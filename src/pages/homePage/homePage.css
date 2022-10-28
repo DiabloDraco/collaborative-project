@@ -10,12 +10,13 @@
     background-size: cover;
     width: 100%;
     height: 410px;
-    position: relative;
     padding-top: 75px;
     padding-bottom: 67px;
 }
 
-.home__top {}
+.home__top {
+    position: relative;
+}
 
 .container {}
 
@@ -112,7 +113,7 @@
     top: 57px;
     width: 834.57px;
     height: 100%;
-    left: 751px;
+    left: 488px;
 }
 
 .home__middle-wrapper {
