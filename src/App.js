@@ -10,11 +10,9 @@ function App() {
     <>
       <div className="wrapper">
         <Header />
-        <div className="container main">
-          <Routes>
-            <Route path="/" element={<HomePage/>}/>
-          </Routes>
-        </div>
+        <Routes>
+          <Route path="/" element={<HomePage />} />
+        </Routes>
         <Footer />
       </div>
     </>

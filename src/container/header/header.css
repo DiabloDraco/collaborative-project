@@ -166,3 +166,14 @@
     cursor: pointer;
     width: 169px;
 }
+
+.header__bottom-open:hover {
+    color: #F29C37;
+    background: #FFFFFF;
+    box-shadow: 0 0 0 1px#F29C37;
+}
+
+.header__bottom-open:active {
+    color: #f29b3791;
+    background: #FFFFFF;
+}

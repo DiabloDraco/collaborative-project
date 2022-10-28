@@ -1,0 +1,43 @@
+.homeCard {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    max-width: 381px;
+    padding: 23px 17px 41px 18px;
+    background: #FFFFFF;
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.15);
+    border-radius: 20px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.homeCard:hover {
+    transform: scale(1.03);
+}
+
+.homeCard__img {}
+
+.homeCard__heading {
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 32px;
+    line-height: 39px;
+    text-align: center;
+    color: #191F2B;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.homeCard__text {
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 20px;
+    max-width: 346px;
+    width: 100%;
+    text-align: center;
+    color: #000000;
+}
