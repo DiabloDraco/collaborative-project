@@ -1,4 +1,4 @@
-import { Link } from 'react-router-dom'
+import { Link, NavLink } from 'react-router-dom'
 import './header.css'
 import Login from './../../assets/images/login.svg'
 import Logo from './../../assets/images/logo.svg'
@@ -6,6 +6,7 @@ import Register from './../../assets/images/register.svg'
 import { ReactComponent as DownArrow } from './../../assets/images/downArrow.svg'
 
 function Header() {
+
     return (
         <>
             <div className='header-wrapper'>
@@ -24,25 +25,26 @@ function Header() {
                                 <img className='header__register-icon' src={Register} alt="Register" />
                                 Register
                             </a>
+                            <select onChange="doGTranslate(this);"><option value="">Select Language</option><option value="en|zh-TW">Chinese (Traditional)</option><option value="en|en">English</option><option value="en|ru">Russian</option></select>
                         </div>
                     </div>
                 </div>
                 <div className='header__bottom-wrapper container'>
-                    <a className='header__bottom-logo-link'>
+                    <NavLink end to={'/'} className='header__bottom-logo-link'>
                         <img className='header__bottom-logo' src={Logo} alt="logo" width={66.17} height={65} />
-                    </a>
+                    </NavLink>
                     <nav className='header__navbar'>
                         <ul className='header__nav-list'>
                             <li className='header__nav-item'>
-                                <a className='header__nav-link'>
+                                <NavLink end to={'/'} className='header__nav-link'>
                                     Home
-                                </a>
+                                </NavLink>
                             </li>
                             <li className='header__nav-item'>
-                                <a className='header__nav-link'>
+                                <NavLink to={'/capital'} className='header__nav-link'>
                                     Ensemble Platform
                                     <DownArrow className='header__drop-arrow' width={14} height={7} />
-                                </a>
+                                </NavLink>
                                 <div className='header__nav-drop'>
                                     <ul className='header__drop-list'>
                                         <li className='header__drop-item'>

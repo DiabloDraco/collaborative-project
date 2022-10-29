@@ -1,0 +1,56 @@
+.capitalI__top-wrapper {
+    background-image: url('./../../assets/images/capitalBack.png');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    padding-top: 57px;
+    padding-bottom: 63px;
+    margin-bottom: 38px;
+}
+
+.capitalI__top {
+    text-align: center;
+}
+
+.container {}
+
+.capitalI__header {
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 40px;
+    line-height: 49px;
+    color: #000000;
+}
+
+.capitalI__bottom {
+    width: 100%;
+}
+
+.capitalI__bottom-heading {
+    margin: 0;
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 32px;
+    line-height: 39px;
+    color: #F29C37;
+    margin-bottom: 38px;
+    width: 878px;
+}
+
+.capitalI__bottom-list {
+    display: flex;
+    flex-direction: column;
+    padding-left: 5px;
+    margin-bottom: 63px;
+}
+
+.capitalI__bottom-item {
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 20px;
+    color: #000000;
+}

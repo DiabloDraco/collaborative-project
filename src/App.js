@@ -4,6 +4,7 @@ import './assets/settings/settings.css'
 import Footer from "./container/footer";
 import './assets/settings/settings.css'
 import HomePage from "./pages/homePage/homePage";
+import CapitalInvestment from "./pages/capitalInvestment/capitalInvestment";
 
 function App() {
   return (
@@ -12,6 +13,7 @@ function App() {
         <Header />
         <Routes>
           <Route path="/" element={<HomePage />} />
+          <Route path="/capital" element={<CapitalInvestment />} />
         </Routes>
         <Footer />
       </div>

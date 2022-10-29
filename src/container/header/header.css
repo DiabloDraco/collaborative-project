@@ -110,6 +110,7 @@
 }
 
 .header__nav-link {
+    text-decoration: none;
     font-family: 'Montserrat';
     font-style: normal;
     font-weight: 600;
@@ -177,3 +178,12 @@
     color: #f29b3791;
     background: #FFFFFF;
 }
+
+.active {
+    color: #F29C37;
+}
+
+.active .header__drop-arrow path{
+    stroke: #F29C37;
+}
+
