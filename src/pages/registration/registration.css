@@ -1,0 +1,120 @@
+.reg__wrapper {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+}
+.reg__logo {
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+.registration__form {
+    display: flex;
+    flex-direction: column;
+    gap: 7px;
+}
+.reg__label {
+    max-width: 470px;
+    box-shadow: 0 0 0 1px black;
+    transition: all 0.3s ease;
+    border-radius: 3px;
+}
+.reg__input {
+    width: 440px;
+    background-color: #fafafa;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    color: #444;
+    padding: 8px 10px 7px;
+    background-color: none !important;
+    border: none !important;
+    padding: 10px;
+    display: inline-block;
+    min-height: 38px;
+    font-size: 14px;
+    line-height: 1.8;
+    vertical-align: middle;
+    border: none;
+}
+
+.error {
+    margin: 0;
+    display: none;
+    transition: all 0.3s ease;
+    color: red;
+    font-size: 12px;
+    padding-left: 8px;
+    padding-bottom: 5px;
+}
+
+.visiblee ~ .error {
+    display: flex;
+}
+
+.reg__input:hover{
+    border: none;
+}
+
+.reg__input:focus{
+    border: none;
+    outline: none;
+}
+
+.reg__label:hover {
+    box-shadow: 0 0 0 1px #00d084;
+}
+
+.reg__label:focus {
+    border: none;
+    outline: none;
+    box-shadow: 0 0 0 1px #00d084;
+}
+.error__name {
+}
+.error {
+}
+.error__last {
+}
+.error__mail {
+}
+.error__phone {
+}
+.error__country {
+}
+.error__password {
+}
+.error__confirm {
+}
+
+.m {
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.submit__btn {
+    display: inline-block;
+    cursor: pointer;
+    text-align: center;
+    letter-spacing: 0.1em;
+    line-height: 1;
+    width: 100%;
+    border: none;
+    background: none repeat scroll 0 0 #D8A724 !important;
+    border-color: #D8A724 !important;
+    box-shadow: none !important;
+    border-radius: 3px;
+    text-transform: capitalize;
+    font-size: 15px;
+    font-weight: 400;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    -webkit-transition: all 0.3s linear 0s;
+    -moz-transition: all 0.3s linear 0s;
+    -ms-transition: all 0.3s linear 0s;
+    -o-transition: all 0.3s linear 0s;
+    transition: all 0.3s linear 0s;
+    padding: 10px 30px 11px;
+    border-radius: 3px;
+    color: black !important;
+    border-bottom: 4px solid #ffebb5 !important;
+    margin-bottom: 60px;
+}
