@@ -1,0 +1,162 @@
+.log__wrapper {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.log__logo {
+    margin-top: 150px;
+    margin-bottom: 50px;
+}
+
+.login__form {
+    display: flex;
+    flex-direction: column;
+    gap: 7px;
+}
+
+.log__label {
+    max-width: 440px;
+    box-shadow: 0 0 0 1px black;
+    transition: all 0.3s ease;
+    border-radius: 3px;
+}
+
+.log__input {
+    width: 420px;
+    background-color: #fafafa;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    color: #444;
+    padding: 8px 10px 7px;
+    background-color: none !important;
+    border: none !important;
+    padding: 10px;
+    display: inline-block;
+    min-height: 38px;
+    font-size: 14px;
+    line-height: 1.8;
+    vertical-align: middle;
+    border: none;
+}
+
+.checkbox__wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+
+.log__check {
+    background-color: #fff;
+    border: 1px solid #bbb;
+    line-height: 0;
+    width: 16px;
+    min-width: 16px;
+    height: 16px;
+    outline: 0;
+    text-align: center;
+    vertical-align: middle;
+    clear: none;
+    cursor: pointer;
+}
+
+.checkbox__text {
+    display: inline-block !important;
+    font-weight: 400;
+    font-size: 13px;
+    font-weight: bold;
+    text-transform: inherit;
+    color: #D8A724;
+}
+
+.error {
+    margin: 0;
+    display: none;
+    transition: all 0.3s ease;
+    color: red;
+    font-size: 12px;
+    padding-left: 8px;
+    padding-bottom: 5px;
+}
+
+.visiblee~.error {
+    display: flex;
+}
+
+.log__input:hover {
+    border: none;
+}
+
+.log__input:focus {
+    border: none;
+    outline: none;
+}
+
+.log__label:hover {
+    box-shadow: 0 0 0 1px #00d084;
+}
+
+.log__label:focus {
+    border: none;
+    outline: none;
+    box-shadow: 0 0 0 1px #00d084;
+}
+
+.error__name {}
+
+.error {}
+
+.error__last {}
+
+.error__mail {}
+
+.error__phone {}
+
+.error__country {}
+
+.error__password {}
+
+.error__confirm {}
+
+.submit__btn {
+    display: inline-block;
+    cursor: pointer;
+    text-align: center;
+    letter-spacing: 0.1em;
+    line-height: 1;
+    width: 100%;
+    border: none;
+    background: none repeat scroll 0 0 #D8A724 !important;
+    border-color: #D8A724 !important;
+    box-shadow: none !important;
+    border-radius: 3px;
+    text-transform: capitalize;
+    font-size: 15px;
+    font-weight: 400;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    -webkit-transition: all 0.3s linear 0s;
+    -moz-transition: all 0.3s linear 0s;
+    -ms-transition: all 0.3s linear 0s;
+    -o-transition: all 0.3s linear 0s;
+    transition: all 0.3s linear 0s;
+    padding: 10px 30px 11px;
+    border-radius: 3px;
+    color: black !important;
+    border-bottom: 4px solid #ffebb5 !important;
+    margin-bottom: 0;
+}
+
+.login__toReg {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: #333;
+    font-size: 13px;
+    font-weight: bold;
+    text-decoration: none;
+    padding-right: 10px;
+    padding-left: 10px;
+}

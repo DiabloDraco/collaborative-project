@@ -17,10 +17,10 @@ function Header() {
                             <a className='header__left-mail' href='mailto:kaban.jobs@gmail.com'>E-Mail: kaban.jobs@gmail.com</a>
                         </div>
                         <div className='header__right'>
-                            <a className='header__right-login'>
+                            <Link to={'/login'} target="_blank" className='header__right-login'>
                                 <img className='header__login-icon' src={Login} alt="Login" />
                                 LOGIN
-                            </a>
+                            </Link>
                             <Link target='_blank' to={'/registraion'} className='header__right-register'>
                                 <img className='header__register-icon' src={Register} alt="Register" />
                                 Register
