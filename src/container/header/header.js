@@ -47,7 +47,44 @@ function Header() {
                                 <div className='header__nav-drop'>
                                     <ul className='header__drop-list'>
                                         <li className='header__drop-item'>
-                                            Ensemble Platform
+                                            <Link className='header__drop-link' to={'/capital'}>
+                                                Ensemble Platform
+                                            </Link>
+                                        </li>
+                                        <li className='header__drop-item'>
+                                            <Link className='header__drop-link' to={'/capital'}>
+                                                Ensemble Platform
+                                            </Link>
+                                        </li>
+                                        <li className='header__drop-item'>
+                                            <Link className='header__drop-link' to={'/capital'}>
+                                                Ensemble Platform
+                                            </Link>
+                                        </li>
+                                        <li className='header__drop-item'>
+                                            <Link className='header__drop-link' to={'/capital'}>
+                                                Ensemble Platform
+                                            </Link>
+                                        </li>
+                                        <li className='header__drop-item'>
+                                            <Link className='header__drop-link' to={'/capital'}>
+                                                Ensemble Platform
+                                            </Link>
+                                        </li>
+                                        <li className='header__drop-item'>
+                                            <Link className='header__drop-link' to={'/capital'}>
+                                                Ensemble Platform
+                                            </Link>
+                                        </li>
+                                        <li className='header__drop-item'>
+                                            <Link className='header__drop-link' to={'/capital'}>
+                                                Ensemble Platform
+                                            </Link>
+                                        </li>
+                                        <li className='header__drop-item'>
+                                            <Link className='header__drop-link' to={'/capital'}>
+                                                Ensemble Platform
+                                            </Link>
                                         </li>
                                     </ul>
                                 </div>
