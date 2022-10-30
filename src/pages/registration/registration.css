@@ -15,6 +15,9 @@
 }
 .reg__label {
     max-width: 470px;
+    box-shadow: 0 0 0 1px black;
+    transition: all 0.3s ease;
+    border-radius: 3px;
 }
 .reg__input {
     width: 440px;
@@ -24,24 +27,43 @@
     padding: 8px 10px 7px;
     background-color: none !important;
     border: none !important;
-    border-radius: 3px;
     padding: 10px;
     display: inline-block;
     min-height: 38px;
-    transition: all 0.3s ease;
     font-size: 14px;
     line-height: 1.8;
     vertical-align: middle;
     border: none;
-    box-shadow: 0 0 0 1px black;
 }
 
-.reg__input:hover {
+.error {
+    margin: 0;
+    display: none;
+    transition: all 0.3s ease;
+    color: red;
+    font-size: 12px;
+    padding-left: 8px;
+    padding-bottom: 5px;
+}
+
+.visiblee ~ .error {
+    display: flex;
+}
+
+.reg__input:hover{
     border: none;
+}
+
+.reg__input:focus{
+    border: none;
+    outline: none;
+}
+
+.reg__label:hover {
     box-shadow: 0 0 0 1px #00d084;
 }
 
-.reg__input:focus {
+.reg__label:focus {
     border: none;
     outline: none;
     box-shadow: 0 0 0 1px #00d084;
