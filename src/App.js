@@ -5,6 +5,7 @@ import Footer from "./container/footer";
 import './assets/settings/settings.css'
 import HomePage from "./pages/homePage/homePage";
 import CapitalInvestment from "./pages/capitalInvestment/capitalInvestment";
+import Registration from "./pages/registration";
 
 function App() {
   return (
@@ -12,6 +13,7 @@ function App() {
       <div className="wrapper">
         <Header />
         <Routes>
+          <Route path="/registraion" element={<Registration/>}/>
           <Route path="/" element={<HomePage />} />
           <Route path="/capital" element={<CapitalInvestment />} />
         </Routes>
