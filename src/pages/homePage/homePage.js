@@ -19,7 +19,7 @@ function HomePage() {
                         </a>
                     </div>
                     <p className='home__top-text'>
-                        Lorem ipsum dolor sit amet.
+                         Over 110.000 users
                     </p>
                     <div className='home__top-eagle'></div>
                 </div>
