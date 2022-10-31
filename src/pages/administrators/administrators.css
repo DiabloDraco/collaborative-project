@@ -1,0 +1,45 @@
+.administrators__list {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.administrators__item {
+    max-width: 800px;
+    width: 100%;
+}
+
+.administrators__item-title {
+    color: #333333;
+    font-weight: bold;
+    font-family: 'Roboto', Arial, Verdana;
+    -webkit-font-smoothing: antialiased;
+    overflow-x: hidden;
+    font-size: 13px;
+    line-height: 21px;
+}
+
+.administrators__item-text {
+    color: #898989;
+    font-weight: 400;
+    font-family: 'Roboto', Arial, Verdana;
+    -webkit-font-smoothing: antialiased;
+    overflow-x: hidden;
+    font-size: 13px;
+    line-height: 21px;
+}
+
+.administrators__item-list {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.administrators__subitem {
+    color: #898989;
+    font-family: 'Roboto', Arial, Verdana;
+    font-weight: 400;
+    -webkit-font-smoothing: antialiased;
+    font-size: 13px;
+    line-height: 21px;
+}

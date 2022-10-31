@@ -164,9 +164,10 @@
     padding: 0;
     border-bottom: 1px dotted #e0e0e0;
     padding: 7px 0;
+    font-weight: 700;
     width: 300px;
     color: #252525;
-    font-size: 14px;
+    font-size: 12px;
     line-height: 15px;
     cursor: pointer;
 }

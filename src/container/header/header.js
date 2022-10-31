@@ -40,50 +40,60 @@ function Header() {
                                 </NavLink>
                             </li>
                             <li className='header__nav-item'>
-                                <NavLink to={'/capital'} className='header__nav-link'>
+                                <p className='header__nav-link'>
                                     Ensemble Platform
                                     <DownArrow className='header__drop-arrow' width={14} height={7} />
-                                </NavLink>
+                                </p>
                                 <div className='header__nav-drop'>
                                     <ul className='header__drop-list'>
                                         <li className='header__drop-item'>
-                                            <Link className='header__drop-link' to={'/capital'}>
-                                                Ensemble Platform
+                                            <Link className='header__drop-link' to={'/groupandb'}>
+                                                CAPITAL INVESTMENT GROUP, INC.
                                             </Link>
                                         </li>
                                         <li className='header__drop-item'>
-                                            <Link className='header__drop-link' to={'/capital'}>
-                                                Ensemble Platform
+                                            <Link className='header__drop-link' to={'/groupandb'}>
+                                                CAPITAL ADVISERS, INC.
                                             </Link>
                                         </li>
                                         <li className='header__drop-item'>
-                                            <Link className='header__drop-link' to={'/capital'}>
-                                                Ensemble Platform
+                                            <Link className='header__drop-link' to={'/groupandb'}>
+                                                CAPITAL INVESTMENT BROKERAGE, INC.
                                             </Link>
                                         </li>
                                         <li className='header__drop-item'>
-                                            <Link className='header__drop-link' to={'/capital'}>
-                                                Ensemble Platform
+                                            <Link className='header__drop-link' to={'/counsel'}>
+                                                CAPITAL INVESTMENT ADVISORY SERVICES
                                             </Link>
                                         </li>
                                         <li className='header__drop-item'>
-                                            <Link className='header__drop-link' to={'/capital'}>
-                                                Ensemble Platform
+                                            <Link className='header__drop-link' to={'/investment-advisory'}>
+                                                CAPITAL INVESTMENT COUNSEL, INC.
                                             </Link>
                                         </li>
                                         <li className='header__drop-item'>
-                                            <Link className='header__drop-link' to={'/capital'}>
-                                                Ensemble Platform
+                                            <Link className='header__drop-link' to={'/administrators'}>
+                                                CAPITAL'S RETIREMENT PLAN SERVICES
                                             </Link>
                                         </li>
                                         <li className='header__drop-item'>
-                                            <Link className='header__drop-link' to={'/capital'}>
-                                                Ensemble Platform
+                                            <Link className='header__drop-link' to={'/mortgage'}>
+                                                CAPITAL MORTGAGE ASSOCIATES
                                             </Link>
                                         </li>
                                         <li className='header__drop-item'>
-                                            <Link className='header__drop-link' to={'/capital'}>
-                                                Ensemble Platform
+                                            <Link className='header__drop-link' to={'/trustservice'}>
+                                                CAPITAL'S TRUST SERVICES
+                                            </Link>
+                                        </li>
+                                        <li className='header__drop-item'>
+                                            <Link className='header__drop-link' to={'/affiliates'}>
+                                                CAPITAL INSURANCE AFFILIATES
+                                            </Link>
+                                        </li>
+                                        <li className='header__drop-item'>
+                                            <Link className='header__drop-link' to={'/capitalbankpartners'}>
+                                                CAPITAL BANK PARTNERS
                                             </Link>
                                         </li>
                                     </ul>
