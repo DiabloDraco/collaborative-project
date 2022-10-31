@@ -179,6 +179,7 @@
 
 .header__drop-link:hover {
     color: #F29C37;
+    transform: scale(1.06);
 }
 
 .header__bottom-open {
