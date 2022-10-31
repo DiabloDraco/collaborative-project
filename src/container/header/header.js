@@ -107,7 +107,89 @@ function Header() {
                                 <div className='header__nav-drop'>
                                     <ul className='header__drop-list'>
                                         <li className='header__drop-item'>
-                                            Investment Services
+                                            <Link className='header__drop-link' to={'/affiliates'}>
+                                                Annuities
+                                            </Link>
+                                        </li>
+                                        <li className='header__drop-item'>
+                                            <Link className='header__drop-link' to={'/capitalbankpartners'}>
+                                                Bank Investment Services
+                                            </Link>
+                                        </li>
+                                        <li className='header__drop-item'>
+                                            <Link className='header__drop-link' to={'/groupandb'}>
+                                            Certificates of Deposits 
+                                            </Link>
+                                        </li>
+                                        <li className='header__drop-item'>
+                                            <Link className='header__drop-link' to={'/groupandb'}>
+                                            Corporate Bonds
+                                            </Link>
+                                        </li>
+                                        <li className='header__drop-item'>
+                                            <Link className='header__drop-link' to={'/groupandb'}>
+                                            Corporate Finance
+                                            </Link>
+                                        </li>
+                                        <li className='header__drop-item'>
+                                            <Link className='header__drop-link' to={'/affiliates'}>
+                                            Estate Planning
+                                            </Link>
+                                        </li>
+                                        <li className='header__drop-item'>
+                                            <Link className='header__drop-link' to={'/groupandb'}>
+                                            Government Securities
+                                            </Link>
+                                        </li>
+                                        <li className='header__drop-item'>
+                                            <Link className='header__drop-link' to={'/affiliates'}>
+                                            Insurance
+                                            </Link>
+                                        </li>
+                                        <li className='header__drop-item'>
+                                            <Link className='header__drop-link' to={'/groupandb'}>
+                                            Investment Banking
+                                            </Link>
+                                        </li>
+                                        <li className='header__drop-item'>
+                                            <Link className='header__drop-link' to={'/groupandb'}>
+                                            Limited Partnerships
+                                            </Link>
+                                        </li>
+                                        <li className='header__drop-item'>
+                                            <Link className='header__drop-link' to={'/counsel'}>
+                                            Money Management
+                                            </Link>
+                                        </li>
+                                        <li className='header__drop-item'>
+                                            <Link className='header__drop-link' to={'/groupandb'}>
+                                            Money Market Funds
+                                            </Link>
+                                        </li>
+                                        <li className='header__drop-item'>
+                                            <Link className='header__drop-link' to={'/mortgage'}>
+                                            Mortgages
+                                            </Link>
+                                        </li>
+                                        <li className='header__drop-item'>
+                                            <Link className='header__drop-link' to={'/groupandb'}>
+                                            Municipal Bonds
+                                            </Link>
+                                        </li>
+                                        <li className='header__drop-item'>
+                                            <Link className='header__drop-link' to={'/groupandb'}>
+                                            Mutual Funds
+                                            </Link>
+                                        </li>
+                                        <li className='header__drop-item'>
+                                            <Link className='header__drop-link' to={'/groupandb'}>
+                                            Options
+                                            </Link>
+                                        </li>
+                                        <li className='header__drop-item'>
+                                            <Link className='header__drop-link' to={'/counsel'}>
+                                            Portfolio Review
+                                            </Link>
                                         </li>
                                     </ul>
                                 </div>

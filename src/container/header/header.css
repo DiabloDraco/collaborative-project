@@ -122,6 +122,7 @@
 
 .header__nav-item:hover .header__nav-link {
     color: #F29C37;
+    transform: scale(1.05);
 }
 
 .header__nav-item:hover .header__drop-arrow path{
@@ -151,7 +152,7 @@
 .header__drop-list {
     display: flex;
     flex-wrap: wrap;
-    height: 196px;
+    height: 100%;
     width: 642px;
     padding: 10px;
     padding-top: 50px;
@@ -179,7 +180,7 @@
 
 .header__drop-link:hover {
     color: #F29C37;
-    transform: scale(1.06);
+    transform: scale(1.05);
 }
 
 .header__bottom-open {
