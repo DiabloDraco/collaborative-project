@@ -1,0 +1,91 @@
+.counsel__wrapper {}
+
+.container {}
+
+.counsel__heading {
+    font-size: 22px;
+    color: #F29C37;
+    border-bottom: 1px solid #F29C37;
+    font-weight: normal;
+    line-height: 32px;
+    margin-bottom: 20px;
+    padding-bottom: 5px;
+}
+
+.counsel__text {
+    margin: 0;
+    margin-bottom: 15px;
+    color: #828281;
+    font-style: italic;
+    padding-bottom: 15px;
+    border-bottom: 1px solid #e3e3e3;
+}
+
+.counsel__subtitle {
+    margin: 0;
+    margin-bottom: 25px;
+    font-family: "Roboto", Arial, Verdana;
+    font-weight: 900;
+    font-size: 13px;
+    line-height: 30px;
+    color: #C90;
+}
+
+.counsel__subtitle-text {
+    margin: 0;
+    margin-bottom: 15px;
+    color: #898989;
+    font-family: 'Roboto', Arial, Verdana;
+    font-weight: 400;
+    -webkit-font-smoothing: antialiased;
+    overflow-x: hidden;
+    font-size: 13px;
+    line-height: 21px;
+}
+
+.counsel__span {
+    margin: 0;
+    font-family: "Roboto", Arial, Verdana;
+    font-weight: 900;
+    font-size: 13px;
+    line-height: 30px;
+    color: #C90;
+    padding-right: 5px;
+}
+
+.counsel__top-wrapper {
+    background-image: url('./../../assets/images/capitalBack.png');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    padding-top: 57px;
+    padding-bottom: 63px;
+    margin-bottom: 38px;
+}
+
+.counsel__top {
+    text-align: center;
+}
+
+.counsel__span-text {
+    margin: 0;
+    color: #898989;
+    font-family: 'Roboto', Arial, Verdana;
+    font-weight: 400;
+    -webkit-font-smoothing: antialiased;
+    overflow-x: hidden;
+    font-size: 13px;
+    line-height: 21px;
+}
+
+.counsel__subtitle-pre {
+    color: #898989;
+    font-family: 'Roboto', Arial, Verdana;
+    font-weight: 400;
+    -webkit-font-smoothing: antialiased;
+    overflow-x: hidden;
+    font-size: 13px;
+    line-height: 21px;
+}
+
+.counsel__pb {}

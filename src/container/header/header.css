@@ -122,13 +122,16 @@
 
 .header__nav-item:hover .header__nav-link {
     color: #F29C37;
+    transform: scale(1.05);
 }
 
-.header__nav-link:hover .header__drop-arrow path{
+.header__nav-item:hover .header__drop-arrow path{
     stroke: #F29C37;
 }
 .header__nav-item:hover .header__nav-drop{
     display: flex;
+    transform: scale(1);
+    transition: all 0.3s ease;
 }
 
 .header__drop-arrow {
@@ -137,6 +140,9 @@
 
 .header__nav-drop {
     display: none;
+    transform: scale(0);
+    z-index: 99999;
+    transition: all 0.3s ease;
     flex-direction: column;
     position: absolute;
     top: 100%;
@@ -144,12 +150,37 @@
 }
 
 .header__drop-list {
-    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+    height: 100%;
+    width: 642px;
+    padding: 10px;
+    padding-top: 50px;
+    background-color: #ffffff;
+    z-index: 9999;
     list-style-type: none;
 }
 
 .header__drop-item {
     padding: 0;
+    border-bottom: 1px dotted #e0e0e0;
+    padding: 7px 0;
+    font-weight: 700;
+    width: 300px;
+    color: #252525;
+    font-size: 12px;
+    line-height: 15px;
+    cursor: pointer;
+}
+
+.header__drop-link {
+    text-decoration: none;
+    color: #191F2B;
+}
+
+.header__drop-link:hover {
+    color: #F29C37;
+    transform: scale(1.05);
 }
 
 .header__bottom-open {
