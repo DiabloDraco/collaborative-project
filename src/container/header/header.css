@@ -129,7 +129,6 @@
     stroke: #F29C37;
 }
 .header__nav-item:hover .header__nav-drop{
-    display: flex;
     transform: scale(1);
     transition: all 0.3s ease;
 }
@@ -139,7 +138,7 @@
 }
 
 .header__nav-drop {
-    display: none;
+    display: flex;
     transform: scale(0);
     z-index: 99999;
     transition: all 0.3s ease;
@@ -180,7 +179,7 @@
 
 .header__drop-link:hover {
     color: #F29C37;
-    transform: scale(1.05);
+    transform: scale(1);
 }
 
 .header__bottom-open {

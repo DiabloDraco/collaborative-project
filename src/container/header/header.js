@@ -100,10 +100,10 @@ function Header() {
                                 </div>
                             </li>
                             <li className='header__nav-item'>
-                                <a className='header__nav-link'>
+                                <p className='header__nav-link'>
                                     Investment Services
                                     <DownArrow className='header__drop-arrow' width={14} height={7} />
-                                </a>
+                                </p>
                                 <div className='header__nav-drop'>
                                     <ul className='header__drop-list'>
                                         <li className='header__drop-item'>
@@ -195,15 +195,15 @@ function Header() {
                                 </div>
                             </li>
                             <li className='header__nav-item'>
-                                <a className='header__nav-link'>
+                                <a   className='header__nav-link'>
                                     Clients
                                 </a>
                             </li>
-                            <li className='header__nav-item'>
+                            <NavLink to={'/resources'} className='header__nav-link'>
                                 <a className='header__nav-link'>
                                     Resources
                                 </a>
-                            </li>
+                            </NavLink>
                             <li className='header__nav-item'>
                                 <a className='header__nav-link'>
                                     Join Capital
