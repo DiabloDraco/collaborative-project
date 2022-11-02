@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom'
 import './footer.css'
 
 function Footer() {
@@ -8,64 +9,54 @@ function Footer() {
                     <div className='footer__top-inner-wrapper container'>
                         <ul className='footer__top-list'>
                             <li className='footer__top-item'>
-                                <a className='footer__item-link'>
+                                <Link to={'/groupandb'} className='footer__item-link'>
                                     CAPITAL INVESTMENT GROUP, INC.
-                                </a>
+                                </Link>
                             </li>
                             <li className='footer__top-item'>
-                                <a className='footer__item-link'>
-                                    CAPITAL INVESTMENT GROUP, INC.
-                                </a>
+                                <Link to={'/advisers'} className='footer__item-link'>
+                                    CAPITAL ADVISERS, INC.
+                                </Link>
                             </li>
                             <li className='footer__top-item'>
-                                <a className='footer__item-link'>
-                                    CAPITAL INVESTMENT GROUP, INC.
-                                </a>
+                                <Link to={'/trustservice'} className='footer__item-link'>
+                                    CAPITAL'S TRUST SERVICES
+                                </Link>
                             </li>
                             <li className='footer__top-item'>
-                                <a className='footer__item-link'>
-                                    CAPITAL INVESTMENT GROUP, INC.
-                                </a>
+                                <Link to={'/groupandb'} className='footer__item-link'>
+                                    CAPITAL INVESTMENT BROKERAGE, INC.
+                                </Link>
                             </li>
                             <li className='footer__top-item'>
-                                <a className='footer__item-link'>
-                                    CAPITAL INVESTMENT GROUP, INC.
-                                </a>
+                                <Link to={'/administrators'} className='footer__item-link'>
+                                    CAPITAL'S RETIREMENT PLAN SERVICES
+                                </Link>
                             </li>
                             <li className='footer__top-item'>
-                                <a className='footer__item-link'>
-                                    CAPITAL INVESTMENT GROUP, INC.
-                                </a>
+                                <Link to={'/capitalbankpartners'} className='footer__item-link'>
+                                    CAPITAL BANK PARTNERS
+                                </Link>
                             </li>
                             <li className='footer__top-item'>
-                                <a className='footer__item-link'>
-                                    CAPITAL INVESTMENT GROUP, INC.
-                                </a>
+                                <Link to={'/counsel'} className='footer__item-link'>
+                                    CAPITAL INVESTMENT COUNSEL, INC.
+                                </Link>
                             </li>
                             <li className='footer__top-item'>
-                                <a className='footer__item-link'>
-                                    CAPITAL INVESTMENT GROUP, INC.
-                                </a>
+                                <Link to={'/affiliates'} className='footer__item-link'>
+                                    CAPITAL INSURANCE AFFILIATES
+                                </Link>
                             </li>
                             <li className='footer__top-item'>
-                                <a className='footer__item-link'>
-                                    CAPITAL INVESTMENT GROUP, INC.
-                                </a>
+                                <Link to={'/mortgage'} className='footer__item-link'>
+                                    CAPITAL MORTGAGE ASSOCIATES
+                                </Link>
                             </li>
                             <li className='footer__top-item'>
-                                <a className='footer__item-link'>
-                                    CAPITAL INVESTMENT GROUP, INC.
-                                </a>
-                            </li>
-                            <li className='footer__top-item'>
-                                <a className='footer__item-link'>
-                                    CAPITAL INVESTMENT GROUP, INC.
-                                </a>
-                            </li>
-                            <li className='footer__top-item'>
-                                <a className='footer__item-link'>
-                                    CAPITAL INVESTMENT GROUP, INC.
-                                </a>
+                                <Link to={'/investment-advisory'} className='footer__item-link'>
+                                    CAPITAL INVESTMENT ADVISORY SERVICES
+                                </Link>
                             </li>
                         </ul>
                     </div>
