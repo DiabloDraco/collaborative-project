@@ -210,11 +210,11 @@ function Header() {
                                     </ul>
                                 </div>
                             </li>
-                            <NavLink to={'/resources'} className='header__nav-link'>
-                                <a className='header__nav-link'>
+                            <li className='header__nav-item'>
+                                <NavLink to={'/resources'} className='header__nav-link'>
                                     Resources
-                                </a>
-                            </NavLink>
+                                </NavLink>
+                            </li>
                             <li className='header__nav-item'>
                                 <a className='header__nav-link'>
                                     Join Capital
