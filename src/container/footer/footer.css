@@ -10,17 +10,18 @@
 .container {
 }
 .footer__top-list {
-    padding: 0;
     display: flex;
     gap: 20px;
+    justify-content: space-between;
     align-items: center;
-    justify-content: space-around;
     flex-wrap: wrap;
     list-style-type: none;
 }
 .footer__top-item {
+    text-decoration: none;
 }
 .footer__item-link {
+    text-decoration: none;
     width: 292px;
     height: 21.79px;
     font-family: 'Montserrat';
@@ -36,11 +37,16 @@
     border-bottom: 1px solid #434a54;
     cursor: pointer;
     transition: 0.5s;
+    margin-right: 70px;
+    text-align: start;
+
 }
 
 .footer__item-link:hover {
     color: #F29C37;
     transition: 0.5s;
+    text-decoration: underline;
+
 }
 
 .footer__bottom {
