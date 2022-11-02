@@ -23,7 +23,7 @@ function Header() {
                             </Link>
                             <Link target='_blank' to={'/registraion'} className='header__right-register'>
                                 <img className='header__register-icon' src={Register} alt="Register" />
-                                Register
+                                REGISTER
                             </Link>
                         </div>
                     </div>
@@ -197,7 +197,18 @@ function Header() {
                             <li className='header__nav-item'>
                                 <a   className='header__nav-link'>
                                     Clients
+                                    <DownArrow className='header__drop-arrow' width={14} height={7} />
                                 </a>
+
+                                <div className='header__nav-drop'>
+                                    <ul className='header__drop-list'>
+                                        <li className='header__drop-item'>
+                                            <Link className='header__drop-link' to={'/affiliates'}>
+                                                DOL Transition Disclosure
+                                            </Link>
+                                        </li>
+                                    </ul>
+                                </div>
                             </li>
                             <NavLink to={'/resources'} className='header__nav-link'>
                                 <a className='header__nav-link'>
