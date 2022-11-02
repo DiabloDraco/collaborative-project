@@ -19,11 +19,11 @@
     gap: 25px;
 }
 
-.header__left-phone {
+.header__left-adress {
     font-family: 'Montserrat';
     font-style: normal;
-    font-weight: 500;
-    font-size: 14px;
+    font-weight: 400;
+    font-size: 12px;
     line-height: 17px;
     color: #FFFFFF;
     text-decoration: none;
@@ -32,8 +32,8 @@
 .header__left-mail {
     font-family: 'Montserrat';
     font-style: normal;
-    font-weight: 500;
-    font-size: 14px;
+    font-weight: 400;
+    font-size: 12px;
     line-height: 17px;
     color: #FFFFFF;
     text-decoration: none;
