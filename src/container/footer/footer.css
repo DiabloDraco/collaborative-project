@@ -12,13 +12,15 @@
 .footer__top-list {
     display: flex;
     gap: 20px;
-    justify-content: space-between;
     align-items: center;
+    justify-content: space-between;
     flex-wrap: wrap;
     list-style-type: none;
 }
 .footer__top-item {
     text-decoration: none;
+    display: flex;
+    align-items: start;
 }
 .footer__item-link {
     text-decoration: none;
@@ -30,14 +32,12 @@
     font-size: 13px;
     line-height: 20px;
     color: #FFFFFF;
-    width: 100%;
-    float: left;
     list-style: none;
     padding: 12px 0;
     border-bottom: 1px solid #434a54;
     cursor: pointer;
-    margin-right: 70px;
-    text-align: start;
+    text-align: center;
+    padding-right: 70px;
 }
 
 .footer__item-link:hover {

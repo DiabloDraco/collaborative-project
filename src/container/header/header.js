@@ -118,90 +118,90 @@ function Header() {
                                         </li>
                                         <li className='header__drop-item'>
                                             <Link className='header__drop-link' to={'/groupandb'}>
-                                            Certificates of Deposits 
+                                                Certificates of Deposits
                                             </Link>
                                         </li>
                                         <li className='header__drop-item'>
                                             <Link className='header__drop-link' to={'/groupandb'}>
-                                            Corporate Bonds
+                                                Corporate Bonds
                                             </Link>
                                         </li>
                                         <li className='header__drop-item'>
                                             <Link className='header__drop-link' to={'/groupandb'}>
-                                            Corporate Finance
+                                                Corporate Finance
                                             </Link>
                                         </li>
                                         <li className='header__drop-item'>
                                             <Link className='header__drop-link' to={'/affiliates'}>
-                                            Estate Planning
+                                                Estate Planning
                                             </Link>
                                         </li>
                                         <li className='header__drop-item'>
                                             <Link className='header__drop-link' to={'/groupandb'}>
-                                            Government Securities
+                                                Government Securities
                                             </Link>
                                         </li>
                                         <li className='header__drop-item'>
                                             <Link className='header__drop-link' to={'/affiliates'}>
-                                            Insurance
+                                                Insurance
                                             </Link>
                                         </li>
                                         <li className='header__drop-item'>
                                             <Link className='header__drop-link' to={'/groupandb'}>
-                                            Investment Banking
+                                                Investment Banking
                                             </Link>
                                         </li>
                                         <li className='header__drop-item'>
                                             <Link className='header__drop-link' to={'/groupandb'}>
-                                            Limited Partnerships
+                                                Limited Partnerships
                                             </Link>
                                         </li>
                                         <li className='header__drop-item'>
                                             <Link className='header__drop-link' to={'/counsel'}>
-                                            Money Management
+                                                Money Management
                                             </Link>
                                         </li>
                                         <li className='header__drop-item'>
                                             <Link className='header__drop-link' to={'/groupandb'}>
-                                            Money Market Funds
+                                                Money Market Funds
                                             </Link>
                                         </li>
                                         <li className='header__drop-item'>
                                             <Link className='header__drop-link' to={'/mortgage'}>
-                                            Mortgages
+                                                Mortgages
                                             </Link>
                                         </li>
                                         <li className='header__drop-item'>
                                             <Link className='header__drop-link' to={'/groupandb'}>
-                                            Municipal Bonds
+                                                Municipal Bonds
                                             </Link>
                                         </li>
                                         <li className='header__drop-item'>
                                             <Link className='header__drop-link' to={'/groupandb'}>
-                                            Mutual Funds
+                                                Mutual Funds
                                             </Link>
                                         </li>
                                         <li className='header__drop-item'>
                                             <Link className='header__drop-link' to={'/groupandb'}>
-                                            Options
+                                                Options
                                             </Link>
                                         </li>
                                         <li className='header__drop-item'>
                                             <Link className='header__drop-link' to={'/counsel'}>
-                                            Portfolio Review
+                                                Portfolio Review
                                             </Link>
                                         </li>
                                     </ul>
                                 </div>
                             </li>
                             <li className='header__nav-item'>
-                                <a   className='header__nav-link'>
+                                <a className='header__nav-link'>
                                     Clients
                                     <DownArrow className='header__drop-arrow' width={14} height={7} />
                                 </a>
 
                                 <div className='header__nav-drop'>
-                                    <ul className='header__drop-list'>
+                                    <ul className='header__drop-list  clients__max '>
                                         <li className='header__drop-item'>
                                             <Link className='header__drop-link' to={'/affiliates'}>
                                                 DOL Transition Disclosure
