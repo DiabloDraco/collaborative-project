@@ -13,8 +13,8 @@ function Header() {
                 <div className='header__top-wrapper'>
                     <div className='header__container container'>
                         <div className='header__left'>
-                            <a className='header__left-phone' href='tel:+380663604794'>Phone: +380663604794</a>
-                            <a className='header__left-mail' href='mailto:kaban.jobs@gmail.com'>E-Mail: kaban.jobs@gmail.com</a>
+                            <a className='header__left-adress' href='#'>Suite 1608 One Exchange Square, 6 Connaught Place, Hong Kong</a>
+                            <a className='header__left-mail' href='mailto:kaban.jobs@gmail.com'>E-Mail: capital@hillhouse-capital.com</a>
                         </div>
                         <div className='header__right'>
                             <Link to={'/login'} target="_blank" className='header__right-login'>

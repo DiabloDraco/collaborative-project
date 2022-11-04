@@ -55,6 +55,10 @@ function HomePage() {
                     </ul>
                 </div>
             </div>
+
+            <div className='home__info'>
+                <a className='home__info-link'>Form CRS (Customer Relationship Summary) for our entities</a>
+            </div>
         </div>
     )
 }
