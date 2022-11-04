@@ -122,11 +122,17 @@
 
 .header__nav-item:hover .header__nav-link {
     color: #F29C37;
-    transform: scale(1.05);
+    /* transform: scale(1.05); */
 }
 
 .header__nav-item:hover .header__drop-arrow path{
     stroke: #F29C37;
+}
+
+.header__nav-item:hover .header__drop-arrow{
+    stroke: #F29C37;
+    transition: 0.4s;
+    transform: rotate(180deg);
 }
 .header__nav-item:hover .header__nav-drop{
     transform: scale(1);
@@ -135,6 +141,7 @@
 
 .header__drop-arrow {
     margin-left: 7px;
+    transition: 0.4s;
 }
 
 .header__nav-drop {

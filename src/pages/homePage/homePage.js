@@ -1,5 +1,9 @@
 import HomeCard from '../../components/homeCard'
-import CardAva from './../../assets/images/cardAva.png'
+
+import CardAva from './../../assets/images/icon1.svg'
+import CardAva2 from './../../assets/images/icon2.svg'
+import CardAva3 from './../../assets/images/icon3.svg'
+
 import './homePage.css'
 
 function HomePage() {
@@ -40,17 +44,17 @@ function HomePage() {
                         <HomeCard
                             img={CardAva}
                             heading={'Integrity'}
-                            text={"We have established a culture that promotes freedom to provide the best possible investment solution for our clients. Though fiercely independent, we pride ourselves on being interdependent when it comes to sharing strategies that benefit everyone."}
+                            text={"The core principle that guides our firm. We pledge to provide you with an investment experience based on honesty, transparency and high ethical standards. Integrity is of such importance that without it, the remaining core values are meaningless."}
                         />
                         <HomeCard
-                            img={CardAva}
+                            img={CardAva2}
                             heading={'Independence'}
                             text={"We have established a culture that promotes freedom to provide the best possible investment solution for our clients. Though fiercely independent, we pride ourselves on being interdependent when it comes to sharing strategies that benefit everyone."}
                         />
                         <HomeCard
-                            img={CardAva}
+                            img={CardAva3}
                             heading={'Innovation'}
-                            text={"We have established a culture that promotes freedom to provide the best possible investment solution for our clients. Though fiercely independent, we pride ourselves on being interdependent when it comes to sharing strategies that benefit everyone."}
+                            text={"In the rapidly changing investment world, we strive to create new processes and services based on leading edge technologies. Our goal is to continue to implement new methods and processes rather than relying on strategies that worked in the past thus initiating positive change for you."}
                         />
                     </ul>
                 </div>
