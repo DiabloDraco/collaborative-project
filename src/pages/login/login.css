@@ -67,7 +67,7 @@
     font-size: 13px;
     font-weight: bold;
     text-transform: inherit;
-    color: #D8A724;
+    color: #F29C37;
 }
 
 .error {
@@ -120,34 +120,40 @@
 .error__confirm {}
 
 .submit__btn {
+    font-family: 'Montserrat';
     display: inline-block;
     cursor: pointer;
     text-align: center;
-    letter-spacing: 0.1em;
-    line-height: 1;
+
     width: 100%;
     border: none;
-    background: none repeat scroll 0 0 #D8A724 !important;
-    border-color: #D8A724 !important;
-    box-shadow: none !important;
-    border-radius: 3px;
+    background: #F29C37 !important;
+    /* border-color: #D8A724 !important; */
+    /* box-shadow: none !important; */
+
     text-transform: capitalize;
-    font-size: 15px;
+    font-size: 16px;
     font-weight: 400;
-    -webkit-font-smoothing: antialiased;
+    /* -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
     -webkit-transition: all 0.3s linear 0s;
     -moz-transition: all 0.3s linear 0s;
     -ms-transition: all 0.3s linear 0s;
     -o-transition: all 0.3s linear 0s;
-    transition: all 0.3s linear 0s;
-    padding: 10px 30px 11px;
-    border-radius: 3px;
+    transition: all 0.3s linear 0s; */
+    padding: 15px 30px 15px;
+    border-radius: 53px;
     color: black !important;
-    border-bottom: 4px solid #ffebb5 !important;
+    font-weight: 600;
+    /* border-bottom: 4px solid #ffebb5 !important; */
     margin-bottom: 0;
+    width: 260px;
+    transition: 0.5s;
+    margin: 0 auto;
 }
-
+.submit__btn:hover{
+    transform: scale(1.05);
+}
 .login__toReg {
     display: flex;
     align-items: center;

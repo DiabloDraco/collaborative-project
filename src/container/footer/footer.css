@@ -37,6 +37,10 @@
     border-bottom: 1px solid #434a54;
     cursor: pointer;
     text-align: center;
+<<<<<<< HEAD
+=======
+    padding-right: 70px;
+>>>>>>> 57a77149dc91a2610877bb3e96bfed3d2c652585
 }
 
 .footer__item-link:hover {

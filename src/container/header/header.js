@@ -216,9 +216,9 @@ function Header() {
                                 </NavLink>
                             </li>
                             <li className='header__nav-item'>
-                                <a className='header__nav-link'>
+                                <NavLink to={'/joincapital'} className='header__nav-link'>
                                     Join Capital
-                                </a>
+                                </NavLink>
                             </li>
                         </ul>
                     </nav>
@@ -227,6 +227,8 @@ function Header() {
                     </a>
                 </div>
             </div>
+
+            <div className='header-margin'></div>
         </>
     )
 }
