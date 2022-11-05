@@ -216,7 +216,7 @@ function Header() {
                                 </NavLink>
                             </li>
                             <li className='header__nav-item'>
-                                <NavLink to={'/joincapital'} className='header__nav-link'>
+                                <NavLink to={'/join'} className='header__nav-link'>
                                     Join Capital
                                 </NavLink>
                             </li>

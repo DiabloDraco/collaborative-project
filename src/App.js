@@ -18,6 +18,8 @@ import Resources from "./pages/resources";
 import Compliance from "./pages/compliance";
 import JoinCapital from "./pages/joincapital";
 import OurLocation from "./pages/our-location";
+import Candidates from "./pages/candidates";
+import Reasons from "./pages/reasons";
 
 function App() {
   return (
@@ -38,8 +40,10 @@ function App() {
           <Route path="/capitalbankpartners" element={<Capitalbankpartners />} />
           <Route path="/resources" element={<Resources />} />
           <Route path="/compliance" element={<Compliance />} />
-          <Route path="/joincapital" element={<JoinCapital />} />
+          <Route path="/join" element={<JoinCapital />} />
           <Route path="/our-location" element={<OurLocation />} />
+          <Route path="/candidates" element={<Candidates />} />
+          <Route path="/reasons" element={<Reasons />} />
         </Routes>
         <Footer />
       </div>
