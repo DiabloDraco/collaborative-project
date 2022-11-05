@@ -1,0 +1,14 @@
+.location__container {
+    width: 100%;
+}
+
+.italic {
+    display: block;
+    margin-bottom: 0;
+    color: black;
+    font-size: 16px;
+}
+
+.mb {
+    margin-bottom: 50px;
+}

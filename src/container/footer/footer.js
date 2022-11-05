@@ -1,4 +1,5 @@
 import { Link } from 'react-router-dom'
+import privacyPdf from './../../assets/files/PrivacyNotice.pdf'
 import './footer.css'
 
 function Footer() {
@@ -68,24 +69,24 @@ function Footer() {
                         </p>
                         <ul className='footer__bottom-right'>
                             <li className='footer__bottom-item'>
-                                <a className='footer__bottom-link'>
+                                <a href={privacyPdf} target="_blank" className='footer__bottom-link'>
                                     Privacy
                                 </a>
                             </li>
                             <li className='footer__bottom-item'>
-                                <a className='footer__bottom-link'>
+                                <Link to={'/compliance'} className='footer__bottom-link'>
                                     Important Disclosures
-                                </a>
+                                </Link>
                             </li>
                             <li className='footer__bottom-item'>
-                                <a className='footer__bottom-link'>
+                                <Link to={'/our-location'} className='footer__bottom-link'>
                                     Contact
-                                </a>
+                                </Link>
                             </li>
                             <li className='footer__bottom-item'>
-                                <a className='footer__bottom-link'>
+                                <Link to={'/compliance'} className='footer__bottom-link'>
                                     The Form CRS
-                                </a>
+                                </Link>
                             </li>
                         </ul>
                     </div>

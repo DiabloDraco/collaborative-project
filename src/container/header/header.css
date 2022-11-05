@@ -80,6 +80,7 @@
 .header__bottom-wrapper {
     display: flex;
     align-items: center;
+    justify-content: space-between;
     padding-top: 24px;
     padding-bottom: 26px;
     height: 50px;

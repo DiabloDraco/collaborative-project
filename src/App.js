@@ -17,6 +17,7 @@ import Capitalbankpartners from "./pages/capitalbankpartners";
 import Resources from "./pages/resources";
 import Compliance from "./pages/compliance";
 import JoinCapital from "./pages/joincapital";
+import OurLocation from "./pages/our-location";
 
 function App() {
   return (
@@ -38,6 +39,7 @@ function App() {
           <Route path="/resources" element={<Resources />} />
           <Route path="/compliance" element={<Compliance />} />
           <Route path="/joincapital" element={<JoinCapital />} />
+          <Route path="/our-location" element={<OurLocation />} />
         </Routes>
         <Footer />
       </div>
