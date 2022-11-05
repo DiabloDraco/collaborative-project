@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom'
 import HomeCard from '../../components/homeCard'
 import CardAva from './../../assets/images/cardAva.png'
 import './homePage.css'
@@ -57,7 +58,7 @@ function HomePage() {
             </div>
 
             <div className='home__info'>
-                <a className='home__info-link'>Form CRS (Customer Relationship Summary) for our entities</a>
+                <Link to={'/'} className='home__info-link'>Form CRS (Customer Relationship Summary) for our entities</Link>
             </div>
         </div>
     )

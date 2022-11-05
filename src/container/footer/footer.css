@@ -36,15 +36,7 @@
     padding: 12px 0;
     border-bottom: 1px solid #434a54;
     cursor: pointer;
-<<<<<<< HEAD
     text-align: center;
-    padding-right: 70px;
-=======
-    transition: 0.5s;
-    margin-right: 70px;
-    text-align: start;
-
->>>>>>> b2059e9d6df7b2cadb17729b67b5c58205831329
 }
 
 .footer__item-link:hover {

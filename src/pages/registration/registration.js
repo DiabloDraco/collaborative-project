@@ -21,17 +21,23 @@ function Registration() {
     function postInfo(e) {
         e.preventDefault();
         if (password.current.value === confirm.current.value && password.current.value.length >= 8) {
-            console.log(
-                name.current.value,
-                last.current.value,
-                mail.current.value,
-                phone.current.value,
-                country.current.value,
-                password.current.value,
-                confirm.current.value
-            );
+            fetch("https://sado111.herokuapp.com/register", {
+                method: "POST",
+                headers: {
+                    "Content-Type": "Application/json"
+                },
+                body: {
+                    "username": `${name.current.value}`,
+                    "lastname": `${last.current.value}`,
+                    "password": `${password.current.value}`,
+                    "email": `${mail.current.value}`,
+                    "contact": `${phone.current.value}`
+                }
+            })
+            .then(req => req.json())
+            .then(data => console.log(data))
             document.querySelector(".password__error").style.display = 'none'
-        }else{
+        } else {
             document.querySelector(".password__error").style.display = 'flex'
         }
     }
@@ -39,10 +45,11 @@ function Registration() {
     function error(e) {
         if (!(e.target.value.length > 0)) {
             e.target.classList.add("visiblee")
-        }else{
+        } else {
             e.target.classList.remove("visiblee")
         }
     }
+
 
     return (
         <>

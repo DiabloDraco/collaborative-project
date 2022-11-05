@@ -15,6 +15,7 @@ import Registration from "./pages/registration";
 import Login from "./pages/login";
 import Capitalbankpartners from "./pages/capitalbankpartners";
 import Resources from "./pages/resources";
+import Compliance from "./pages/compliance";
 
 function App() {
   return (
@@ -34,6 +35,7 @@ function App() {
           <Route path="/affiliates" element={<Affiliates />} />
           <Route path="/capitalbankpartners" element={<Capitalbankpartners />} />
           <Route path="/resources" element={<Resources />} />
+          <Route path="/compliance" element={<Compliance />} />
         </Routes>
         <Footer />
       </div>

@@ -8,13 +8,22 @@ function Login() {
         document.querySelector(".header-wrapper").remove()
         document.querySelector(".footer__wrapper").remove()
     }, [])
-    function postInfo(e) {
+   async function postInfo(e) {
         e.preventDefault();
         if (mail && password) {
-            console.log(
-                mail.current.value,
-                password.current.value,
-            );
+          let res = await  fetch("https://sado111.herokuapp.com/login", {
+                method: "POST",
+                headers: {
+                    "Content-Type": "application/json"
+                },
+                body: {
+                    email: `${mail.current.value}`,
+                    password: `${password.current.value}`
+                }
+            })
+               
+            res = await res.json()
+            console.log(res)
             document.querySelector(".password__error").style.display = 'none'
         } else {
             document.querySelector(".password__error").style.display = 'flex'
