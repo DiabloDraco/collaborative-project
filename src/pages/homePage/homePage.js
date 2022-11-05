@@ -62,7 +62,7 @@ function HomePage() {
             </div>
 
             <div className='home__info'>
-                <Link to={'/'} className='home__info-link'>Form CRS (Customer Relationship Summary) for our entities</Link>
+                <Link to={'/compliance'} className='home__info-link'>Form CRS (Customer Relationship Summary) for our entities</Link>
             </div>
         </div>
     )

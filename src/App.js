@@ -15,11 +15,8 @@ import Registration from "./pages/registration";
 import Login from "./pages/login";
 import Capitalbankpartners from "./pages/capitalbankpartners";
 import Resources from "./pages/resources";
-<<<<<<< HEAD
 import Compliance from "./pages/compliance";
-=======
 import JoinCapital from "./pages/joincapital";
->>>>>>> 57a77149dc91a2610877bb3e96bfed3d2c652585
 
 function App() {
   return (
@@ -39,11 +36,8 @@ function App() {
           <Route path="/affiliates" element={<Affiliates />} />
           <Route path="/capitalbankpartners" element={<Capitalbankpartners />} />
           <Route path="/resources" element={<Resources />} />
-<<<<<<< HEAD
           <Route path="/compliance" element={<Compliance />} />
-=======
           <Route path="/joincapital" element={<JoinCapital />} />
->>>>>>> 57a77149dc91a2610877bb3e96bfed3d2c652585
         </Routes>
         <Footer />
       </div>
