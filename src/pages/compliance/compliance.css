@@ -31,6 +31,9 @@
 
 .compilance__link {
     text-decoration: none;
+    display: inline-block;
+    width: 100%;
+    cursor: pointer;
     color: #aab2bd;
     font-size: 13px;
     font-weight: 700;

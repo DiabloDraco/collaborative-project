@@ -210,6 +210,7 @@
     text-align: center;
     cursor: pointer;
     width: 169px;
+    text-decoration: none;
 }
 
 .header__bottom-open:hover {

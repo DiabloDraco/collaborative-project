@@ -24,11 +24,11 @@
 .counsel__subtitle {
     margin: 0;
     margin-bottom: 25px;
-    font-family: "Roboto", Arial, Verdana;
-    font-weight: 900;
+    font-family: "Montserrat";
+    font-weight: 800;
     font-size: 13px;
     line-height: 30px;
-color: #F29C37;
+    color: #F29C37;
 }
 
 .counsel__subtitle-text {
@@ -45,7 +45,7 @@ color: #F29C37;
 
 .counsel__span {
     margin: 0;
-    font-family: "Roboto", Arial, Verdana;
+    font-family: "Montserrat";
     font-weight: 900;
     font-size: 13px;
     line-height: 30px;

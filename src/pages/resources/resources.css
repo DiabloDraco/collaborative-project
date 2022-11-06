@@ -1,0 +1,15 @@
+.mn {
+    margin: 0; 
+}
+
+.resources__title {
+    font-size: 16px;
+    line-height: 22px;
+    margin: 0;
+    margin-bottom: 10px;
+    margin-top: 10px;
+    font-weight: 700;
+    font-variant: normal;
+    white-space: normal;
+    color: #404040;
+}

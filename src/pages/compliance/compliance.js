@@ -1,4 +1,9 @@
 import './compliance.css'
+import CRSCIG from './../../assets/files/CRSCIG1.pdf'
+import CRSCIB from './../../assets/files/CRSCIB1.pdf'
+import CRSCOUNSEL from './../../assets/files/CRSCOUNSEL1.pdf'
+import CRSCIAS from './../../assets/files/CRSCIAS1.pdf'
+import BusinessContinuityPlanNotice from './../../assets/files/BusinessContinuityPlanNotice.pdf'
 
 function Compliance() {
     return (
@@ -14,20 +19,20 @@ function Compliance() {
                 <h2 className='compilance__title bigger'>
                     Client Relationship Summaries for Our Entities (Form CRS)
                 </h2>
-                <a className='project__links' href="">
+                <a className='project__links' href={CRSCIG} target="_blank">
                     Capital Investment Group, Inc.
                 </a>
-                <a className='project__links' href="">
+                <a className='project__links' href={CRSCIB} target={'_blank'}>
                     Capital Investment Brokerage, Inc.
                 </a>
-                <a className='project__links' href="">
+                <a className='project__links' href={CRSCOUNSEL} target={'_blank'}>
                     Capital Investment Counsel Inc.
                 </a>
-                <a className='project__links' href="">
+                <a className='project__links' href={CRSCIAS} target={'_blank'}>
                     Capital Investment Advisory Services, LLC
                 </a>
 
-                <a className='compilance__title bigger__link' href="">
+                <a className='compilance__title bigger__link' href={BusinessContinuityPlanNotice} target={'_blank'}>
                     Business Continuity Notice
                 </a>
 
