@@ -222,9 +222,9 @@ function Header() {
                             </li>
                         </ul>
                     </nav>
-                    <a href='https://coinumm.com/ru/fast-flow-landing' target={'_blank'} className='header__bottom-open'>
+                    <Link to={'/login'} target="_blank" className='header__bottom-open'>
                         OPEN ACCOUNT
-                    </a>
+                    </Link>
                 </div>
             </div>
 

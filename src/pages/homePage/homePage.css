@@ -54,6 +54,9 @@
     font-size: 16px;
     line-height: 20px;
     color: #FFFFFF;
+
+    padding: 15px 20px;
+    text-decoration: none;
 }
 
 .home__top-contact:hover {
@@ -78,8 +81,10 @@
     text-align: center;
     border: 2px solid #F29C37;
     border-radius: 100px;
-    width: 122px;
+    
     cursor: pointer;
+    padding: 15px 20px;
+    text-decoration: none;
 }
 
 .home__top-join:hover {

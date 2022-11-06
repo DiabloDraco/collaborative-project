@@ -5,6 +5,8 @@ import CardAva from './../../assets/images/icon1.svg'
 import CardAva2 from './../../assets/images/icon2.svg'
 import CardAva3 from './../../assets/images/icon3.svg'
 
+import HeroWidget from "../../components/heroWidget";
+
 import './homePage.css'
 
 function HomePage() {
@@ -16,12 +18,12 @@ function HomePage() {
                         INTEGRITY INDEPENDENTS INNOVATION
                     </h1>
                     <div className='home__top-btn-wrapper'>
-                        <a className='home__top-contact'>
-                            CONTACT US
-                        </a>
-                        <a className='home__top-join'>
-                            Join US
-                        </a>
+                        <Link to={'/login'} className='home__top-contact'>
+                            JOIN US
+                        </Link>
+                        <Link to={'joincapital/reasons'} className='home__top-join'>
+                            RAESONS TO JOIN
+                        </Link>
                     </div>
                     <p className='home__top-text'>
                         Over 110.000 users
@@ -29,6 +31,7 @@ function HomePage() {
                     <div className='home__top-eagle'></div>
                 </div>
             </div>
+          <HeroWidget />
             <div className='home__middle-wrapper'>
                 <div className='home__middle container'>
                     <p className='home__middle-text'>
