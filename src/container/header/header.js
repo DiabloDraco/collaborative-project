@@ -222,9 +222,9 @@ function Header() {
                             </li>
                         </ul>
                     </nav>
-                    <Link to={'/login'} target="_blank" className='header__bottom-open'>
+                    <a href='/login' rel="noopener noreferrer" target="_blank" className='header__bottom-open'>
                         OPEN ACCOUNT
-                    </Link>
+                    </a>
                 </div>
             </div>
 
