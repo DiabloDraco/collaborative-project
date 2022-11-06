@@ -1,6 +1,7 @@
 import { useEffect, useRef } from 'react'
-import { Link } from 'react-router-dom'
+import { Link, NavLink } from 'react-router-dom'
 import fullLogo from './../../assets/images/fullLogo.svg'
+import { ReactComponent as DownArrow } from './../../assets/images/downArrow.svg'
 import './login.css'
 
 function Login() {
@@ -55,6 +56,14 @@ function Login() {
                         <Link className='login__toReg' target={'_parent'} to={'/registraion'}>Register</Link>
                     </div>
                 </form>
+
+                <div className='log__homeButton'>
+                    <NavLink target={'_parent'} to={'/'} className='header__nav-link log__link'>
+                         <DownArrow className='log__arrow' width={14} height={7} />
+                            Home
+                                   
+                    </NavLink>
+                </div>
             </div>
         </>
     )

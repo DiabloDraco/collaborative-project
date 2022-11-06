@@ -3,6 +3,8 @@ import fullLogo from './../../assets/images/fullLogo.svg'
 import * as Yup from 'yup'
 import { useFormik } from 'formik'
 import { useEffect, useRef } from 'react'
+import { Link,NavLink } from 'react-router-dom'
+import { ReactComponent as DownArrow } from './../../assets/images/downArrow.svg'
 
 function Registration() {
     useEffect(() => {
@@ -86,7 +88,18 @@ function Registration() {
                         <div className='error__confirm error'>Please complete all required fields!</div>
                     </label>
                     <button className='submit__btn' type='submit'>Register</button>
+                    <div className='login__bottom'>
+                        <Link className='login__toReg' target={'_parent'} to={'/login'}>Login</Link>
+                    </div>
                 </form>
+
+                <div className='log__homeButton'>
+                    <NavLink target={'_parent'} to={'/'} className='header__nav-link log__link'>
+                         <DownArrow className='log__arrow' width={14} height={7} />
+                            Home
+                                   
+                    </NavLink>
+                </div>
             </div>
         </>
     )

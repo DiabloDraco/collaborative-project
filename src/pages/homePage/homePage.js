@@ -21,7 +21,7 @@ function HomePage() {
                         <Link to={'/login'} className='home__top-contact'>
                             JOIN US
                         </Link>
-                        <Link to={'joincapital/reasons'} className='home__top-join'>
+                        <Link to={'/reasons'} className='home__top-join'>
                             RAESONS TO JOIN
                         </Link>
                     </div>

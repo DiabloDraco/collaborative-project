@@ -3,6 +3,7 @@
     align-items: center;
     flex-direction: column;
     justify-content: center;
+    height: 100vh;
 }
 
 .log__logo {
@@ -103,7 +104,7 @@
     box-shadow: 0 0 0 1px #00d084;
 }
 
-.error__name {}
+/* .error__name {}
 
 .error {}
 
@@ -117,7 +118,7 @@
 
 .error__password {}
 
-.error__confirm {}
+.error__confirm {} */
 
 .submit__btn {
     font-family: 'Montserrat';
@@ -165,4 +166,33 @@
     text-decoration: none;
     padding-right: 10px;
     padding-left: 10px;
+}
+
+.log__homeButton {
+    position: absolute;
+    left: 30px;
+    bottom: 30px;
+
+    display: flex;
+    align-items: center;
+}
+.log__arrow {
+    margin-right: 4PX;
+    transition: 0.4s;
+    transform: rotate(90deg);
+}
+
+.log__arrow path{
+    stroke: #F29C37;
+}
+
+.log__homeButton:hover .log__arrow {
+ transform: translateX(-5px) rotate(90deg);
+}
+
+.log__link {
+    display: flex;
+    align-items: center;
+    align-content: center;
+    font-size: 18px;
 }

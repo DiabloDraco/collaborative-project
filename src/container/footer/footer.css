@@ -5,10 +5,10 @@
 .footer__top {
     background-color: #333942;
 }
-.footer__top-inner-wrapper {
+/* .footer__top-inner-wrapper {
 }
 .container {
-}
+} */
 .footer__top-list {
     display: flex;
     gap: 20px;
@@ -20,7 +20,7 @@
 .footer__top-item {
     text-decoration: none;
     display: flex;
-    align-items: start;
+    align-items: flex-start;
 }
 .footer__item-link {
     text-decoration: none;
@@ -66,8 +66,8 @@
     max-width: 100%;
     gap: 21px;
 }
-.footer__bottom-item {
-}
+/* .footer__bottom-item {
+} */
 .footer__bottom-link {
     font-size: 15px;
     text-decoration: none;

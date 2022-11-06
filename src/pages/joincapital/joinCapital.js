@@ -11,8 +11,8 @@ function JoinCapital() {
                     JOIN OUR TEAM
                 </h2>
                 <div className='join__buttons-wrapper'>
-                    <Link to={'/candidates'} className='join__button'>
-                        Join Capital
+                    <Link to={'/login'} className='join__button'>
+                        Join
                     </Link>
                     <Link to={'/reasons'} className='join__button'>
                         Reasons to join

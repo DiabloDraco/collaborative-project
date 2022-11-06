@@ -1,4 +1,4 @@
-.container {}
+/* .container {} */
 
 .join__image {
     display: flex;
@@ -9,7 +9,7 @@
     margin-bottom: 30px;
 }
 
-.counsel__heading {}
+/* .counsel__heading {} */
 
 .join__buttons-wrapper {
     display: flex;
@@ -23,24 +23,25 @@
     text-decoration: none;
     height: 30px;
     background: #F29C37;
-    border-bottom: 1px solid #f29b37c5;
     padding: 12px 22px;
-    font-size: 13px;
-    border-radius: 25px;
-    font-weight: 500;
+    font-size: 16px;
+    border-radius: 100px;
+    font-weight: 600;
     text-align: center;
     display: flex;
     justify-content: center;
     flex-direction: column;
     color: #FFF !important;
     cursor: pointer;
+
+    text-transform: uppercase;
 }
 
 .join__button:hover {
-    background: #89929d;
+
     color: #FFF!important;
     text-decoration: none;
-    border-bottom: 1px solid #656d78;
+
 }
 
 .join__button:active {
