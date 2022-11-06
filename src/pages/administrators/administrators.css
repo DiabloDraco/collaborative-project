@@ -12,7 +12,7 @@
 .administrators__item-title {
     color: #333333;
     font-weight: bold;
-    font-family: 'Roboto', Arial, Verdana;
+   font-family: 'Montserrat';
     -webkit-font-smoothing: antialiased;
     overflow-x: hidden;
     font-size: 13px;
@@ -22,7 +22,7 @@
 .administrators__item-text {
     color: #898989;
     font-weight: 400;
-    font-family: 'Roboto', Arial, Verdana;
+   font-family: 'Montserrat';
     -webkit-font-smoothing: antialiased;
     overflow-x: hidden;
     font-size: 13px;
@@ -37,7 +37,7 @@
 
 .administrators__subitem {
     color: #898989;
-    font-family: 'Roboto', Arial, Verdana;
+   font-family: 'Montserrat';
     font-weight: 400;
     -webkit-font-smoothing: antialiased;
     font-size: 13px;
