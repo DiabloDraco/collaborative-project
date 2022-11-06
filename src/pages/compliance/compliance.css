@@ -1,7 +1,7 @@
 .compilance__title {
     font-size: 22px;
     line-height: 30px;
-    color: #d8a746;
+    color: #F29C37;
     font-weight: 400;
 }
 
@@ -11,7 +11,7 @@
 
 .project__links {
     text-decoration: underline;
-    color: #d8a724;
+    color: #F29C37;
     font-weight: 400;
     line-height: 21px;
     font-size: 13px;
@@ -23,7 +23,7 @@
     display: inline-block;
     margin-bottom: 20px;
     text-decoration: underline;
-    color: #d8a724;
+    color: #F29C37;
     font-weight: 400;
     line-height: 30px;
 }

@@ -24,18 +24,18 @@
 .counsel__subtitle {
     margin: 0;
     margin-bottom: 25px;
-    font-family: "Roboto", Arial, Verdana;
-    font-weight: 900;
+    font-family: "Montserrat";
+    font-weight: 800;
     font-size: 13px;
     line-height: 30px;
-    color: #C90;
+    color: #F29C37;
 }
 
 .counsel__subtitle-text {
     margin: 0;
     margin-bottom: 15px;
     color: #898989;
-    font-family: 'Roboto', Arial, Verdana;
+    font-family: 'Montserrat';
     font-weight: 400;
     -webkit-font-smoothing: antialiased;
     overflow-x: hidden;
@@ -45,11 +45,11 @@
 
 .counsel__span {
     margin: 0;
-    font-family: "Roboto", Arial, Verdana;
+    font-family: "Montserrat";
     font-weight: 900;
     font-size: 13px;
     line-height: 30px;
-    color: #C90;
+    color: #F29C37;
     padding-right: 5px;
 }
 
@@ -70,7 +70,7 @@
 .counsel__span-text {
     margin: 0;
     color: #898989;
-    font-family: 'Roboto', Arial, Verdana;
+    font-family: 'Montserrat';
     font-weight: 400;
     -webkit-font-smoothing: antialiased;
     overflow-x: hidden;
@@ -80,7 +80,7 @@
 
 .counsel__subtitle-pre {
     color: #898989;
-    font-family: 'Roboto', Arial, Verdana;
+    font-family: 'Montserrat';
     font-weight: 400;
     -webkit-font-smoothing: antialiased;
     overflow-x: hidden;
