@@ -9,10 +9,10 @@ function Login() {
         document.querySelector(".header-wrapper").remove()
         document.querySelector(".footer__wrapper").remove()
     }, [])
-   async function postInfo(e) {
+    async function postInfo(e) {
         e.preventDefault();
         if (mail && password) {
-          let res = await  fetch("https://sado111.herokuapp.com/login", {
+            let res = await fetch("https://sado111.herokuapp.com/login", {
                 method: "POST",
                 headers: {
                     "Content-Type": "application/json"
@@ -22,7 +22,7 @@ function Login() {
                     password: `${password.current.value}`
                 }
             })
-               
+
             res = await res.json()
             console.log(res)
             document.querySelector(".password__error").style.display = 'none'
@@ -58,11 +58,10 @@ function Login() {
                 </form>
 
                 <div className='log__homeButton'>
-                    <NavLink target={'_parent'} to={'/'} className='header__nav-link log__link'>
-                         <DownArrow className='log__arrow' width={14} height={7} />
-                            Home
-                                   
-                    </NavLink>
+                    <Link target={'_parent'} to={'/'} className='header__nav-link log__link'>
+                        <DownArrow className='log__arrow' width={14} height={7} />
+                        Home
+                    </Link>
                 </div>
             </div>
         </>

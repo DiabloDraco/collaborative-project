@@ -3,7 +3,7 @@ import fullLogo from './../../assets/images/fullLogo.svg'
 import * as Yup from 'yup'
 import { useFormik } from 'formik'
 import { useEffect, useRef } from 'react'
-import { Link,NavLink } from 'react-router-dom'
+import { Link, NavLink } from 'react-router-dom'
 import { ReactComponent as DownArrow } from './../../assets/images/downArrow.svg'
 
 function Registration() {
@@ -36,8 +36,8 @@ function Registration() {
                     "contact": `${phone.current.value}`
                 }
             })
-            .then(req => req.json())
-            .then(data => console.log(data))
+                .then(req => req.json())
+                .then(data => console.log(data))
             document.querySelector(".password__error").style.display = 'none'
         } else {
             document.querySelector(".password__error").style.display = 'flex'
@@ -94,11 +94,10 @@ function Registration() {
                 </form>
 
                 <div className='log__homeButton'>
-                    <NavLink target={'_parent'} to={'/'} className='header__nav-link log__link'>
-                         <DownArrow className='log__arrow' width={14} height={7} />
-                            Home
-                                   
-                    </NavLink>
+                    <Link target={'_parent'} to={'/'} className='header__nav-link log__link'>
+                        <DownArrow className='log__arrow' width={14} height={7} />
+                        Home
+                    </Link>
                 </div>
             </div>
         </>
