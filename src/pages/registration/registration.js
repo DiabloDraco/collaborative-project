@@ -91,14 +91,15 @@ function Registration() {
                     <div className='login__bottom'>
                         <Link className='login__toReg' target={'_parent'} to={'/login'}>Login</Link>
                     </div>
+                    <div className='reg__homeButton'>
+                        <Link target={'_parent'} to={'/'} className='header__nav-link log__link'>
+                            <DownArrow className='log__arrow' width={14} height={7} />
+                            Home
+                        </Link>
+                    </div>
                 </form>
 
-                <div className='log__homeButton'>
-                    <Link target={'_parent'} to={'/'} className='header__nav-link log__link'>
-                        <DownArrow className='log__arrow' width={14} height={7} />
-                        Home
-                    </Link>
-                </div>
+
             </div>
         </>
     )

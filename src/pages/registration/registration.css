@@ -14,26 +14,22 @@
     gap: 7px;
 }
 .reg__label {
-    max-width: 470px;
-    box-shadow: 0 0 0 1px black;
-    transition: all 0.3s ease;
-    border-radius: 3px;
-}
-.reg__input {
     width: 440px;
+    transition: all 0.3s ease;
+}
+
+.reg__input {
+    width: 420px;
+    display: block;
     background-color: #fafafa;
-    border: 1px solid rgba(0, 0, 0, 0.1);
     color: #444;
-    padding: 8px 10px 7px;
-    background-color: none !important;
-    border: none !important;
+    border: #333 solid 1px;
+    border-radius: 20px;
     padding: 10px;
-    display: inline-block;
-    min-height: 38px;
+    max-height: 38px;
     font-size: 14px;
     line-height: 1.8;
-    vertical-align: middle;
-    border: none;
+    border-radius: 5px;
 }
 
 .error {
@@ -88,4 +84,34 @@
 .m {
     margin-top: 20px;
     margin-bottom: 20px;
+}
+
+.reg__homeButton {
+    position: absolute;
+    left: 30px;
+    bottom: 30px;
+
+    display: flex;
+    align-items: center;
+}
+
+.reg__homeButton:hover .log__arrow {
+    transform: translateX(-5px) rotate(90deg);
+}
+
+@media only screen and (max-width: 900px) {
+    /* MOBILE */
+
+    .reg__homeButton {
+        position: absolute;
+        left: 30px;
+        bottom: -100px;
+    
+        display: flex;
+        align-items: center;
+    }
+    
+    .reg__homeButton:hover .log__arrow {
+        transform: translateX(-5px) rotate(90deg);
+    }
 }
