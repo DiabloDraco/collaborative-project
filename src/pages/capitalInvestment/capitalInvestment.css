@@ -54,3 +54,20 @@
     line-height: 20px;
     color: #000000;
 }
+
+@media only screen and (max-width: 900px) {
+    /* MOBILE */
+
+    .capitalI__bottom-heading {
+        margin: 0;
+        font-family: 'Montserrat';
+        font-style: normal;
+        font-weight: 600;
+        font-size: 32px;
+        line-height: 39px;
+        color: #F29C37;
+        margin-bottom: 38px;
+        max-width: 878px;
+        width: 90%;
+    }
+}

@@ -4,8 +4,20 @@ import Login from './../../assets/images/login.svg'
 import Logo from './../../assets/images/logo.svg'
 import Register from './../../assets/images/register.svg'
 import { ReactComponent as DownArrow } from './../../assets/images/downArrow.svg'
+import { useRef } from 'react'
+import cross from './../../assets/images/cross-svgrepo-com.svg'
+import hamburger from './../../assets/images/hamburger-menu-svgrepo-com.svg'
 
 function Header() {
+
+    let navbar = useRef(null)
+
+    function close() {
+        navbar.current.style.display = 'none'
+    }    
+    function open() {
+        navbar.current.style.display = 'flex'
+    }
 
     return (
         <>
@@ -21,7 +33,7 @@ function Header() {
                                 <img className='header__login-icon' src={Login} alt="Login" />
                                 LOGIN
                             </Link>
-                            <Link to={'/registraion'} rel="noopener noreferrer" target='_blank'  className='header__right-register'>
+                            <Link to={'/registraion'} rel="noopener noreferrer" target='_blank' className='header__right-register'>
                                 <img className='header__register-icon' src={Register} alt="Register" />
                                 REGISTER
                             </Link>
@@ -32,8 +44,13 @@ function Header() {
                     <NavLink end to={'/'} className='header__bottom-logo-link'>
                         <img className='header__bottom-logo' src={Logo} alt="logo" width={66.17} height={65} />
                     </NavLink>
-                    <nav className='header__navbar'>
+                    <nav ref={navbar} className='header__navbar'>
                         <ul className='header__nav-list'>
+                            <li className='header__nav-item header__cross-wrapper'>
+                                <button onClick={close} className='header__cross'>
+                                    <img src={cross} alt="cross" />
+                                </button>
+                            </li>
                             <li className='header__nav-item'>
                                 <NavLink end to={'/'} className='header__nav-link'>
                                     Home
@@ -225,6 +242,9 @@ function Header() {
                     <a href='https://coinumm.com/ru/fast-flow-landing' rel="noopener noreferrer" target="_blank" className='header__bottom-open'>
                         OPEN ACCOUNT
                     </a>
+                    <button onClick={open} className='header__brg'>
+                        <img src={hamburger} alt="hamburger" />
+                    </button>
                 </div>
             </div>
 
