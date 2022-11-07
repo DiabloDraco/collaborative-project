@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/static/css/main.c4b604a1.css",
-    "main.js": "/static/js/main.180ee2bf.js",
+    "main.js": "/static/js/main.06c16591.js",
     "static/media/PrivacyNotice.pdf": "/static/media/PrivacyNotice.3658e3597bf444e1eee5.pdf",
     "static/media/office.jpg": "/static/media/office.d28dda6977e0554d5b80.jpg",
     "static/media/FinancialCalculators.pdf": "/static/media/FinancialCalculators.1d61832ef759111f072d.pdf",
@@ -27,18 +27,18 @@
     "static/media/montserrat-v25-latin-regular.woff2": "/static/media/montserrat-v25-latin-regular.acb6629fe45c43ad5d8b.woff2",
     "static/media/montserrat-v25-latin-600.woff2": "/static/media/montserrat-v25-latin-600.5d6df38dd70f631c488b.woff2",
     "static/media/montserrat-v25-latin-900.woff2": "/static/media/montserrat-v25-latin-900.0224a085141ad2d60479.woff2",
-    "static/media/icon3.svg": "/static/media/icon3.6727b10be61f2a343e2159cb755dc3b1.svg",
-    "static/media/icon2.svg": "/static/media/icon2.144c2eb13c664027e1ef1db875ddc5c3.svg",
-    "static/media/icon1.svg": "/static/media/icon1.4c705d79a3bf85274ee123b94581649c.svg",
+    "static/media/icon3.svg": "/static/media/icon3.959eb84042e25f94145d009d29b1b045.svg",
+    "static/media/icon2.svg": "/static/media/icon2.676995827ab3ea1ada2f418b65de85b8.svg",
+    "static/media/icon1.svg": "/static/media/icon1.4e5e8ea312ebcfaccf85c5a00a354410.svg",
     "index.html": "/index.html",
     "static/media/login.svg": "/static/media/login.5128da8feabee423a9a29ea4939d480a.svg",
     "static/media/register.svg": "/static/media/register.f36e453f0bea96fc1164a9d6c9ba6699.svg",
     "static/media/downArrow.svg": "/static/media/downArrow.b418d12a1525e34c99b25caf1fbe1f32.svg",
     "main.c4b604a1.css.map": "/static/css/main.c4b604a1.css.map",
-    "main.180ee2bf.js.map": "/static/js/main.180ee2bf.js.map"
+    "main.06c16591.js.map": "/static/js/main.06c16591.js.map"
   },
   "entrypoints": [
     "static/css/main.c4b604a1.css",
-    "static/js/main.180ee2bf.js"
+    "static/js/main.06c16591.js"
   ]
 }
