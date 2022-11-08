@@ -1,6 +1,10 @@
 import { Link } from 'react-router-dom'
 import HomeCard from '../../components/homeCard'
 
+import item1 from './../../assets/images/1.png'
+import item2 from './../../assets/images/2.png'
+import item3 from './../../assets/images/3.png'
+
 import CardAva from './../../assets/images/icon1.svg'
 import CardAva2 from './../../assets/images/icon2.svg'
 import CardAva3 from './../../assets/images/icon3.svg'
@@ -66,6 +70,12 @@ function HomePage() {
 
             <div className='home__info'>
                 <Link to={'/compliance'} className='home__info-link'>Form CRS (Customer Relationship Summary) for our entities</Link>
+            </div>
+
+            <div className='container rev'>
+                <img src={item1}></img>
+                <img src={item2}></img>
+                <img src={item3}></img>
             </div>
         </div>
     )

@@ -432,4 +432,12 @@
         height: 30px;
         object-fit: contain;
     }
+
+    .header__left {
+        display: grid;
+    }
+
+    .header__right  {
+        align-items: flex-start
+    }
 }

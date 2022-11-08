@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/static/css/main.c4b604a1.css",
-    "main.js": "/static/js/main.06c16591.js",
+    "main.css": "/static/css/main.09ba711c.css",
+    "main.js": "/static/js/main.36b36d32.js",
     "static/media/PrivacyNotice.pdf": "/static/media/PrivacyNotice.3658e3597bf444e1eee5.pdf",
     "static/media/office.jpg": "/static/media/office.d28dda6977e0554d5b80.jpg",
     "static/media/FinancialCalculators.pdf": "/static/media/FinancialCalculators.1d61832ef759111f072d.pdf",
@@ -21,6 +21,9 @@
     "static/media/montserrat-v25-latin-regular.woff": "/static/media/montserrat-v25-latin-regular.281179d375517d9c131b.woff",
     "static/media/montserrat-v25-latin-600.woff": "/static/media/montserrat-v25-latin-600.e5f115311730acb7c305.woff",
     "static/media/montserrat-v25-latin-900.woff": "/static/media/montserrat-v25-latin-900.309923ab7ba30c01d1a7.woff",
+    "static/media/1.png": "/static/media/1.d9e2fffd29f3a41c7fd3.png",
+    "static/media/3.png": "/static/media/3.5c5724b71a6fa9e1c96e.png",
+    "static/media/2.png": "/static/media/2.e23fe84458aa889a46c3.png",
     "static/media/montserrat-v25-latin-800.woff2": "/static/media/montserrat-v25-latin-800.1d6a43e98bd10cc3f86d.woff2",
     "static/media/montserrat-v25-latin-700.woff2": "/static/media/montserrat-v25-latin-700.56c09b9a46af6a54eeb3.woff2",
     "static/media/montserrat-v25-latin-500.woff2": "/static/media/montserrat-v25-latin-500.38a674fae449557fef97.woff2",
@@ -30,15 +33,17 @@
     "static/media/icon3.svg": "/static/media/icon3.959eb84042e25f94145d009d29b1b045.svg",
     "static/media/icon2.svg": "/static/media/icon2.676995827ab3ea1ada2f418b65de85b8.svg",
     "static/media/icon1.svg": "/static/media/icon1.4e5e8ea312ebcfaccf85c5a00a354410.svg",
+    "static/media/cross-svgrepo-com.svg": "/static/media/cross-svgrepo-com.dfbd992551e69deacab7f863a3b08dd5.svg",
     "index.html": "/index.html",
     "static/media/login.svg": "/static/media/login.5128da8feabee423a9a29ea4939d480a.svg",
     "static/media/register.svg": "/static/media/register.f36e453f0bea96fc1164a9d6c9ba6699.svg",
+    "static/media/hamburger-menu-svgrepo-com.svg": "/static/media/hamburger-menu-svgrepo-com.1719fcfcad0a1ef0cbc7d195049280ad.svg",
     "static/media/downArrow.svg": "/static/media/downArrow.b418d12a1525e34c99b25caf1fbe1f32.svg",
-    "main.c4b604a1.css.map": "/static/css/main.c4b604a1.css.map",
-    "main.06c16591.js.map": "/static/js/main.06c16591.js.map"
+    "main.09ba711c.css.map": "/static/css/main.09ba711c.css.map",
+    "main.36b36d32.js.map": "/static/js/main.36b36d32.js.map"
   },
   "entrypoints": [
-    "static/css/main.c4b604a1.css",
-    "static/js/main.06c16591.js"
+    "static/css/main.09ba711c.css",
+    "static/js/main.36b36d32.js"
   ]
 }
