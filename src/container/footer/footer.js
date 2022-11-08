@@ -14,11 +14,11 @@ function Footer() {
                                     CAPITAL INVESTMENT GROUP, INC.
                                 </Link>
                             </li>
-                            <li className='footer__top-item'>
+                            {/* <li className='footer__top-item'>
                                 <Link to={'/advisers'} className='footer__item-link'>
                                     CAPITAL ADVISERS, INC.
                                 </Link>
-                            </li>
+                            </li> */}
                             <li className='footer__top-item'>
                                 <Link to={'/trustservice'} className='footer__item-link'>
                                     CAPITAL'S TRUST SERVICES

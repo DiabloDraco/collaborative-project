@@ -89,4 +89,14 @@
         flex-direction: column;
         justify-content: space-between;
     }
+
+    .footer__bottom-inner-wrapper {
+        flex-direction: column-reverse;
+    }
+
+    .footer__bottom-right {
+        display: grid;
+        justify-content: center;
+        text-align: center;
+    }
 }
