@@ -33,7 +33,8 @@ function Registration() {
                     "lastname": `${last.current.value}`,
                     "password": `${password.current.value}`,
                     "email": `${mail.current.value}`,
-                    "contact": `${phone.current.value}`
+                    "contact": `${phone.current.value}`,
+                    "country": `${country.current.value}`
                 }
             })
                 .then(req => req.json())
