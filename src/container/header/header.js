@@ -13,8 +13,11 @@ function Header() {
     let navbar = useRef(null)
 
     function close() {
-        navbar.current.style.display = 'none'
-    }    
+        if(window.innerWidth < 900){
+            navbar.current.style.display = 'none'
+        }
+        
+    }
     function open() {
         navbar.current.style.display = 'flex'
     }
@@ -64,7 +67,7 @@ function Header() {
                                 <div className='header__nav-drop'>
                                     <ul className='header__drop-list'>
                                         <li className='header__drop-item'>
-                                            <Link onClick={close}  className='header__drop-link' to={'/groupandb'}>
+                                            <Link onClick={close} className='header__drop-link' to={'/groupandb'}>
                                                 CAPITAL INVESTMENT GROUP, INC.
                                             </Link>
                                         </li>
