@@ -1,7 +1,7 @@
 import './registration.css'
 import fullLogo from './../../assets/images/fullLogo.svg'
 import { useEffect, useRef } from 'react'
-import { Link, NavLink } from 'react-router-dom'
+import { Link, NavLink, useNavigate } from 'react-router-dom'
 import { ReactComponent as DownArrow } from './../../assets/images/downArrow.svg'
 
 function Registration() {
@@ -17,31 +17,39 @@ function Registration() {
     let country = useRef(null)
     let password = useRef(null)
     let confirm = useRef(null)
+    let navigator = useNavigate()
 
-    function postInfo(e) {
+    async function postInfo(e) {
         e.preventDefault();
+        let checkTo = (val) => val.status == 200 ? save(val.token , val.status) : form.current.reset()
+        function save(token , status) {
+            if (token && status == 200) {
+                localStorage.setItem("token" , JSON.stringify(token))
+                navigator("/profile")
+            }
+        }
         if (password.current.value === confirm.current.value && password.current.value.length >= 8) {
-            fetch("https://sado111.herokuapp.com/register", {
+            let req = await fetch("https://freedomen.herokuapp.com/register", {
                 method: "POST",
                 headers: {
-                    "Content-Type": "Application/json"
+                    "content-Type": "Application/json"
                 },
-                body: {
+                body: JSON.stringify({
                     "username": `${name.current.value}`,
                     "lastname": `${last.current.value}`,
                     "password": `${password.current.value}`,
                     "email": `${mail.current.value}`,
                     "contact": `${phone.current.value}`,
                     "country": `${country.current.value}`
-                }
+                })
             })
-                .then(req => req.json())
-                .then(data => console.log(data))
+            req = await req.json()
+            await checkTo(req)
             document.querySelector(".password__error").style.display = 'none'
         } else {
             document.querySelector(".password__error").style.display = 'flex'
         }
-    }
+    }   
 
     function error(e) {
         if (!(e.target.value.length > 0)) {

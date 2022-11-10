@@ -46,7 +46,7 @@ function HomePage() {
                     <p className='home__middle-text'>
                         Over the last three decades, Capital Investment Companies has built a loyal following through our independence and self-determination. By avoiding the merger/acquisition lure that flooded the financial services industry over the last several years, our company has remained solid and strong, growing with our clients' needs while never outgrowing our own capabilities. Through our Ensemble Platform, we offer a team of professionals with comprehensive services, working together as one, for you...
                     </p>
-                    <Link to={'/login'} className='home__middle-btn'>
+                    <Link to={'/login'} style={{textDecoration:'none'}} className='home__middle-btn'>
                         JOIN TO PLATFORM
                     </Link>
                 </div>
