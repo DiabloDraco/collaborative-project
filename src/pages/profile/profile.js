@@ -9,8 +9,7 @@ function Profile() {
     }, [])
     let navigate = useNavigate()
     useEffect(() => {
-        let token = JSON.parse(localStorage.getItem("token"))
-        if (token) {
+        if (!JSON.parse(localStorage.getItem("token"))) {
             navigate('/')
         }
     }, [JSON.parse(localStorage.getItem("token"))])
