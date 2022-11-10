@@ -1,15 +1,13 @@
 import './registration.css'
 import fullLogo from './../../assets/images/fullLogo.svg'
-import * as Yup from 'yup'
-import { useFormik } from 'formik'
 import { useEffect, useRef } from 'react'
 import { Link, NavLink } from 'react-router-dom'
 import { ReactComponent as DownArrow } from './../../assets/images/downArrow.svg'
 
 function Registration() {
     useEffect(() => {
-        document.querySelector(".header-wrapper").remove()
-        document.querySelector(".footer__wrapper").remove()
+        document.querySelector(".header-wrapper").style.display = 'none'
+        document.querySelector(".footer__wrapper").style.display = 'none'
     }, [])
     let form = useRef(null)
     let name = useRef(null)
@@ -90,10 +88,10 @@ function Registration() {
                     </label>
                     <button className='submit__btn' type='submit'>Register</button>
                     <div className='login__bottom'>
-                        <Link className='login__toReg' target={'_parent'} to={'/login'}>Login</Link>
+                        <Link className='login__toReg' to={'/login'}>Login</Link>
                     </div>
                     <div className='reg__homeButton'>
-                        <Link target={'_parent'} to={'/'} className='header__nav-link log__link'>
+                        <Link to={'/'} className='header__nav-link log__link'>
                             <DownArrow className='log__arrow' width={14} height={7} />
                             Home
                         </Link>

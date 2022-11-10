@@ -12,8 +12,13 @@ import CardAva3 from './../../assets/images/icon3.svg'
 import HeroWidget from "../../components/heroWidget";
 
 import './homePage.css'
+import { useEffect } from 'react'
 
 function HomePage() {
+    useEffect(() => {
+        document.querySelector(".header-wrapper").style.display = 'block'
+        document.querySelector(".footer__wrapper").style.display = 'flex'
+    }, [])
     return (
         <div className='home__wrapper'>
             <div className='home__top-wrapper'>
@@ -41,25 +46,28 @@ function HomePage() {
                     <p className='home__middle-text'>
                         Over the last three decades, Capital Investment Companies has built a loyal following through our independence and self-determination. By avoiding the merger/acquisition lure that flooded the financial services industry over the last several years, our company has remained solid and strong, growing with our clients' needs while never outgrowing our own capabilities. Through our Ensemble Platform, we offer a team of professionals with comprehensive services, working together as one, for you...
                     </p>
-                    <a className='home__middle-btn'>
+                    <Link to={'/login'} className='home__middle-btn'>
                         JOIN TO PLATFORM
-                    </a>
+                    </Link>
                 </div>
             </div>
             <div className='home__bottom-wrapper'>
                 <div className='home__bottom container'>
                     <ul className='home__bottom-list'>
                         <HomeCard
+                            key={1}
                             img={CardAva}
                             heading={'Integrity'}
                             text={"The core principle that guides our firm. We pledge to provide you with an investment experience based on honesty, transparency and high ethical standards. Integrity is of such importance that without it, the remaining core values are meaningless."}
                         />
                         <HomeCard
+                            key={2}
                             img={CardAva2}
                             heading={'Independence'}
                             text={"We have established a culture that promotes freedom to provide the best possible investment solution for our clients. Though fiercely independent, we pride ourselves on being interdependent when it comes to sharing strategies that benefit everyone."}
                         />
                         <HomeCard
+                            key={3}
                             img={CardAva3}
                             heading={'Innovation'}
                             text={"In the rapidly changing investment world, we strive to create new processes and services based on leading edge technologies. Our goal is to continue to implement new methods and processes rather than relying on strategies that worked in the past thus initiating positive change for you."}

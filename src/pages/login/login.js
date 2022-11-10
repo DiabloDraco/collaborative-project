@@ -6,8 +6,8 @@ import './login.css'
 
 function Login() {
     useEffect(() => {
-        document.querySelector(".header-wrapper").remove()
-        document.querySelector(".footer__wrapper").remove()
+        document.querySelector(".header-wrapper").style.display = 'none'
+        document.querySelector(".footer__wrapper").style.display = 'none'
     }, [])
     async function postInfo(e) {
         e.preventDefault();
@@ -53,12 +53,12 @@ function Login() {
                     </label>
                     <button className='submit__btn' type='submit'>Login</button>
                     <div className='login__bottom'>
-                        <Link className='login__toReg' target={'_parent'} to={'/registraion'}>Register</Link>
+                        <Link className='login__toReg' to={'/registraion'}>Register</Link>
                     </div>
                 </form>
 
                 <div className='log__homeButton'>
-                    <Link target={'_parent'} to={'/'} className='header__nav-link log__link'>
+                    <Link to={'/'} className='header__nav-link log__link'>
                         <DownArrow className='log__arrow' width={14} height={7} />
                         Home
                     </Link>
