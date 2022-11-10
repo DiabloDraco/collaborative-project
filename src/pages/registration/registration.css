@@ -46,24 +46,32 @@
     display: flex;
 }
 
-.reg__input:hover{
+
+.reg__input:hover {
     border: none;
+    border: 1px solid #00d084;
+    border-radius: 5px;
 }
 
-.reg__input:focus{
+.reg__input:focus {
+    border: none;
+    border: 1px solid #00d084;
+    border-radius: 5px;
+}
+
+.reg__input:focus-visible {
     border: none;
     outline: none;
+    border: 1px solid #00d084;
 }
 
-.reg__label:hover {
-    box-shadow: 0 0 0 1px #00d084;
-}
-
-.reg__label:focus {
+.reg__input:active {
     border: none;
-    outline: none;
-    box-shadow: 0 0 0 1px #00d084;
+    border: 1px solid #00d084;
 }
+
+
+
 .error__name {
 }
 .error {
