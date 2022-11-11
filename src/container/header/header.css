@@ -102,7 +102,7 @@
 .header__bottom-logo-link {}
 
 .header__bottom-logo {
-    margin-right: 74.83px;
+    margin-right: 40px;
 }
 
 .header__navbar {}
@@ -110,7 +110,7 @@
 .header__nav-list {
     display: flex;
     align-items: center;
-    gap: 32px;
+    gap: 22px;
     margin-right: 53px;
     padding: 0;
 }
@@ -127,7 +127,7 @@
     font-family: 'Montserrat';
     font-style: normal;
     font-weight: 600;
-    font-size: 14px;
+    font-size: 13px;
     line-height: 20px;
     color: #191F2B;
     cursor: pointer;

@@ -40,6 +40,11 @@ function Header() {
                                 <img className='header__register-icon' src={Register} alt="Register" />
                                 REGISTER
                             </Link>
+                        
+                            <div id="google_translate_element">
+
+                            </div>
+                            
                         </div>
                     </div>
                 </div>
@@ -238,6 +243,11 @@ function Header() {
                             <li className='header__nav-item'>
                                 <NavLink onClick={close} to={'/join'} className='header__nav-link'>
                                     Join Capital
+                                </NavLink>
+                            </li>
+                            <li className='header__nav-item'>
+                                <NavLink onClick={close} to={'/courses'} className='header__nav-link'>
+                                    Courses
                                 </NavLink>
                             </li>
                         </ul>

@@ -21,6 +21,7 @@ import OurLocation from "./pages/our-location";
 import Candidates from "./pages/candidates";
 import Reasons from "./pages/reasons";
 import Profile from "./pages/profile";
+import Courses from "./pages/courses";
 
 function App() {
   return (
@@ -46,6 +47,7 @@ function App() {
           <Route path="/candidates" element={<Candidates />} />
           <Route path="/reasons" element={<Reasons />} />
           <Route path="/profile" element={<Profile />} />
+          <Route path="/courses" element={<Courses />} />
         </Routes>
         <Footer />
       </div>
