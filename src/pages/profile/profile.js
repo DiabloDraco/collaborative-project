@@ -20,6 +20,10 @@ function Profile() {
         }
     }, [JSON.parse(localStorage.getItem("token"))])
     const clipboard = useClipboard();
+    function logOut() {
+        localStorage.removeItem("token")
+        navigate('/')
+    }
     return (
         <>
             <div className='container profile__container'>
@@ -42,7 +46,7 @@ function Profile() {
                         </div>
                         <div className='profile__header-buttons-wrapper'>
                             <button className='profile__button-cash'>вывести кеш</button>
-                            <button className='profile__button-logout'>Logout</button>
+                            <button onClick={logOut} className='profile__button-logout'>Logout</button>
                         </div>
                     </div>
                 </div>
