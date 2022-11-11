@@ -117,9 +117,9 @@ function Profile() {
                     </div>
                 </div>
             </div>
-        </>) : (<div style={{paddingTop: "250px"}} className='container'>
-            <div class="loadingio-spinner-rolling-abnchqzzkj4"><div class="ldio-q6yet173mcl">
-                <div></div>
+        </>) : (<div style={{ paddingTop: "250px" }} className='container'>
+            <div class="loadingio-spinner-pulse-rgnlb5ykrc"><div class="ldio-rxa1k1wifs">
+                <div></div><div></div><div></div>
             </div></div>
         </div>)
     )
