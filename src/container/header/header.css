@@ -20,7 +20,7 @@
     display: none;
 }
 
-.container {}
+/* .container {} */
 
 .header__left {
     display: flex;
@@ -70,7 +70,7 @@
     cursor: pointer;
 }
 
-.header__login-icon {}
+/* .header__login-icon {} */
 
 .header__right-register {
     display: flex;
@@ -86,7 +86,7 @@
     text-decoration: none;
 }
 
-.header__register-icon {}
+/* .header__register-icon {} */
 
 .header__bottom-wrapper {
     display: flex;
@@ -97,15 +97,15 @@
     height: 50px;
 }
 
-.container {}
+/* .container {} */
 
-.header__bottom-logo-link {}
+/* .header__bottom-logo-link {} */
 
 .header__bottom-logo {
     margin-right: 40px;
 }
 
-.header__navbar {}
+/* .header__navbar {} */
 
 .header__nav-list {
     display: flex;
