@@ -1,4 +1,4 @@
-import React, { useEffect, useRef } from 'react'
+import React, { useEffect, useRef, useState } from 'react'
 import { Link, NavLink, useNavigate } from 'react-router-dom'
 import { useClipboard } from 'use-clipboard-copy'
 import profileLogo from './../../assets/images/profileLogo.svg'
@@ -9,14 +9,29 @@ import copy from './../../assets/images/copy.svg'
 import './profile.css'
 
 function Profile() {
+    let [data, setData] = useState()
     useEffect(() => {
         document.querySelector(".header-wrapper").style.display = 'none'
         document.querySelector(".footer__wrapper").style.display = 'none'
     }, [])
     let navigate = useNavigate()
+    function getInfo() {
+        fetch("https://freedomen.herokuapp.com/user", {
+            method: "GET",
+            headers: {
+                "token": `${JSON.parse(localStorage.getItem('token'))}`
+            }
+        })
+            .then(req => req.json())
+            .then(data => setData(data))
+    }
     useEffect(() => {
         if (!JSON.parse(localStorage.getItem("token"))) {
             navigate('/')
+        }
+        if (JSON.parse(localStorage.getItem("token"))) {
+            getInfo()
+            console.log(data);
         }
     }, [JSON.parse(localStorage.getItem("token"))])
     const clipboard = useClipboard();
@@ -25,7 +40,7 @@ function Profile() {
         navigate('/')
     }
     return (
-        <>
+        (data) ? (<>
             <div className='container profile__container'>
                 <div className='profile__header'>
                     <Link to={'/'}>
@@ -36,10 +51,10 @@ function Profile() {
                             <img src={profileAva} alt="ava" className='profile__ava' />
                             <div className='profile__user-right'>
                                 <h3 className='profile__user-name'>
-                                    Maks Connars
+                                    {data?.data.username} {data?.data.lastname}
                                 </h3>
                                 <label className='profile__user-id-label' onClick={clipboard.copy}>
-                                    <input className='profile__user-id-input' readOnly value={'id:124023'} ref={clipboard.target} />
+                                    <input className='profile__user-id-input' readOnly value={`id:${data?.data.balance_id}`} ref={clipboard.target} />
                                     <img className='profile__user-id-copy-icon' src={copy} alt="copy" />
                                 </label>
                             </div>
@@ -55,7 +70,7 @@ function Profile() {
                     <div className='profile__left'>
                         <div className='profile__left-top'>
                             <p className='profile__balance-text'>Your balance:</p>
-                            <p className='profile__balance'>$0</p>
+                            <p className='profile__balance'>${data?.data.score}</p>
                             <span className='profile__line'></span>
                         </div>
 
@@ -102,7 +117,11 @@ function Profile() {
                     </div>
                 </div>
             </div>
-        </>
+        </>) : (<div style={{paddingTop: "250px"}} className='container'>
+            <div class="loadingio-spinner-rolling-abnchqzzkj4"><div class="ldio-q6yet173mcl">
+                <div></div>
+            </div></div>
+        </div>)
     )
 }
 
