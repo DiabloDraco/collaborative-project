@@ -1,54 +1,59 @@
 import './heroWidget.css';
-import {Helmet} from "react-helmet";
+
+function componentDidMount() {
+  
+    const script = document.createElement('script');
+    script.src = 'https://s3.tradingview.com/external-embedding/embed-widget-ticker-tape.js'
+    script.async = true;
+    script.innerHTML = JSON.stringify(  {
+        "symbols": [
+          {
+            "proName": "FOREXCOM:SPXUSD",
+            "title": "S&P 500"
+          },
+          {
+            "proName": "FOREXCOM:NSXUSD",
+            "title": "US 100"
+          },
+          {
+            "proName": "FX_IDC:EURUSD",
+            "title": "EUR/USD"
+          },
+          {
+            "proName": "BITSTAMP:BTCUSD",
+            "title": "Bitcoin"
+          },
+          {
+            "proName": "BITSTAMP:ETHUSD",
+            "title": "Ethereum"
+          }
+        ],
+        "showSymbolLogo": true,
+        "colorTheme": "dark",
+        "isTransparent": false,
+        "displayMode": "adaptive",
+        "locale": "en"
+      });
+
+      document.getElementById("myContainer").appendChild(script); 
+};
+
+
+
+// componentDidMount()
 
 function HeroWidget() {
-
     return(
-        
         <>
-            <div>
-            <Helmet>   
-                <script type="text/javascript" src="https://s3.tradingview.com/external-embedding/embed-widget-ticker-tape.js" async>
-                {` 
-                    {
-                    "symbols": [
-                        {
-                        "description": "",
-                        "proName": "NYSE:BABA"
-                        },
-                        {
-                        "description": "",
-                        "proName": "HKEX:MIU1!"
-                        },
-                        {
-                        "description": "",
-                        "proName": "NIKKEI"
-                        },
-                        {
-                        "description": "",
-                        "proName": "NSE:NIFTY"
-                        },
-                        {
-                        "description": "",
-                        "proName": "TVC:HSI"
-                        },
-                        {
-                        "description": "",
-                        "proName": "NYSE:MUFG"
-                        }
-                    ],
-                    "showSymbolLogo": true,
-                    "colorTheme": "light",
-                    "isTransparent": false,
-                    "displayMode": "adaptive",
-                    "locale": "en"
-                    }
-                `}
-                </script>
-            </Helmet>
+        <div id="myContainer">
+            <div className="tradingview-widget-container">
+            <div className="tradingview-widget-container__widget">
+
             </div>
+            
+            </div>
+        </div>
         </>
     )
 }
-
 export default HeroWidget
