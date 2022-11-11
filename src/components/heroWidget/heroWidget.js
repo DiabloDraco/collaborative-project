@@ -1,5 +1,5 @@
 import './heroWidget.css';
-import { useEffect } from 'react'
+import { useEffect } from 'react';
 
 
 function HeroWidget() {
@@ -41,7 +41,7 @@ function HeroWidget() {
 
         document.getElementById("myContainer").appendChild(script); 
 
-  }, [])
+  }, []);
   
 
   
