@@ -1,5 +1,6 @@
 import { useEffect } from 'react'
-import { useNavigate } from 'react-router-dom'
+import { Link, useNavigate } from 'react-router-dom'
+import profileLogo from './../../assets/images/profileLogo.svg'
 import './profile.css'
 
 function Profile() {
@@ -15,7 +16,14 @@ function Profile() {
     }, [JSON.parse(localStorage.getItem("token"))])
     return (
         <>
-            <h2>daa</h2>
+            <div className='container'>
+                <div className='profile__header'>
+                    <Link to={'/'}>
+                        <img src={profileLogo} alt="logo" />
+                    </Link>
+                    
+                </div>
+            </div>
         </>
     )
 }
