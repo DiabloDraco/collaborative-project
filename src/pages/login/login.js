@@ -1,30 +1,38 @@
 import { useEffect, useRef } from 'react'
-import { Link, NavLink } from 'react-router-dom'
+import { Link, NavLink, useNavigate } from 'react-router-dom'
 import fullLogo from './../../assets/images/fullLogo.svg'
 import { ReactComponent as DownArrow } from './../../assets/images/downArrow.svg'
 import './login.css'
 
 function Login() {
+    let navigator = useNavigate()
     useEffect(() => {
         document.querySelector(".header-wrapper").style.display = 'none'
         document.querySelector(".footer__wrapper").style.display = 'none'
     }, [])
     async function postInfo(e) {
         e.preventDefault();
+        let checkTo = (val) => val.status == 200 ? save(val.token , val.status) : form.current.reset()
+        function save(token , status) {
+            if (token && status == 200) {
+                localStorage.setItem("token" , JSON.stringify(token))
+                navigator("/profile")
+            }
+        }
         if (mail && password) {
-            let res = await fetch("https://sado111.herokuapp.com/login", {
+            let res = await fetch("https://freedomen.herokuapp.com/login", {
                 method: "POST",
                 headers: {
-                    "Content-Type": "application/json"
+                    "content-Type": "application/json"
                 },
-                body: {
+                body: JSON.stringify({
                     email: `${mail.current.value}`,
                     password: `${password.current.value}`
-                }
+                })
             })
 
             res = await res.json()
-            console.log(res)
+            await checkTo(res)
             document.querySelector(".password__error").style.display = 'none'
         } else {
             document.querySelector(".password__error").style.display = 'flex'

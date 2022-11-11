@@ -10,6 +10,7 @@
     line-height: 32px;
     margin-bottom: 20px;
     padding-bottom: 5px;
+    width: 100%;
 }
 
 .counsel__text {
@@ -89,3 +90,47 @@
 }
 
 .counsel__pb {}
+
+@media only screen and (max-width: 900px) {
+    /* MOBILE */
+
+    .counsel__wrapper {
+        max-width: 900px;
+        width: 100%;
+    }
+
+    .counsel__heading {
+        max-width: 80vw;
+        width: 100%;
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    .counsel__text {
+        max-width: 90vw;
+        width: 100%;
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    .counsel__subtitle-text {
+        max-width: 90vw;
+        width: 100%;
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    .counsel__span ~ .counsel__span-text {
+        max-width: 90vw;
+        display: inline-block;
+        width: 100%;
+    }
+
+    .counsel__subtitle-pre {
+        max-width: 95vw;
+        width: 100%;
+        display: flex;
+        flex-wrap: wrap;
+        text-overflow: ellipsis;
+    }
+}

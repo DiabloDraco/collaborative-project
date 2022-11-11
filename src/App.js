@@ -20,6 +20,7 @@ import JoinCapital from "./pages/joincapital";
 import OurLocation from "./pages/our-location";
 import Candidates from "./pages/candidates";
 import Reasons from "./pages/reasons";
+import Profile from "./pages/profile";
 
 function App() {
   return (
@@ -44,6 +45,7 @@ function App() {
           <Route path="/our-location" element={<OurLocation />} />
           <Route path="/candidates" element={<Candidates />} />
           <Route path="/reasons" element={<Reasons />} />
+          <Route path="/profile" element={<Profile />} />
         </Routes>
         <Footer />
       </div>
