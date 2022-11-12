@@ -43,21 +43,21 @@ function Profile() {
 
 
 
-// EnOT.IO
-// const ContactForm = () => {
-//     const [state, setState] = useState({
-//       merchant_id: '',
-//       order: '',
-//       subject: '',
-//       message: ''
-//     });
+    // EnOT.IO
+    // const ContactForm = () => {
+    //     const [state, setState] = useState({
+    //       merchant_id: '',
+    //       order: '',
+    //       subject: '',
+    //       message: ''
+    //     });
 
 
     return (
         (data) ? (<>
             <div className='profile__container'>
                 <div className='profile__header'>
-                    <Link to={'/'}>
+                    <Link className='profile__header-logo' to={'/'}>
                         <img src={profileLogo} alt="logo" />
                     </Link>
                     <div className='profile__header-right'>
@@ -90,12 +90,14 @@ function Profile() {
 
                         <div className='profile__bottom'>
                             <Link className='profile__bottom-link' to={'/profile'}>Account setting</Link>
-                            <button className='profile__bottom-btn'>OPEN PLATFORM</button>
-                            <div className='profile__activated'>
-                                <img src={profilError} alt="err" />
-                                <p className='profile__error-text'>
-                                    To go to the platform you account must be activated
-                                </p>
+                            <div className='profile__left-bottom-wrapper'>
+                                <button className='profile__bottom-btn'>OPEN PLATFORM</button>
+                                <div className='profile__activated'>
+                                    <img src={profilError} alt="err" />
+                                    <p className='profile__error-text'>
+                                        To go to the platform you account must be activated
+                                    </p>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -115,18 +117,18 @@ function Profile() {
                             </h3>
 
                             <ul className='profile__payment-list'>
-                               
+
                                 <form method='GET' action='https://Billing.cx/pay/step-one'>
-                                        <input type='hidden' name='m' value='MERCHANT_ID'/>
-                                        <input type='hidden' name='oa' value='PAY_SUM' />
-                                        <input type='hidden' name='o' value='PAY_ID' />
-                                        <input type='hidden' name='s' value='SIGN' />
-                                        <input type='hidden' name='cf' value='YOUR_PARAMS'/> 
-                                        {/* <input type='hidden' name='cf[NAME_PARAMS]' value='YOUR_PARAMS'></input> */}
-                                        <input type="submit" value='тест'>
-                    
-                                        </input>
-                                    </form>
+                                    <input type='hidden' name='m' value='MERCHANT_ID' />
+                                    <input type='hidden' name='oa' value='PAY_SUM' />
+                                    <input type='hidden' name='o' value='PAY_ID' />
+                                    <input type='hidden' name='s' value='SIGN' />
+                                    <input type='hidden' name='cf' value='YOUR_PARAMS' />
+                                    {/* <input type='hidden' name='cf[NAME_PARAMS]' value='YOUR_PARAMS'></input> */}
+                                    <input type="submit" value='тест'>
+
+                                    </input>
+                                </form>
                             </ul>
                         </div>
                     </div>
