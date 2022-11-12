@@ -4,8 +4,13 @@ import CRSCIB from './../../assets/files/CRSCIB1.pdf'
 import CRSCOUNSEL from './../../assets/files/CRSCOUNSEL1.pdf'
 import CRSCIAS from './../../assets/files/CRSCIAS1.pdf'
 import BusinessContinuityPlanNotice from './../../assets/files/BusinessContinuityPlanNotice.pdf'
+import { useEffect } from 'react'
 
 function Compliance() {
+    useEffect(() => {
+        document.querySelector(".header-wrapper").style.display = 'block'
+        document.querySelector(".footer__wrapper").style.display = 'flex'
+    }, [])
     return (
         <>
             <div className='counsel__top-wrapper'>

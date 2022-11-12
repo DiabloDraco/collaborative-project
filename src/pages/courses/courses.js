@@ -1,6 +1,11 @@
+import { useEffect } from 'react'
 import './courses.css'
 
 function Courses() {
+    useEffect(() => {
+        document.querySelector(".header-wrapper").style.display = 'block'
+        document.querySelector(".footer__wrapper").style.display = 'flex'
+    }, [])
     return (
         <>
             <div className='container courses__wrapper'>

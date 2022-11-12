@@ -1,6 +1,11 @@
+import { useEffect } from 'react'
 import './reasons.css'
 
 function Reasons() {
+    useEffect(() => {
+        document.querySelector(".header-wrapper").style.display = 'block'
+        document.querySelector(".footer__wrapper").style.display = 'flex'
+    }, [])
     return(
         <>    
         <div className='capitalI__top-wrapper'>

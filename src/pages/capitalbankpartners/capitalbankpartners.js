@@ -1,6 +1,11 @@
+import { useEffect } from 'react'
 import './capitalbankpartners.css'
 
 function Capitalbankpartners() {
+    useEffect(() => {
+        document.querySelector(".header-wrapper").style.display = 'block'
+        document.querySelector(".footer__wrapper").style.display = 'flex'
+    }, [])
     return (
         <>
             <div className='counsel__top-wrapper'>

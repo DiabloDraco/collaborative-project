@@ -1,8 +1,13 @@
 import './joinCapital.css'
 import teamImg from './../../assets/images/office.jpg'
 import { Link } from 'react-router-dom'
+import { useEffect } from 'react'
 
 function JoinCapital() {
+    useEffect(() => {
+        document.querySelector(".header-wrapper").style.display = 'block'
+        document.querySelector(".footer__wrapper").style.display = 'flex'
+    }, [])
     return (
         <>
             <div className='container'>

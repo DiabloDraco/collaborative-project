@@ -1,7 +1,12 @@
 import './resources.css'
 import FinansCalculatorPdf from './../../assets/files/FinancialCalculators.pdf'
+import { useEffect } from 'react'
 
 function Resources() {
+    useEffect(() => {
+        document.querySelector(".header-wrapper").style.display = 'block'
+        document.querySelector(".footer__wrapper").style.display = 'flex'
+    }, [])
     return (
         <>
             <div className='counsel__top-wrapper'>
