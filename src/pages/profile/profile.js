@@ -31,7 +31,6 @@ function Profile() {
         }
         if (JSON.parse(localStorage.getItem("token"))) {
             getInfo()
-            console.log(data);
         }
     }, [JSON.parse(localStorage.getItem("token"))])
     const clipboard = useClipboard();
@@ -118,7 +117,7 @@ function Profile() {
                 </div>
             </div>
         </>) : (<div style={{ paddingTop: "250px" }} className='container'>
-            <div class="loadingio-spinner-pulse-rgnlb5ykrc"><div class="ldio-rxa1k1wifs">
+            <div className="loadingio-spinner-pulse-rgnlb5ykrc"><div className="ldio-rxa1k1wifs">
                 <div></div><div></div><div></div>
             </div></div>
         </div>)

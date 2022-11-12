@@ -17,6 +17,7 @@ function Registration() {
     let country = useRef(null)
     let password = useRef(null)
     let confirm = useRef(null)
+    let date = useRef(null)
     let navigator = useNavigate()
 
     async function postInfo(e) {
@@ -40,7 +41,8 @@ function Registration() {
                     "password": `${password.current.value}`,
                     "email": `${mail.current.value}`,
                     "contact": `${phone.current.value}`,
-                    "country": `${country.current.value}`
+                    "country": `${country.current.value}`,
+                    "brithday": `${country.current.value}`
                 })
             })
             req = await req.json()
@@ -75,6 +77,10 @@ function Registration() {
                     </label>
                     <label className='reg__label'>
                         <input onChange={error} ref={mail} className='reg__input' required type="email" placeholder='Email' />
+                        <div className='error__mail error'>Please complete all required fields!</div>
+                    </label>
+                    <label className='reg__label'>
+                        <input onChange={error} ref={date} className='reg__input' required type="date" placeholder='Birthday' />
                         <div className='error__mail error'>Please complete all required fields!</div>
                     </label>
                     <label className='reg__label'>
