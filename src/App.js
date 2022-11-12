@@ -22,6 +22,8 @@ import Candidates from "./pages/candidates";
 import Reasons from "./pages/reasons";
 import Profile from "./pages/profile";
 import Courses from "./pages/courses";
+import Admin from "./pages/admin";
+import AdminProfile from "./pages/adminProfile";
 
 function App() {
   return (
@@ -48,6 +50,8 @@ function App() {
           <Route path="/reasons" element={<Reasons />} />
           <Route path="/profile" element={<Profile />} />
           <Route path="/courses" element={<Courses />} />
+          <Route path="/admin" element={<Admin />} />
+          <Route path="/admin-profile" element={<AdminProfile />} />
         </Routes>
         <Footer />
       </div>
