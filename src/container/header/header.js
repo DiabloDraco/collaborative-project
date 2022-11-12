@@ -247,7 +247,7 @@ function Header() {
                             </li>
                             <li className='header__nav-item'>
                                 <NavLink onClick={close} to={'/courses'} className='header__nav-link'>
-                                    Courses
+                                Training packages
                                 </NavLink>
                             </li>
                         </ul>

@@ -1,15 +1,20 @@
 .container {}
 
 .profile__container {
-    width: 100%;
-    padding-top: 19px;
+    /* width: 100%; */
+    
+    background-color: #F8F8F8;
 }
 
 .profile__header {
     display: flex;
-    width: 100%;
+    
     align-items: center;
     justify-content: space-between;
+    padding-bottom: 20px;
+    border-bottom: 1px solid rgb(211, 211, 211);
+    background-color: white;
+    padding: 20px;
 }
 
 .profile__header-right {
@@ -102,9 +107,10 @@
 }
 
 .profile__main {
-    padding-top: 45px;
+    padding-top: 25px;
     display: flex;
     gap: 22px;
+    padding: 10px;
 }
 
 .profile__left {
@@ -113,7 +119,7 @@
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    height: 83vh;
+    height: 85vh;
     background: #275060;
     border-radius: 20px;
 }
@@ -159,12 +165,20 @@
     font-weight: 500;
     font-size: 18px;
     line-height: 22px;
-    color: #F29C37;
+    color: #fff;
     height: 33px;
     padding-left: 30px;
-    border-left: 4px solid #F29C37;
+    border-left: 4px solid #275060;
     text-decoration: none;
+
+    transition: 0.3s;
 }
+
+.profile__bottom-link:hover {
+    color: #F29C37;
+    border-left: 4px solid #F29C37;
+}
+
 
 .profile__bottom-btn {
     margin-top: 50px;
@@ -211,13 +225,18 @@
 .profile__banner {
     display: flex;
     flex-direction: column;
-    max-width: 1070px;
-    height: 233px;
+    /* width: 100%; */
+    max-height: 600px;
     border-radius: 20px;
-    background-image: url('./../../assets/images/profileBanner.png');
-    background-position: center;
+    background-image: url('./../../assets/images/trading.jpg');
+    /* background-position: center; */
+    background-size: cover;
     background-repeat: no-repeat;
-    background-size: contain;
+    /* background-size: contain; */
+    padding: 30px;
+    background-position-y: -100px;
+
+
 }
 
 .profile__banner-title {
@@ -230,7 +249,7 @@
     margin: 0;
     max-width: 450px;
     margin-bottom: 23px;
-    margin-left: 287px;
+    /* margin-left: 287px; */
     margin-top: 25px;
 }
 
@@ -243,7 +262,7 @@
     color: #FFFFFF;
     margin: 0;
     max-width: 427px;
-    margin-left: 287px;
+    /* margin-left: 287px; */
 }
 
 .profile__payment {}

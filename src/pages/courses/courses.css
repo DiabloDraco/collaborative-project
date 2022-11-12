@@ -1,136 +1,113 @@
-.counsel__wrapper {}
-
-.container {}
-
-.counsel__heading {
-    font-size: 22px;
-    color: #F29C37;
-    border-bottom: 1px solid #F29C37;
-    font-weight: normal;
-    line-height: 32px;
-    margin-bottom: 20px;
-    padding-bottom: 5px;
-    width: 100%;
+.courses__cards {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-bottom: 80px;
+    margin-top: 40px;
+    gap: 12px;
 }
 
-.counsel__text {
-    margin: 0;
-    margin-bottom: 15px;
-    color: #828281;
-    font-style: italic;
-    padding-bottom: 15px;
-    border-bottom: 1px solid #e3e3e3;
-}
 
-.counsel__subtitle {
-    margin: 0;
-    margin-bottom: 25px;
-    font-family: "Montserrat";
-    font-weight: 800;
-    font-size: 13px;
-    line-height: 30px;
-    color: #F29C37;
-}
+/* .courses__wrapper {
+} */
 
-.counsel__subtitle-text {
-    margin: 0;
-    margin-bottom: 15px;
-    color: #898989;
-   font-family: 'Montserrat';
-    font-weight: 400;
-    -webkit-font-smoothing: antialiased;
-    overflow-x: hidden;
-    font-size: 13px;
-    line-height: 21px;
-}
-
-.counsel__span {
-    margin: 0;
-    font-family: "Montserrat";
-    font-weight: 900;
-    font-size: 13px;
-    line-height: 30px;
-    color: #F29C37;
-    padding-right: 5px;
-}
-
-.counsel__top-wrapper {
-    background-image: url('./../../assets/images/capitalBack.png');
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: cover;
-    padding-top: 57px;
-    padding-bottom: 63px;
-    margin-bottom: 38px;
-}
-
-.counsel__top {
+.courses__title {
     text-align: center;
 }
 
-.counsel__span-text {
-    margin: 0;
-    color: #898989;
-   font-family: 'Montserrat';
-    font-weight: 400;
-    -webkit-font-smoothing: antialiased;
-    overflow-x: hidden;
-    font-size: 13px;
-    line-height: 21px;
+.courses__title h3 {
+    font-size: 34px;
 }
 
-.counsel__subtitle-pre {
-    color: #898989;
-   font-family: 'Montserrat';
-    font-weight: 400;
-    -webkit-font-smoothing: antialiased;
-    overflow-x: hidden;
-    font-size: 13px;
-    line-height: 21px;
+.courses__card {
+    background-color: white;
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.13);
+    padding: 15px 20px;
+    border-radius: 20px;
+    transition: 0.4s;
+    cursor: pointer;
 }
 
-.counsel__pb {}
+.courses__card:hover {
+    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.090);
+    transform: translateY(-7px)
+}
 
-@media only screen and (max-width: 900px) {
-    /* MOBILE */
+.couses__card-heading{
+    text-align: center;
+}
+.courses__card-price {
+    margin-top: 6px;
+    margin-bottom: 6px;
+    text-align: center;
+    font-size: 40px;
+    font-weight: 700;
+}
 
-    .counsel__wrapper {
-        max-width: 900px;
-        width: 100%;
+.courses__descr {
+    padding: 0;
+    list-style: none;
+    margin-bottom: 40px;
+}
+
+.courses__descr li {
+    margin-bottom: 10px;
+}
+
+.courses__descr li svg {
+    margin-right: 5px;
+}
+
+.courses__card a {
+    transition: 0.5s;
+    padding: 10px 20px;
+}
+
+.courses__bottom-wrapper {
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.courses__bottom-text {
+    text-align: center;
+    font-size: 13px;
+    margin-top: 20px;
+    margin-bottom: 10px;
+}
+
+.gray {
+    color: #C3C3C3 !important;
+}
+
+.bronze {
+    color: #CD7F32;
+}
+
+.silver {
+    color: #C0C0C0;
+}
+
+.gold {
+    color: #FFD700;
+}
+
+.platinum {
+    color: #E5E4E2;
+}
+
+@media screen and (max-width: 900px){
+    .courses__cards {
+        justify-content: center;
     }
 
-    .counsel__heading {
-        max-width: 80vw;
-        width: 100%;
-        display: flex;
-        flex-wrap: wrap;
+    .courses__card:hover {
+        box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.090);
+        transform: translateY(0px)
     }
 
-    .counsel__text {
-        max-width: 90vw;
-        width: 100%;
-        display: flex;
-        flex-wrap: wrap;
-    }
-
-    .counsel__subtitle-text {
-        max-width: 90vw;
-        width: 100%;
-        display: flex;
-        flex-wrap: wrap;
-    }
-
-    .counsel__span ~ .counsel__span-text {
-        max-width: 90vw;
-        display: inline-block;
-        width: 100%;
-    }
-
-    .counsel__subtitle-pre {
-        max-width: 95vw;
-        width: 100%;
-        display: flex;
-        flex-wrap: wrap;
-        text-overflow: ellipsis;
+    .courses__card {
+        margin-bottom: 30px;
     }
 }

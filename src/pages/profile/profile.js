@@ -38,9 +38,24 @@ function Profile() {
         localStorage.removeItem("token")
         navigate('/')
     }
+
+
+
+
+
+// EnOT.IO
+// const ContactForm = () => {
+//     const [state, setState] = useState({
+//       merchant_id: '',
+//       order: '',
+//       subject: '',
+//       message: ''
+//     });
+
+
     return (
         (data) ? (<>
-            <div className='container profile__container'>
+            <div className='profile__container'>
                 <div className='profile__header'>
                     <Link to={'/'}>
                         <img src={profileLogo} alt="logo" />
@@ -59,7 +74,7 @@ function Profile() {
                             </div>
                         </div>
                         <div className='profile__header-buttons-wrapper'>
-                            <button className='profile__button-cash'>вывести кеш</button>
+                            <button className='profile__button-cash'>Withdraw</button>
                             <button onClick={logOut} className='profile__button-logout'>Logout</button>
                         </div>
                     </div>
@@ -100,17 +115,18 @@ function Profile() {
                             </h3>
 
                             <ul className='profile__payment-list'>
-                                <li className='profile__payment-item'>
-                                    <img className='profile__payment-item-icon' src={profilPaymentItem} alt="img" />
-                                    <div className='profile__payment-item-right'>
-                                        <p className='profile__payment-item-title'>
-                                            BillingX
-                                        </p>
-                                        <p className='profile__payment-item-subtitle'>
-                                            банковский перевод / криптовалюта / qiwi
-                                        </p>
-                                    </div>
-                                </li>
+                               
+                                <form method='GET' action='https://Billing.cx/pay/step-one'>
+                                        <input type='hidden' name='m' value='MERCHANT_ID'/>
+                                        <input type='hidden' name='oa' value='PAY_SUM' />
+                                        <input type='hidden' name='o' value='PAY_ID' />
+                                        <input type='hidden' name='s' value='SIGN' />
+                                        <input type='hidden' name='cf' value='YOUR_PARAMS'/> 
+                                        {/* <input type='hidden' name='cf[NAME_PARAMS]' value='YOUR_PARAMS'></input> */}
+                                        <input type="submit" value='тест'>
+                    
+                                        </input>
+                                    </form>
                             </ul>
                         </div>
                     </div>
