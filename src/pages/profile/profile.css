@@ -506,10 +506,15 @@
     }
 
     .profile__banner {
-        border-radius: 20px;
+        /* border-radius: 20px;
         display: flex;
         flex-direction: row;
         align-items: center;
+        padding-top: 0; */
+
+        border-radius: 20px;
+        display: flex;
+        align-items: flex-start;
         padding-top: 0;
     }
 

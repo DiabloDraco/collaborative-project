@@ -1,7 +1,6 @@
 import './heroWidget.css';
 import { useEffect } from 'react';
 
-
 function HeroWidget() {
 
   useEffect(() => {

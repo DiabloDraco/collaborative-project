@@ -39,20 +39,6 @@ function Profile() {
         navigate('/')
     }
 
-
-
-
-
-    // EnOT.IO
-    // const ContactForm = () => {
-    //     const [state, setState] = useState({
-    //       merchant_id: '',
-    //       order: '',
-    //       subject: '',
-    //       message: ''
-    //     });
-
-
     return (
         (data) ? (<>
             <div className='profile__container'>
@@ -118,17 +104,6 @@ function Profile() {
 
                             <ul className='profile__payment-list'>
 
-                                <form method='GET' action='https://Billing.cx/pay/step-one'>
-                                    <input type='hidden' name='m' value='MERCHANT_ID' />
-                                    <input type='hidden' name='oa' value='PAY_SUM' />
-                                    <input type='hidden' name='o' value='PAY_ID' />
-                                    <input type='hidden' name='s' value='SIGN' />
-                                    <input type='hidden' name='cf' value='YOUR_PARAMS' />
-                                    {/* <input type='hidden' name='cf[NAME_PARAMS]' value='YOUR_PARAMS'></input> */}
-                                    <input type="submit" value='тест'>
-
-                                    </input>
-                                </form>
                             </ul>
                         </div>
                     </div>
