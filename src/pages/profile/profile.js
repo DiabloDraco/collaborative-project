@@ -38,6 +38,30 @@ function Profile() {
         localStorage.removeItem("token")
         navigate('/')
     }
+    let payment = useRef(null)
+    let merchant = useRef(null)
+    let orderid = useRef(null)
+    let sign = useRef(null)
+
+    function handleSubmit(e) {
+        e.preventDefault()
+        fetch("https://Billing.cx/pay/step-one", {
+            method: "POST",
+            headers: {
+                "content-Type": "application/json"
+            },
+            body: JSON.stringify({
+                "merchant_id": `${merchant.current.value}`,
+                "amount": `${payment.current.value}`,
+                "sign": `${orderid.current.value}`,
+                "": `${sign.current.value}`
+            })
+        })
+        .then(req => req.json())
+        .then(data => console.log(data))       
+        .catch((err)=> console.log(err)) 
+    }
+    let today = new Date();
 
     return (
         (data) ? (<>
@@ -104,15 +128,13 @@ function Profile() {
 
                             <ul className='profile__payment-list'>
                                 <li>
-                                <form method='get' action='https://Billing.cx/pay/step-one'>
-                                    <input type='hidden' name='m' value='MERCHANT_ID' />
-                                    <input type='number' name='oa' value='PAY_SUM' />
-                                    <input type='hidden' name='o' value='PAY_ID' />
-                                    <input type='hidden' name='s' value='SIGN' />
-                                    {/* <input type='hidden' name='cf' value='YOUR_PARAMS'>
-                                    <input type='hidden' name='cf[NAME_PARAMS]' value='YOUR_PARAMS'> */}
-                                    <input type="submit" value="Перейти к оплате" />
-                                </form>
+                                    <form target='_blank' method='get' action='https://Billing.cx/pay/step-one'>
+                                        <input type='hidden' ref={merchant} name='m' value={`${process.env.MERCHANT_ID}`} />
+                                        <input type='number' ref={payment} name='oa' />
+                                        <input type='hidden' ref={orderid} name='o' value={`${today.toLocaleString()}`} />
+                                        <input type='hidden' ref={sign} name='s' value={`${process.env.SIGN}`} />
+                                        <input type="submit" value="Перейти к оплате" />
+                                    </form>
                                 </li>
                             </ul>
                         </div>
