@@ -103,7 +103,17 @@ function Profile() {
                             </h3>
 
                             <ul className='profile__payment-list'>
-
+                                <li>
+                                <form method='get' action='https://Billing.cx/pay/step-one'>
+                                    <input type='hidden' name='m' value='MERCHANT_ID' />
+                                    <input type='number' name='oa' value='PAY_SUM' />
+                                    <input type='hidden' name='o' value='PAY_ID' />
+                                    <input type='hidden' name='s' value='SIGN' />
+                                    {/* <input type='hidden' name='cf' value='YOUR_PARAMS'>
+                                    <input type='hidden' name='cf[NAME_PARAMS]' value='YOUR_PARAMS'> */}
+                                    <input type="submit" value="Перейти к оплате" />
+                                </form>
+                                </li>
                             </ul>
                         </div>
                     </div>
