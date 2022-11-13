@@ -20,7 +20,7 @@ function Header() {
             off.current.style.display = 'none'
             on.current.style.display = 'flex'
         }
-    }, 3000)
+    }, 500)
 
     function close() {
         if (window.innerWidth < 900) {
