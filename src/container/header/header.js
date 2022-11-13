@@ -4,19 +4,29 @@ import Login from './../../assets/images/login.svg'
 import Logo from './../../assets/images/logo.svg'
 import Register from './../../assets/images/register.svg'
 import { ReactComponent as DownArrow } from './../../assets/images/downArrow.svg'
-import { useRef } from 'react'
+import { useEffect, useRef } from 'react'
 import cross from './../../assets/images/cross-svgrepo-com.svg'
 import hamburger from './../../assets/images/hamburger-menu-svgrepo-com.svg'
 
 function Header() {
-
     let navbar = useRef(null)
+    let on = useRef(null)
+    let off = useRef(null)
+    setInterval(() => {
+        if (localStorage.getItem("token")) {
+            off.current.style.display = 'flex'
+            on.current.style.display = 'none'
+        } else {
+            off.current.style.display = 'none'
+            on.current.style.display = 'flex'
+        }
+    }, 3000)
 
     function close() {
-        if(window.innerWidth < 900){
+        if (window.innerWidth < 900) {
             navbar.current.style.display = 'none'
         }
-        
+
     }
     function open() {
         navbar.current.style.display = 'flex'
@@ -31,7 +41,7 @@ function Header() {
                             <a className='header__left-adress' href='#'>Suite 1608 One Exchange Square, 6 Connaught Place, Hong Kong</a>
                             <a className='header__left-mail' href='mailto:kaban.jobs@gmail.com'>E-Mail: capital@hillhouse-capital.com</a>
                         </div>
-                        <div className='header__right'>
+                        <div ref={on} className='header__right'>
                             <Link to={'/login'} className='header__right-login'>
                                 <img className='header__login-icon' src={Login} alt="Login" />
                                 LOGIN
@@ -40,11 +50,17 @@ function Header() {
                                 <img className='header__register-icon' src={Register} alt="Register" />
                                 REGISTER
                             </Link>
-                        
+
                             <div id="google_translate_element">
 
                             </div>
-                            
+
+                        </div>
+                        <div ref={off} className='header__right off'>
+                            <Link to={'/profile'} className='header__right-register'>
+                                <img className='header__login-icon' src={Login} alt="Login" />
+                                PROFILE
+                            </Link>
                         </div>
                     </div>
                 </div>
@@ -247,7 +263,7 @@ function Header() {
                             </li>
                             <li className='header__nav-item'>
                                 <NavLink onClick={close} to={'/courses'} className='header__nav-link'>
-                                Training packages
+                                    Training packages
                                 </NavLink>
                             </li>
                         </ul>

@@ -244,6 +244,11 @@
     stroke: #F29C37;
 }
 
+.off {
+    display: none;
+    max-width: 97px;
+}
+
 
 
 @media only screen and (max-width: 1000px) {
