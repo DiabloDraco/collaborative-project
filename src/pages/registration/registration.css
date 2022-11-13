@@ -111,6 +111,10 @@
 @media only screen and (max-width: 900px) {
     /* MOBILE */
 
+    .registration__form {
+        max-width: 90vw;
+    }
+
     .reg__homeButton {
         position: absolute;
         left: 30px;
@@ -123,4 +127,10 @@
     .reg__homeButton:hover .log__arrow {
         transform: translateX(-5px) rotate(90deg);
     }
+
+    .reg__input {
+        max-width: 350px;
+    }
+
+    
 }
