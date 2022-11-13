@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/static/css/main.77fb3b45.css",
-    "main.js": "/static/js/main.a2ecb92e.js",
+    "main.css": "/static/css/main.940f91b2.css",
+    "main.js": "/static/js/main.52601bc1.js",
     "static/media/PrivacyNotice.pdf": "/static/media/PrivacyNotice.3658e3597bf444e1eee5.pdf",
     "static/media/office.jpg": "/static/media/office.d28dda6977e0554d5b80.jpg",
     "static/media/FinancialCalculators.pdf": "/static/media/FinancialCalculators.1d61832ef759111f072d.pdf",
@@ -14,16 +14,16 @@
     "static/media/capitalBack.png": "/static/media/capitalBack.55659460ac0aa4de1b8d.png",
     "static/media/BusinessContinuityPlanNotice.pdf": "/static/media/BusinessContinuityPlanNotice.a20da22d546297b21857.pdf",
     "static/media/trading.jpg": "/static/media/trading.3d89d6138bab6608c2ea.jpg",
-    "static/media/fullLogo.svg": "/static/media/fullLogo.6b263c750ff8d3ce1f57b9c057f725ab.svg",
-    "static/media/logo.svg": "/static/media/logo.7574a0f19e48a9640b26a0acb4334909.svg",
-    "static/media/profileLogo.svg": "/static/media/profileLogo.ca24b8a8260872b89bd26ef4840d0cd0.svg",
+    "static/media/fullLogo.svg": "/static/media/fullLogo.5940e4e7eab802bb1ca8ac214290ee49.svg",
+    "static/media/logo.svg": "/static/media/logo.f4291b5a68c55a5398ea44721665b78e.svg",
+    "static/media/profileLogo.svg": "/static/media/profileLogo.7c9f48c34b6d72cba30c413cc2362a80.svg",
     "static/media/montserrat-v25-latin-800.woff": "/static/media/montserrat-v25-latin-800.5d71387e7b31e17b93c7.woff",
     "static/media/montserrat-v25-latin-700.woff": "/static/media/montserrat-v25-latin-700.fb5068a547276441355d.woff",
     "static/media/montserrat-v25-latin-500.woff": "/static/media/montserrat-v25-latin-500.62a04d3d3d6d38ba2a92.woff",
     "static/media/montserrat-v25-latin-regular.woff": "/static/media/montserrat-v25-latin-regular.281179d375517d9c131b.woff",
     "static/media/montserrat-v25-latin-600.woff": "/static/media/montserrat-v25-latin-600.e5f115311730acb7c305.woff",
     "static/media/montserrat-v25-latin-900.woff": "/static/media/montserrat-v25-latin-900.309923ab7ba30c01d1a7.woff",
-    "static/media/profilePaymentItem.svg": "/static/media/profilePaymentItem.b5bc355da8e4813cdf13988656a1408b.svg",
+    "static/media/profilePaymentItem.svg": "/static/media/profilePaymentItem.ace2fa4bc2bf572d14eda7b8ec9c4032.svg",
     "static/media/1.png": "/static/media/1.d9e2fffd29f3a41c7fd3.png",
     "static/media/3.png": "/static/media/3.5c5724b71a6fa9e1c96e.png",
     "static/media/2.png": "/static/media/2.e23fe84458aa889a46c3.png",
@@ -34,22 +34,22 @@
     "static/media/montserrat-v25-latin-600.woff2": "/static/media/montserrat-v25-latin-600.5d6df38dd70f631c488b.woff2",
     "static/media/montserrat-v25-latin-900.woff2": "/static/media/montserrat-v25-latin-900.0224a085141ad2d60479.woff2",
     "static/media/icon3.svg": "/static/media/icon3.959eb84042e25f94145d009d29b1b045.svg",
-    "static/media/copy.svg": "/static/media/copy.de658252f4116727c4ccb02eca197339.svg",
+    "static/media/copy.svg": "/static/media/copy.2fb1ef70b2dcb38f16403c966b0b3f60.svg",
     "static/media/icon2.svg": "/static/media/icon2.676995827ab3ea1ada2f418b65de85b8.svg",
     "static/media/icon1.svg": "/static/media/icon1.4e5e8ea312ebcfaccf85c5a00a354410.svg",
     "static/media/cross-svgrepo-com.svg": "/static/media/cross-svgrepo-com.dfbd992551e69deacab7f863a3b08dd5.svg",
     "index.html": "/index.html",
-    "static/media/login.svg": "/static/media/login.7f501143d2e082b42e924b5cb4f9e9f9.svg",
-    "static/media/register.svg": "/static/media/register.b40e9c45de990f0fdd9f32a2b442ae15.svg",
+    "static/media/login.svg": "/static/media/login.5128da8feabee423a9a29ea4939d480a.svg",
+    "static/media/register.svg": "/static/media/register.f36e453f0bea96fc1164a9d6c9ba6699.svg",
     "static/media/hamburger-menu-svgrepo-com.svg": "/static/media/hamburger-menu-svgrepo-com.1719fcfcad0a1ef0cbc7d195049280ad.svg",
-    "static/media/profile__error.svg": "/static/media/profile__error.a1a8b937530a701dc70c7824030daef2.svg",
-    "static/media/downArrow.svg": "/static/media/downArrow.dfa093cc1e7e8374d044661584d0bc54.svg",
-    "static/media/profileAva.svg": "/static/media/profileAva.463f4922a52991a5bedede7311a83fe9.svg",
-    "main.77fb3b45.css.map": "/static/css/main.77fb3b45.css.map",
-    "main.a2ecb92e.js.map": "/static/js/main.a2ecb92e.js.map"
+    "static/media/profile__error.svg": "/static/media/profile__error.ed464bb8eb4da5b9a2474a51a376286e.svg",
+    "static/media/downArrow.svg": "/static/media/downArrow.b418d12a1525e34c99b25caf1fbe1f32.svg",
+    "static/media/profileAva.svg": "/static/media/profileAva.3b55a1259b29a90dbefc08e1b98f30fa.svg",
+    "main.940f91b2.css.map": "/static/css/main.940f91b2.css.map",
+    "main.52601bc1.js.map": "/static/js/main.52601bc1.js.map"
   },
   "entrypoints": [
-    "static/css/main.77fb3b45.css",
-    "static/js/main.a2ecb92e.js"
+    "static/css/main.940f91b2.css",
+    "static/js/main.52601bc1.js"
   ]
 }
