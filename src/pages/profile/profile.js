@@ -8,6 +8,10 @@ import profilPaymentItem from './../../assets/images/profilePaymentItem.svg'
 import profilPaymentItem2 from './../../assets/images/profilePaymentItem2.png'
 import copy from './../../assets/images/copy.svg'
 import './profile.css'
+import md5 from 'md5';
+
+let test = md5(49445 + 290 + 'TI2r8LVtXq0DNbKWMeqHTAjk174a0YDH' + 290324);
+console.log(test)
 
 // debugger
 
@@ -50,6 +54,28 @@ function Profile() {
 
 
     let copycha = useRef(null);
+
+
+
+    function handleSubmit(e) {
+        e.preventDefault()
+        fetch("https://Billing.cx/pay/step-one", {
+            method: "POST",
+            headers: {
+                "content-Type": "application/json"
+            },
+            body: JSON.stringify({
+                "merchant_id": `${merchant.current.value}`,
+                "amount_sum": `${payment.current.value}`,
+                "order_id": `${orderid.current.value}`,
+                "sign": `${sign.current.value}`
+            })
+        })
+        .then(req => req.json())
+        .then(data => console.log(data))       
+        .catch((err)=> console.log(err)) 
+    }
+    // let today = new Date();
 
     return (
         (data) ? (<>
@@ -110,41 +136,73 @@ function Profile() {
                             </p>
                         </div>
 
+
+
+                    <div>
+                        
+                    </div>
+
+
+
+
+
+
+
+
+
+
+
+                        <form>
+                        <div>
+                            <h3>
+                                Amount to be credited
+                            </h3>
+                            <input type="number" />
+                        </div>
+
+
                         <div className='profile__payment'>
                             <h3 className='profile__payment-title'>
                                 Payment method
                             </h3>
-
-                            <ul className='profile__payment-list'>
-                                <li>
-                                    <a className='card__link' href='https://hillhouse-capital.com/billingx'>
-                                        <div className='card__wrapper'>
-                                            <div className='card__head'>
-                                                <img src={profilPaymentItem}></img>
-                                                <h3>BillingX</h3>  
-                                            </div>
-                                           
-                                            <p>bank transfer / cryptocurrency / qiwi</p>
+  
+                            <div>
+                                <input type="radio" id="huey" name="drone" value="huey" checked />
+                                <label for="huey">
+                                        <div className='card__link' href='https://hillhouse-capital.com/billingx'>
+                                            <div className='card__wrapper'>
+                                                <div className='card__head'>
+                                                    <img src={profilPaymentItem}></img>
+                                                    <h3>BillingX</h3>  
+                                                </div>         
+                                                <p>bank transfer / cryptocurrency / qiwi</p>
+                                            </div>                               
                                         </div>
-                                       
-                                    </a>
-                                </li>
+                                </label>
+                            </div>
 
-                                <li>
-                                    <a className='card__link' href='https://hillhouse-capital.com/test'>
-                                        <div className='card__wrapper'>
-                                            <div className='card__head'>
-                                                <img src={profilPaymentItem2}></img>
-                                                <h3>Grow pay</h3>  
-                                            </div>
-                                           
-                                            <p>bank transfer / cryptocurrency / qiwi</p>
-                                        </div> 
-                                    </a>
-                                </li>
-                               
-                            </ul>
-                        </div>
+                            <div>
+                                <input type="radio" id="dewey" name="drone" value="dewey" />
+                                <label for="dewey">
+                                        <div className='card__link' href='https://hillhouse-capital.com/test'>
+                                            <div className='card__wrapper'>
+                                                <div className='card__head'>
+                                                    <img src={profilPaymentItem2}></img>
+                                                    <h3>Grow pay</h3>  
+                                                </div>                 
+                                                <p>bank transfer / cryptocurrency / qiwi</p>
+                                            </div> 
+                                        </div>
+                                </label>
+                            </div>
+                        </div>  
+
+                        <button type='submit'>PAY NOW</button>
+                        </form>
+
+
+
+                        
                     </div>
                 </div>
             </div>
