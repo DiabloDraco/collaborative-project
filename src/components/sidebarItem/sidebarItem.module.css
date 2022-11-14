@@ -1,0 +1,40 @@
+.sideBarItem {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    gap: 24px;
+    max-width: 255px;
+    width: 100%;
+    max-height: 56px;
+    padding: 18px 24px;
+}
+
+.sideBarItem__icon {}
+
+.sideBarItem__heading {
+    font-family: 'Mulish';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 20px;
+    letter-spacing: 0.2px;
+    color: #A4A6B3;
+}
+
+.active {
+    background: rgba(159, 162, 180 , 0.08);
+    color: #DDE2FF;
+    position: relative;
+}
+
+.active::before {
+    content: "";
+    display: inline-block;
+    position: absolute;
+    height: 56px;
+    width: 3px;
+    background: #DDE2FF;
+    left: 0;
+}

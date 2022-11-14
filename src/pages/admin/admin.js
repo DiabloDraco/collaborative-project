@@ -1,5 +1,5 @@
 import './admin.css'
-import { useEffect, useRef } from 'react'
+import { useEffect, useRef, useState } from 'react'
 import { Link, NavLink, useNavigate } from 'react-router-dom'
 import fullLogo from './../../assets/images/fullLogo.svg'
 import { ReactComponent as DownArrow } from './../../assets/images/downArrow.svg'
@@ -10,12 +10,13 @@ function Admin() {
         document.querySelector(".header-wrapper").style.display = 'none'
         document.querySelector(".footer__wrapper").style.display = 'none'
     }, [])
+
     async function postInfo(e) {
         e.preventDefault();
         let checkTo = (val) => val.status == 200 ? save(val.token, val.status) : form.current.reset()
         function save(token, status) {
             if (token && status == 200) {
-                localStorage.setItem("token", JSON.stringify(token))
+                localStorage.setItem("admin", JSON.stringify(token))
                 navigator("/admin-profile")
             }
         }

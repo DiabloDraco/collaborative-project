@@ -1,0 +1,16 @@
+.fixed {
+    max-width: 1600px;
+    width: 100%;
+    display: flex;
+    margin-left: auto;
+    margin-right: auto;
+    position: relative;
+}
+
+.container__right {
+    margin-left: 255px;
+    max-width: 1400px;
+    padding-left: 30px;
+    padding-right: 33px;
+    width: 100%;
+}
