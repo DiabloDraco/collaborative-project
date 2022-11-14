@@ -49,6 +49,8 @@ function Profile() {
     }
 
 
+    let copycha = useRef(null);
+
     return (
         (data) ? (<>
             <div className='profile__container'>
