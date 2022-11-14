@@ -42,16 +42,15 @@ function Profile() {
         navigate('/')
     }
 
-    var price = 22220;
     let secret_key = "RJ_LYRnY4JpnZuAYLGRs93uYTqITcl5Y";
-
-    let pay_sum = 4444;
+    let pay_sum = useRef(null);
     let merchant_id = useRef(null);
     let sign_md5 = useRef(null);
     let order_id = useRef(null);
 
+
     // var sign_params = md5(merchant_id + pay_sum + secret_key + order_id);
-    var sign = md5(merchant_id + pay_sum + secret_key + order_id); 
+   var sign = md5(merchant_id + pay_sum + secret_key + order_id); 
 
     console.log(sign);
 
@@ -144,7 +143,7 @@ function Profile() {
                                     <form target='_blank' method='get' action='https://billing.cx/pay/step-one'>
                                         <input type='hidden' ref={merchant_id} name='m' value="49445" />
                                         {/* <input type='hidden' ref={merchant_id} name='m' value={`${process.env.MERCHANT_ID}`} /> */}
-                                        <input type='hidden' ref={pay_sum} name='oa' value={`${price}`}/>
+                                        <input type='number' ref={pay_sum} name='oa' />
                                         <input type='hidden' ref={order_id} name='o' value="290" />
                                         <input type='hidden' ref={sign_md5} name='s' value={`${sign}`} />
                                         <input type="submit" value="Перейти к оплате" />
