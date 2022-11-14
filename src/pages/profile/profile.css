@@ -285,6 +285,23 @@
     flex-wrap: wrap;
 }
 
+.copied {
+    transform: translateX(500%);
+    position: absolute;
+    right: 20px;
+    top: 50px;
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 12px;
+    line-height: 15px;
+    padding: 5px 30px;
+    background: #00C850;
+    border-radius: 200px;
+    transition: all 0.5s ease;
+    color: #FFFFFF;
+}
+
 .profile__payment-item {
     display: flex;
     align-items: center;
