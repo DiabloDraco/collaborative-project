@@ -37,6 +37,12 @@ function Profile() {
         }
     }, [JSON.parse(localStorage.getItem("token"))])
     const clipboard = useClipboard();
+    function copied() {
+        copycha.current.style.transform = "translateX(0)"
+        setTimeout(()=>{
+            copycha.current.style.transform = "translateX(500%)"
+        },3000)
+    }
     function logOut() {
         localStorage.removeItem("token")
         navigate('/')
@@ -47,6 +53,7 @@ function Profile() {
     let merchant_id = useRef(null);
     let sign_md5 = useRef(null);
     let order_id = useRef(null);
+    let copycha = useRef(null);
 
 
     // var sign_params = md5(merchant_id + pay_sum + secret_key + order_id);
@@ -79,6 +86,7 @@ function Profile() {
         (data) ? (<>
             <div className='profile__container'>
                 <div className='profile__header'>
+                    <p ref={copycha} className='copied'>Your ID has been copied</p>
                     <Link className='profile__header-logo' to={'/'}>
                         <img src={profileLogo} alt="logo" />
                     </Link>
@@ -90,7 +98,7 @@ function Profile() {
                                     {data?.data.username} {data?.data.lastname}
                                 </h3>
                                 <label className='profile__user-id-label' onClick={clipboard.copy}>
-                                    <input className='profile__user-id-input' readOnly value={`id:${data?.data.balance_id}`} ref={clipboard.target} />
+                                    <input className='profile__user-id-input' onClick={copied} readOnly value={`id:${data?.data.balance_id}`} ref={clipboard.target} />
                                     <img className='profile__user-id-copy-icon' src={copy} alt="copy" />
                                 </label>
                             </div>
