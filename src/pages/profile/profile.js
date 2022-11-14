@@ -48,38 +48,6 @@ function Profile() {
         navigate('/')
     }
 
-    let secret_key = "RJ_LYRnY4JpnZuAYLGRs93uYTqITcl5Y";
-    let pay_sum = useRef(null);
-    let merchant_id = useRef(null);
-    let sign_md5 = useRef(null);
-    let order_id = useRef(null);
-
-
-    // var sign_params = md5(merchant_id + pay_sum + secret_key + order_id);
-   var sign = md5(merchant_id + pay_sum + secret_key + order_id); 
-
-    console.log(sign);
-
-
-    function handleSubmit(e) {
-        e.preventDefault()
-        fetch("https://Billing.cx/pay/step-one", {
-            method: "GET",
-            headers: {
-                "content-Type": "application/json"
-            },
-            body: JSON.stringify({
-                "m": `${merchant_id.current.value}`,
-                "oa": `${pay_sum.current.value}`,
-                "o": `${order_id.current.value}`,
-                "s:": `${sign_md5.current.value}`
-            })
-        })
-        .then(req => req.json())
-        .then(data => console.log(data))       
-        .catch((err)=> console.log(err)) 
-    }
-    let today = new Date();
 
     return (
         (data) ? (<>
