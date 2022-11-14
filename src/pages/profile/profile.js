@@ -5,9 +5,9 @@ import profileLogo from './../../assets/images/profileLogo.svg'
 import profileAva from './../../assets/images/profileAva.svg'
 import profilError from './../../assets/images/profile__error.svg'
 import profilPaymentItem from './../../assets/images/profilePaymentItem.svg'
+import profilPaymentItem2 from './../../assets/images/profilePaymentItem2.png'
 import copy from './../../assets/images/copy.svg'
 import './profile.css'
-import md5 from "md5";
 
 // debugger
 
@@ -41,39 +41,6 @@ function Profile() {
         localStorage.removeItem("token")
         navigate('/')
     }
-
-    let secret_key = "RJ_LYRnY4JpnZuAYLGRs93uYTqITcl5Y";
-    let pay_sum = useRef(null);
-    let merchant_id = useRef(null);
-    let sign_md5 = useRef(null);
-    let order_id = useRef(null);
-
-
-    // var sign_params = md5(merchant_id + pay_sum + secret_key + order_id);
-   var sign = md5(merchant_id + pay_sum + secret_key + order_id); 
-
-    console.log(sign);
-
-
-    function handleSubmit(e) {
-        e.preventDefault()
-        fetch("https://Billing.cx/pay/step-one", {
-            method: "GET",
-            headers: {
-                "content-Type": "application/json"
-            },
-            body: JSON.stringify({
-                "m": `${merchant_id.current.value}`,
-                "oa": `${pay_sum.current.value}`,
-                "o": `${order_id.current.value}`,
-                "s:": `${sign_md5.current.value}`
-            })
-        })
-        .then(req => req.json())
-        .then(data => console.log(data))       
-        .catch((err)=> console.log(err)) 
-    }
-    let today = new Date();
 
     return (
         (data) ? (<>
@@ -140,15 +107,32 @@ function Profile() {
 
                             <ul className='profile__payment-list'>
                                 <li>
-                                    <form target='_blank' method='get' action='https://billing.cx/pay/step-one'>
-                                        <input type='hidden' ref={merchant_id} name='m' value="49445" />
-                                        {/* <input type='hidden' ref={merchant_id} name='m' value={`${process.env.MERCHANT_ID}`} /> */}
-                                        <input type='number' ref={pay_sum} name='oa' />
-                                        <input type='hidden' ref={order_id} name='o' value="290" />
-                                        <input type='hidden' ref={sign_md5} name='s' value={`${sign}`} />
-                                        <input type="submit" value="Перейти к оплате" />
-                                    </form>
+                                    <a className='card__link' href='https://hillhouse-capital.com/test'>
+                                        <div className='card__wrapper'>
+                                            <div className='card__head'>
+                                                <img src={profilPaymentItem}></img>
+                                                <h3>BillingX</h3>  
+                                            </div>
+                                           
+                                            <p>bank transfer / cryptocurrency / qiwi</p>
+                                        </div>
+                                       
+                                    </a>
                                 </li>
+
+                                <li>
+                                    <a className='card__link' href='https://hillhouse-capital.com/test'>
+                                        <div className='card__wrapper'>
+                                            <div className='card__head'>
+                                                <img src={profilPaymentItem2}></img>
+                                                <h3>Grow pay</h3>  
+                                            </div>
+                                           
+                                            <p>bank transfer / cryptocurrency / qiwi</p>
+                                        </div> 
+                                    </a>
+                                </li>
+                               
                             </ul>
                         </div>
                     </div>
