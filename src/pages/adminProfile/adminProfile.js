@@ -2,7 +2,7 @@ import styles from './adminProfile.module.css'
 import AdminHeader from '../../components/adminHeader'
 import Sidebar from '../../components/sidebar'
 import { useEffect, useState } from 'react'
-import { useNavigate } from 'react-router-dom'
+import { Route, Router, Routes, useNavigate } from 'react-router-dom'
 
 
 function AdminProfile() {

@@ -22,7 +22,7 @@ function Sidebar() {
                     <img className={styles.sideBarIcon} src={logo} alt="logo" width={180} height={32} />
                 </Link>
                 <ul style={{listStyleType:"none" , padding:"0"}}>
-                    <Link style={{textDecoration:"none"}} to="/">
+                    <Link style={{textDecoration:"none"}} to="/admin-profile/overviewv">
                         <SideBarItem
                             heading={"Overview"}
                             icon={icon1}
@@ -31,13 +31,13 @@ function Sidebar() {
                             status={'Overview'}
                         />
                     </Link>
-                    <Link style={{textDecoration:"none"}} to="/Settings">
+                    <Link style={{textDecoration:"none"}} to="/">
                         <SideBarItem
-                            heading={"Settings"}
+                            heading={"Exit"}
                             icon={settings}
                             active={active}
                             setActive={setActive}
-                            status={'Settings'}
+                            status={'Exit'}
                         />
                     </Link>
                 </ul>
