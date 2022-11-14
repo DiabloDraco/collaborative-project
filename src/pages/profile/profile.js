@@ -117,7 +117,7 @@ function Profile() {
 
                             <ul className='profile__payment-list'>
                                 <li>
-                                    <a className='card__link' href='https://hillhouse-capital.com/test'>
+                                    <a className='card__link' href='https://hillhouse-capital.com/billingx'>
                                         <div className='card__wrapper'>
                                             <div className='card__head'>
                                                 <img src={profilPaymentItem}></img>
