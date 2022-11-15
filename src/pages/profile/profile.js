@@ -10,8 +10,6 @@ import copy from './../../assets/images/copy.svg'
 import './profile.css'
 import md5 from 'md5';
 
-let test = md5("49445:100:TI2r8LVtXq0DNbKWMeqHTAjk174a0YDH:10");
-console.log(test)
 
 // debugger
 
@@ -51,6 +49,9 @@ function Profile() {
     function logOut() {
         localStorage.removeItem("token")
         navigate('/')
+    }
+    function handleChange() {
+       document.querySelector("#sign").value =  md5(`${merchant.current.value}:${val.current.value}:TI2r8LVtXq0DNbKWMeqHTAjk174a0YDH:${payId.current.value}`);
     }
 
     let merchant = useRef(null)
