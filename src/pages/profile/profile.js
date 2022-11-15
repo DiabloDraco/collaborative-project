@@ -43,9 +43,9 @@ function Profile() {
     const clipboard = useClipboard();
     function copied() {
         copycha.current.style.transform = "translateX(0)"
-        setTimeout(()=>{
+        setTimeout(() => {
             copycha.current.style.transform = "translateX(500%)"
-        },3000)
+        }, 3000)
     }
     function logOut() {
         localStorage.removeItem("token")
@@ -57,24 +57,24 @@ function Profile() {
 
 
 
-    function handleSubmit(e) {
-        e.preventDefault()
-        fetch("https://Billing.cx/pay/step-one", {
-            method: "POST",
-            headers: {
-                "content-Type": "application/json"
-            },
-            body: JSON.stringify({
-                "merchant_id": `${merchant.current.value}`,
-                "amount_sum": `${payment.current.value}`,
-                "order_id": `${orderid.current.value}`,
-                "sign": `${sign.current.value}`
-            })
-        })
-        .then(req => req.json())
-        .then(data => console.log(data))       
-        .catch((err)=> console.log(err)) 
-    }
+    // function handleSubmit(e) {
+    //     e.preventDefault()
+    //     fetch("https://Billing.cx/pay/step-one", {
+    //         method: "POST",
+    //         headers: {
+    //             "content-Type": "application/json"
+    //         },
+    //         body: JSON.stringify({
+    //             "merchant_id": `${merchant.current.value}`,
+    //             "amount_sum": `${payment.current.value}`,
+    //             "order_id": `${orderid.current.value}`,
+    //             "sign": `${sign.current.value}`
+    //         })
+    //     })
+    //     .then(req => req.json())
+    //     .then(data => console.log(data))       
+    //     .catch((err)=> console.log(err)) 
+    // }
     // let today = new Date();
 
     return (
@@ -138,9 +138,9 @@ function Profile() {
 
 
 
-                    <div>
-                        
-                    </div>
+                        <div>
+
+                        </div>
 
 
 
@@ -153,56 +153,56 @@ function Profile() {
 
 
                         <form>
-                        <div>
-                            <h3>
-                                Amount to be credited
-                            </h3>
-                            <input type="number" />
-                        </div>
-
-
-                        <div className='profile__payment'>
-                            <h3 className='profile__payment-title'>
-                                Payment method
-                            </h3>
-  
                             <div>
-                                <input type="radio" id="huey" name="drone" value="huey" checked />
-                                <label for="huey">
+                                <h3>
+                                    Amount to be credited
+                                </h3>
+                                <input type="number" />
+                            </div>
+
+
+                            <div className='profile__payment'>
+                                <h3 className='profile__payment-title'>
+                                    Payment method
+                                </h3>
+
+                                <div>
+                                    <input type="radio" id="huey" name="drone" value="huey" checked />
+                                    <label for="huey">
                                         <div className='card__link' href='https://hillhouse-capital.com/billingx'>
                                             <div className='card__wrapper'>
                                                 <div className='card__head'>
                                                     <img src={profilPaymentItem}></img>
-                                                    <h3>BillingX</h3>  
-                                                </div>         
+                                                    <h3>BillingX</h3>
+                                                </div>
                                                 <p>bank transfer / cryptocurrency / qiwi</p>
-                                            </div>                               
+                                            </div>
                                         </div>
-                                </label>
-                            </div>
+                                    </label>
+                                </div>
 
-                            <div>
-                                <input type="radio" id="dewey" name="drone" value="dewey" />
-                                <label for="dewey">
+                                <div>
+                                    <input type="radio" id="dewey" name="drone" value="dewey" />
+                                    <label for="dewey">
                                         <div className='card__link' href='https://hillhouse-capital.com/test'>
                                             <div className='card__wrapper'>
                                                 <div className='card__head'>
                                                     <img src={profilPaymentItem2}></img>
-                                                    <h3>Grow pay</h3>  
-                                                </div>                 
+                                                    <h3>Grow pay</h3>
+                                                </div>
                                                 <p>bank transfer / cryptocurrency / qiwi</p>
-                                            </div> 
+                                            </div>
                                         </div>
-                                </label>
+                                    </label>
+                                </div>
                             </div>
-                        </div>  
 
-                        <button type='submit'>PAY NOW</button>
+                            <button type='submit'>PAY NOW</button>
                         </form>
 
 
 
-                        
+
                     </div>
                 </div>
             </div>

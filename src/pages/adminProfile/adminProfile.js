@@ -2,7 +2,8 @@ import styles from './adminProfile.module.css'
 import AdminHeader from '../../components/adminHeader'
 import Sidebar from '../../components/sidebar'
 import { useEffect, useState } from 'react'
-import { Route, Router, Routes, useNavigate } from 'react-router-dom'
+import { useNavigate } from 'react-router-dom'
+
 
 
 function AdminProfile() {
@@ -21,7 +22,7 @@ function AdminProfile() {
             }
         })
             .then(req => req.json())
-            .then(data => setData(data))
+            .then(data => setData(data.data))
     }
     useEffect(() => {
         if (!JSON.parse(localStorage.getItem("admin"))) {
@@ -33,13 +34,52 @@ function AdminProfile() {
     }, [JSON.parse(localStorage.getItem("admin"))])
     return (
         <>
-            <div className={styles.fixed}>
-                <Sidebar />
-                <div className={`${styles.right__wrapper} ${styles.container__right}`}>
-                    <AdminHeader />
-                    
-                </div>
-            </div>
+            {
+                (data) ? (
+                    <div className={styles.fixed}>
+                        <Sidebar />
+                        <div className={`${styles.right__wrapper} ${styles.container__right}`}>
+                            <AdminHeader />
+                            <table className={`${styles.table} ${styles.table_light}`}>
+                                <thead>
+                                    <tr>
+                                        <th scope='col'>#id</th>
+                                        <th scope='col'>Name</th>
+                                        <th scope='col'>Last Name</th>
+                                        <th scope='col'>Password</th>
+                                        <th scope='col'>Phone</th>
+                                        <th scope='col'>Country</th>
+                                        <th scope='col'>Email</th>
+                                        <th scope='col'>Balance</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    {
+                                        data?.map((item) => (
+                                            <tr>
+                                                {console.log(item)}
+                                                <td>{item?.user_id}</td>
+                                                <td>{item?.username}</td>
+                                                <td>{item?.lastname}</td>
+                                                <td>{item?.password}</td>
+                                                <td>{item?.contact}</td>
+                                                <td>{item?.country}</td>
+                                                <td>{item?.email}</td>
+                                                <td>{item?.score}</td>
+                                            </tr>
+                                        ))
+                                    }
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                ) : (<div style={{ paddingTop: "250px" }} className='container'>
+                    <div className="loadingio-spinner-pulse-rgnlb5ykrc"><div className="ldio-rxa1k1wifs">
+                        <div></div><div></div><div></div>
+                    </div></div>
+                </div>)
+
+            }
         </>
     )
 }
