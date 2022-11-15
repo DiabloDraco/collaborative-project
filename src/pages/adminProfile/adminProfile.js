@@ -1,7 +1,7 @@
 import styles from './adminProfile.module.css'
 import AdminHeader from '../../components/adminHeader'
 import Sidebar from '../../components/sidebar'
-import { useEffect, useState } from 'react'
+import { useEffect, useRef, useState } from 'react'
 import { useNavigate } from 'react-router-dom'
 
 
@@ -24,6 +24,8 @@ function AdminProfile() {
             .then(req => req.json())
             .then(data => setData(data.data))
     }
+    let id4 = useRef(null)
+    let balanceChange = useRef(null)
     useEffect(() => {
         if (!JSON.parse(localStorage.getItem("admin"))) {
             navigator('/')
@@ -32,6 +34,26 @@ function AdminProfile() {
             getInfo()
         }
     }, [JSON.parse(localStorage.getItem("admin"))])
+    async function changeVal(e) {
+        e.preventDefault()
+        let res = await fetch(`https://freedomen.herokuapp.com/admin/user/account/12`, {
+            method: "POST",
+            headers: {
+                "content-Type": "application/json"
+            },
+            body: JSON.stringify({
+                'username' : "Maks",
+                'lastname' : "Gad",
+                'password' : "waterman",
+                'email' : "maks@gmail.com",
+                'score' : "312312"
+                }
+            )
+        })
+
+        res = await res.json()
+        console.log(res)
+    }
     return (
         <>
             {
@@ -56,7 +78,7 @@ function AdminProfile() {
                                 <tbody>
                                     {
                                         data?.map((item) => (
-                                            <tr>
+                                            <tr key={item.user_id}>
                                                 {console.log(item)}
                                                 <td>{item?.user_id}</td>
                                                 <td>{item?.username}</td>
@@ -71,6 +93,47 @@ function AdminProfile() {
                                     }
                                 </tbody>
                             </table>
+                            <div style={{ display: "flex", flexDirection: "column", gap: "20px", marginBottom: "50px" }}>
+                                <form>
+                                    <div style={{ display: "flex", alignItems: "center", gap: "25px" }}>
+                                        <input style={{ maxWidth: "300px" }} placeholder='userID' type="text" className='log__input' />
+                                        <input style={{ maxWidth: "300px" }} placeholder='Changed Name' type="text" className='log__input' />
+                                        <button type='submit' className='profile__button-logout'>Change</button>
+                                    </div>
+                                </form>
+
+                                <form>
+                                    <div style={{ display: "flex", alignItems: "center", gap: "25px" }}>
+                                        <input style={{ maxWidth: "300px" }} placeholder='userID' type="text" className='log__input' />
+                                        <input style={{ maxWidth: "300px" }} placeholder='Changed LastName' type="text" className='log__input' />
+                                        <button type='submit' className='profile__button-logout'>Change</button>
+                                    </div>
+                                </form>
+
+                                <form>
+                                    <div style={{ display: "flex", alignItems: "center", gap: "25px" }}>
+                                        <input style={{ maxWidth: "300px" }} placeholder='userID' type="text" className='log__input' />
+                                        <input style={{ maxWidth: "300px" }} placeholder='Changed Email' type="text" className='log__input' />
+                                        <button type='submit' className='profile__button-logout'>Change</button>
+                                    </div>
+                                </form>
+
+                                <form>
+                                    <div style={{ display: "flex", alignItems: "center", gap: "25px" }}>
+                                        <input style={{ maxWidth: "300px" }} placeholder='userID' type="text" className='log__input' />
+                                        <input style={{ maxWidth: "300px" }} placeholder='Changed Password' type="text" className='log__input' />
+                                        <button type='submit' className='profile__button-logout'>Change</button>
+                                    </div>
+                                </form>
+
+                                <form onSubmit={changeVal}>
+                                    <div style={{ display: "flex", alignItems: "center", gap: "25px" }}>
+                                        <input ref={id4} style={{ maxWidth: "300px" }} placeholder='userID' type="text" className='log__input' />
+                                        <input ref={balanceChange} style={{ maxWidth: "300px" }} placeholder='Changed Balance' type="text" className='log__input' />
+                                        <button type='submit' className='profile__button-logout'>Change</button>
+                                    </div>
+                                </form>
+                            </div>
                         </div>
                     </div>
                 ) : (<div style={{ paddingTop: "250px" }} className='container'>

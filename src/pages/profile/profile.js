@@ -13,9 +13,11 @@ import md5 from 'md5';
 let test = md5(49445 + 290 + 'TI2r8LVtXq0DNbKWMeqHTAjk174a0YDH' + 290324);
 console.log(test)
 
+
 // debugger
 
 function Profile() {
+
     let [data, setData] = useState()
     useEffect(() => {
         document.querySelector(".header-wrapper").style.display = 'none'
@@ -54,7 +56,7 @@ function Profile() {
 
 
     let copycha = useRef(null);
-
+    let num = useRef(null);
 
 
     // function handleSubmit(e) {
@@ -157,7 +159,7 @@ function Profile() {
                                 <h3>
                                     Amount to be credited
                                 </h3>
-                                <input type="number" />
+                                <input ref={num} type="number" />
                             </div>
 
 
@@ -213,5 +215,7 @@ function Profile() {
         </div>)
     )
 }
+
+
 
 export default Profile
