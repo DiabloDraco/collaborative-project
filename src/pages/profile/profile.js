@@ -10,10 +10,6 @@ import copy from './../../assets/images/copy.svg'
 import './profile.css'
 import md5 from 'md5';
 
-let test = md5(49445 + 290 + 'TI2r8LVtXq0DNbKWMeqHTAjk174a0YDH' + 290324);
-console.log(test)
-
-// debugger
 
 function Profile() {
     let [data, setData] = useState()
@@ -54,7 +50,7 @@ function Profile() {
 
 
     let copycha = useRef(null);
-
+    // let today = new Date();
 
 
     // function handleSubmit(e) {
@@ -65,7 +61,7 @@ function Profile() {
     //             "content-Type": "application/json"
     //         },
     //         body: JSON.stringify({
-    //             "merchant_id": `${merchant.current.value}`,
+    //             "m": `${payment.current.value}`,
     //             "amount_sum": `${payment.current.value}`,
     //             "order_id": `${orderid.current.value}`,
     //             "sign": `${sign.current.value}`
@@ -75,7 +71,7 @@ function Profile() {
     //     .then(data => console.log(data))       
     //     .catch((err)=> console.log(err)) 
     // }
-    // let today = new Date();
+
 
     return (
         (data) ? (<>
