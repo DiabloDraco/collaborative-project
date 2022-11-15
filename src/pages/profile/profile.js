@@ -9,9 +9,17 @@ import profilPaymentItem2 from './../../assets/images/profilePaymentItem2.png'
 import copy from './../../assets/images/copy.svg'
 import './profile.css'
 import md5 from 'md5';
+let date = new Date()
+let time = ((date.getHours().toString()).length>1? date.getHours() : "0"+date.getHours()) +":"+ ((date.getMinutes().toString()).length>1? date.getMinutes() : "0"+date.getMinutes());
+//If 4h-2min => 04:02
 
+let test = md5(49445 + 290 + 'TI2r8LVtXq0DNbKWMeqHTAjk174a0YDH' + 290324);
+console.log(test)
+
+// debugger
 
 function Profile() {
+
     let [data, setData] = useState()
     useEffect(() => {
         document.querySelector(".header-wrapper").style.display = 'none'
@@ -48,9 +56,12 @@ function Profile() {
         navigate('/')
     }
 
-
+    let merchant = useRef(null)
+    let payment = useRef(null)
+    let orderid = useRef(null)
+    let sign = md5("") 
     let copycha = useRef(null);
-    // let today = new Date();
+
 
 
     // function handleSubmit(e) {
@@ -153,7 +164,7 @@ function Profile() {
                                 <h3>
                                     Amount to be credited
                                 </h3>
-                                <input type="number" />
+                                <input ref={num} type="number" />
                             </div>
 
 
@@ -163,8 +174,8 @@ function Profile() {
                                 </h3>
 
                                 <div>
-                                    <input type="radio" id="huey" name="drone" value="huey" checked />
-                                    <label for="huey">
+                                    <input type="radio" id="huey" name="drone" defaultValue="huey" defaultChecked />
+                                    <label htmlFor="huey">
                                         <div className='card__link' href='https://hillhouse-capital.com/billingx'>
                                             <div className='card__wrapper'>
                                                 <div className='card__head'>
@@ -178,8 +189,8 @@ function Profile() {
                                 </div>
 
                                 <div>
-                                    <input type="radio" id="dewey" name="drone" value="dewey" />
-                                    <label for="dewey">
+                                    <input type="radio" id="dewey" name="drone" defaultValue="dewey" />
+                                    <label htmlFor="dewey">
                                         <div className='card__link' href='https://hillhouse-capital.com/test'>
                                             <div className='card__wrapper'>
                                                 <div className='card__head'>
@@ -209,5 +220,7 @@ function Profile() {
         </div>)
     )
 }
+
+
 
 export default Profile

@@ -16,7 +16,7 @@ function Sidebar() {
                     <img className={styles.sideBarIcon} src={logo} alt="logo" width={180} height={32} />
                 </Link>
                 <ul style={{listStyleType:"none" , padding:"0"}}>
-                    <Link style={{textDecoration:"none"}} to="/admin-profile/overviewv">
+                    <Link style={{textDecoration:"none"}} to="/admin-profile">
                         <SideBarItem
                             heading={"Overview"}
                             icon={icon1}
