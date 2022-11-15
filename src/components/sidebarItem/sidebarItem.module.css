@@ -24,7 +24,6 @@
 }
 
 .active {
-    background: rgba(159, 162, 180 , 0.08);
     color: #DDE2FF;
     position: relative;
 }
