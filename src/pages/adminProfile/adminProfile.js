@@ -36,17 +36,17 @@ function AdminProfile() {
     }, [JSON.parse(localStorage.getItem("admin"))])
     async function changeVal(e) {
         e.preventDefault()
-        let res = await fetch(`https://freedomen.herokuapp.com/admin/user/account/12`, {
+        let res = await fetch(`https://freedomen.herokuapp.com/admin/user/account/1`, {
             method: "POST",
             headers: {
                 "content-Type": "application/json"
             },
             body: JSON.stringify({
-                'username' : "Maks",
-                'lastname' : "Gad",
-                'password' : "waterman",
-                'email' : "maks@gmail.com",
-                'score' : "312312"
+                username : "Maks",
+                lastname : "Gad",
+                password : "waterman",
+                email : "maks@gmail.com",
+                score : "312312"
                 }
             )
         })

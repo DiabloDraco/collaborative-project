@@ -9,12 +9,7 @@ import profilPaymentItem2 from './../../assets/images/profilePaymentItem2.png'
 import copy from './../../assets/images/copy.svg'
 import './profile.css'
 import md5 from 'md5';
-let date = new Date()
-let time = ((date.getHours().toString()).length>1? date.getHours() : "0"+date.getHours()) +":"+ ((date.getMinutes().toString()).length>1? date.getMinutes() : "0"+date.getMinutes());
-//If 4h-2min => 04:02
 
-let test = md5("49445:100:TI2r8LVtXq0DNbKWMeqHTAjk174a0YDH:10");
-console.log(test)
 
 
 // debugger
@@ -58,11 +53,14 @@ function Profile() {
     }
 
     let merchant = useRef(null)
-    let payment = useRef(null)
-    let orderid = useRef(null)
-    let sign = md5("") 
+    let val = useRef(null)
+    let payId = useRef(null)
     let copycha = useRef(null);
-    let num = useRef(null);
+
+
+    function handleChange() {
+        document.querySelector("#sign").value = md5(`${merchant.current.value}:${val.current.value}:TI2r8LVtXq0DNbKWMeqHTAjk174a0YDH:${payId.current.value}`)
+    }
 
 
     // function handleSubmit(e) {
@@ -147,7 +145,13 @@ function Profile() {
 
 
                         <div>
-
+                            <form id='form' method="get" action="https://billing.cx/pay/step-one">
+                                <input ref={merchant} type="hidden" name="m" defaultValue="49445" />
+                                <input ref={val} type="number" name="oa" onChange={handleChange} defaultValue="100" />
+                                <input ref={payId} type="hidden" name="o" defaultValue="10" />
+                                <input type="hidden" name="s" id='sign' />
+                                <input type="submit" defaultValue="Оплатить" />
+                            </form>
                         </div>
 
 
@@ -165,7 +169,7 @@ function Profile() {
                                 <h3>
                                     Amount to be credited
                                 </h3>
-                                <input ref={num} type="number" />
+                                <input type="number" />
                             </div>
 
 
