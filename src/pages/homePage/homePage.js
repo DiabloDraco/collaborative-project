@@ -31,7 +31,7 @@ function HomePage() {
                             JOIN US
                         </Link>
                         <Link to={'/reasons'} className='home__top-join'>
-                            RAESONS TO JOIN
+                            RAESONS
                         </Link>
                     </div>
                     <p className='home__top-text'>
