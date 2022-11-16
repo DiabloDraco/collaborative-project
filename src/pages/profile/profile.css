@@ -489,7 +489,6 @@ input[type="radio" i] {
     background-color: #0000002d;
     z-index: 999;
     backdrop-filter: blur(2px);
-    
 }
 
 #billingcx-modal {
