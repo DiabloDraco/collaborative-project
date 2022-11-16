@@ -1,10 +1,13 @@
 import './registration.css'
 import fullLogo from './../../assets/images/fullLogo.svg'
-import { useEffect, useRef } from 'react'
+import { useEffect, useRef, useState } from 'react'
 import { Link, NavLink, useNavigate } from 'react-router-dom'
 import { ReactComponent as DownArrow } from './../../assets/images/downArrow.svg'
+import 'react-phone-number-input/style.css'
+import PhoneInput from 'react-phone-number-input'
 
 function Registration() {
+    const [value, setValue] = useState()
     useEffect(() => {
         document.querySelector(".header-wrapper").style.display = 'none'
         document.querySelector(".footer__wrapper").style.display = 'none'
@@ -20,12 +23,13 @@ function Registration() {
     let date = useRef(null)
     let navigator = useNavigate()
 
+
     async function postInfo(e) {
         e.preventDefault();
-        let checkTo = (val) => val.status == 200 ? save(val.token , val.status) : form.current.reset()
-        function save(token , status) {
+        let checkTo = (val) => val.status == 200 ? save(val.token, val.status) : form.current.reset()
+        function save(token, status) {
             if (token && status == 200) {
-                localStorage.setItem("token" , JSON.stringify(token))
+                localStorage.setItem("token", JSON.stringify(token))
                 navigator("/profile")
             }
         }
@@ -40,7 +44,7 @@ function Registration() {
                     "lastname": `${last.current.value}`,
                     "password": `${password.current.value}`,
                     "email": `${mail.current.value}`,
-                    "contact": `${phone.current.value}`,
+                    "contact": `${value}`,
                     "country": `${country.current.value}`,
                     "brithday": `${country.current.value}`
                 })
@@ -51,7 +55,7 @@ function Registration() {
         } else {
             document.querySelector(".password__error").style.display = 'flex'
         }
-    }   
+    }
 
     function error(e) {
         if (!(e.target.value.length > 0)) {
@@ -85,9 +89,15 @@ function Registration() {
                         <div className='error__mail error'>Please complete all required fields!</div>
                     </label>
                     <label className='reg__label'>
-                        <input onChange={error} ref={phone} className='reg__input' required type="tel" placeholder='Phone' />
+                        <PhoneInput
+                            className='reg__input'
+                            placeholder='Phone'
+                            ref={phone}
+                            value={value}
+                            onChange={setValue} required />
                         <div className='error__phone error'>Please complete all required fields!</div>
                     </label>
+
                     <label className='reg__label'>
                         <input onChange={error} ref={country} className='reg__input' required type="text" placeholder='Country' />
                         <div className='error__country error'>Please complete all required fields!</div>

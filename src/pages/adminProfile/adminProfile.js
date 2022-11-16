@@ -24,8 +24,14 @@ function AdminProfile() {
             .then(req => req.json())
             .then(data => setData(data.data))
     }
-    let id4 = useRef(null)
+    let id = useRef(null)
+    let userName = useRef(null)
+    let lastName = useRef(null)
+    let userId = useRef(null)
+    let email = useRef(null)
+    let password = useRef(null)
     let balanceChange = useRef(null)
+
     useEffect(() => {
         if (!JSON.parse(localStorage.getItem("admin"))) {
             navigator('/')
@@ -34,105 +40,107 @@ function AdminProfile() {
             getInfo()
         }
     }, [JSON.parse(localStorage.getItem("admin"))])
+    async function userDelete(e) {
+        e.preventDefault()
+        let res = await fetch(`https://freedomen.herokuapp.com/admin/user/delete/${userId.current.value}`, {
+            method: "DELETE",
+            headers: {
+                "content-Type": "application/json",
+                "token": `${JSON.parse(localStorage.getItem("admin"))}`
+            }
+        })
+        res = await res.json()
+        setTimeout(() => {
+            alert("user deleted successfully")
+        }, 1000)
+        setTimeout(() => {
+            window.location.reload()
+        }, 2000)
+    }
     async function changeVal(e) {
         e.preventDefault()
-        let res = await fetch(`https://freedomen.herokuapp.com/admin/user/account/1`, {
-            method: "POST",
+        let res = await fetch(`https://freedomen.herokuapp.com/admin/user/account/${id.current?.value}`, {
+            method: "PUT",
             headers: {
-                "content-Type": "application/json"
+                "content-Type": "application/json",
+                "token": `${JSON.parse(localStorage.getItem("admin"))}`
             },
             body: JSON.stringify({
-                username : "Maks",
-                lastname : "Gad",
-                password : "waterman",
-                email : "maks@gmail.com",
-                score : "312312"
-                }
+                "username": `${userName.current.value}`,
+                "lastname": `${lastName.current.value}`,
+                "password": `${password.current.value}`,
+                "email": `${email.current.value}`,
+                "score": `${balanceChange.current.value}`
+            }
             )
         })
-
         res = await res.json()
-        console.log(res)
+        setTimeout(() => {
+            if (res.status == 201) {
+                alert("user changed successfully")
+            } else {
+                alert("user failed to change")
+            }
+        }, 1000)
+        setTimeout(() => {
+            window.location.reload()
+        }, 2000)
     }
     return (
         <>
             {
                 (data) ? (
-                    <div className={styles.fixed}>
-                        <Sidebar />
-                        <div className={`${styles.right__wrapper} ${styles.container__right}`}>
-                            <AdminHeader />
-                            <table className={`${styles.table} ${styles.table_light}`}>
-                                <thead>
-                                    <tr>
-                                        <th style={{width:'100px'}} scope='col'>#id</th>
-                                        <th scope='col'>Name</th>
-                                        <th scope='col'>Last Name</th>
-                                        <th scope='col'>Password</th>
-                                        <th scope='col'>Phone</th>
-                                        <th scope='col'>Country</th>
-                                        <th style={{width:"300px"}} scope='col'>Email</th>
-                                        <th scope='col'>Balance</th>
-                                    </tr>
-                                </thead>
-                                <tbody>
-                                    {
-                                        data?.map((item) => (
-                                            <tr key={item.user_id}>
-                                                {console.log(item)}
-                                                <td style={{width:"100px"}}>{item?.user_id}</td>
-                                                <td>{item?.username}</td>
-                                                <td>{item?.lastname}</td>
-                                                <td>{item?.password}</td>
-                                                <td>{item?.contact}</td>
-                                                <td>{item?.country}</td>
-                                                <td style={{width:"300px"}}>{item?.email}</td>
-                                                <td>{item?.score}</td>
-                                            </tr>
-                                        ))
-                                    }
-                                </tbody>
-                            </table>
-                            <div style={{ display: "flex", flexDirection: "column", gap: "20px", marginBottom: "50px" }}>
-                                <form>
-                                    <div style={{ display: "flex", alignItems: "center", gap: "25px" }}>
-                                        <input style={{ maxWidth: "300px" }} placeholder='userID' type="text" className='log__input' />
-                                        <input style={{ maxWidth: "300px" }} placeholder='Changed Name' type="text" className='log__input' />
-                                        <button type='submit' className='profile__button-logout'>Change</button>
-                                    </div>
-                                </form>
-
-                                <form>
-                                    <div style={{ display: "flex", alignItems: "center", gap: "25px" }}>
-                                        <input style={{ maxWidth: "300px" }} placeholder='userID' type="text" className='log__input' />
-                                        <input style={{ maxWidth: "300px" }} placeholder='Changed LastName' type="text" className='log__input' />
-                                        <button type='submit' className='profile__button-logout'>Change</button>
-                                    </div>
-                                </form>
-
-                                <form>
-                                    <div style={{ display: "flex", alignItems: "center", gap: "25px" }}>
-                                        <input style={{ maxWidth: "300px" }} placeholder='userID' type="text" className='log__input' />
-                                        <input style={{ maxWidth: "300px" }} placeholder='Changed Email' type="text" className='log__input' />
-                                        <button type='submit' className='profile__button-logout'>Change</button>
-                                    </div>
-                                </form>
-
-                                <form>
-                                    <div style={{ display: "flex", alignItems: "center", gap: "25px" }}>
-                                        <input style={{ maxWidth: "300px" }} placeholder='userID' type="text" className='log__input' />
-                                        <input style={{ maxWidth: "300px" }} placeholder='Changed Password' type="text" className='log__input' />
-                                        <button type='submit' className='profile__button-logout'>Change</button>
-                                    </div>
-                                </form>
-
-                                <form onSubmit={changeVal}>
-                                    <div style={{ display: "flex", alignItems: "center", gap: "25px" }}>
-                                        <input ref={id4} style={{ maxWidth: "300px" }} placeholder='userID' type="text" className='log__input' />
-                                        <input ref={balanceChange} style={{ maxWidth: "300px" }} placeholder='Changed Balance' type="text" className='log__input' />
-                                        <button type='submit' className='profile__button-logout'>Change</button>
-                                    </div>
-                                </form>
+                    <div className={styles.maxwrap}>
+                        <div className={styles.fixed}>
+                            <Sidebar />
+                            <div className={`${styles.right__wrapper} ${styles.container__right}`}>
+                                <AdminHeader />
+                                <table className={`${styles.table} ${styles.table_light}`}>
+                                    <thead>
+                                        <tr>
+                                            <th style={{ width: '100px' }} scope='col'>#id</th>
+                                            <th scope='col'>Name</th>
+                                            <th scope='col'>Last Name</th>
+                                            <th scope='col'>Password</th>
+                                            <th scope='col'>Phone</th>
+                                            <th scope='col'>Country</th>
+                                            <th style={{ width: "300px" }} scope='col'>Email</th>
+                                            <th scope='col'>Balance</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        {
+                                            data?.map((item) => (
+                                                <tr key={item.user_id}>
+                                                    {console.log(item)}
+                                                    <td style={{ width: "100px" }}>{item?.user_id}</td>
+                                                    <td>{item?.username}</td>
+                                                    <td>{item?.lastname}</td>
+                                                    <td>{item?.password}</td>
+                                                    <td>{item?.contact}</td>
+                                                    <td>{item?.country}</td>
+                                                    <td style={{ width: "300px" }}>{item?.email}</td>
+                                                    <td>{item?.score}</td>
+                                                </tr>
+                                            ))
+                                        }
+                                    </tbody>
+                                </table>
+                                <div>
+                                    <form style={{ display: "flex", flexDirection: "column", gap: "20px", marginBottom: "50px", marginTop: "50px", alignItems: "center" }} onSubmit={changeVal}>
+                                        <input ref={id} style={{ maxWidth: "800px" }} placeholder='userID' type="text" className='log__input' />
+                                        <input ref={userName} style={{ maxWidth: "800px" }} placeholder='Changed Name' type="text" className='log__input' />
+                                        <input ref={lastName} style={{ maxWidth: "800px" }} placeholder='Changed LastName' type="text" className='log__input' />
+                                        <input ref={email} style={{ maxWidth: "800px" }} placeholder='Changed Email' type="text" className='log__input' />
+                                        <input ref={password} style={{ maxWidth: "800px" }} placeholder='Changed Password' type="text" className='log__input' />
+                                        <input ref={balanceChange} style={{ maxWidth: "800px" }} placeholder='Changed Balance' type="text" className='log__input' />
+                                        <button style={{ maxWidth: "330px" }} type='submit' className='profile__button-logout'>Change</button>
+                                    </form>
+                                    <form style={{ display: "flex", flexDirection: "column", gap: "20px", marginBottom: "50px", marginTop: "50px", alignItems: "center" }} onSubmit={userDelete}>
+                                        <input ref={userId} style={{ maxWidth: "800px" }} placeholder='userID' type="text" className='log__input' />
+                                        <button style={{ maxWidth: "330px" }} type='submit' className='profile__button-logout'>Delete</button>
+                                    </form>
+                                </div>
                             </div>
                         </div>
                     </div>
