@@ -65,13 +65,13 @@ function AdminProfile() {
                             <table className={`${styles.table} ${styles.table_light}`}>
                                 <thead>
                                     <tr>
-                                        <th scope='col'>#id</th>
+                                        <th style={{width:'100px'}} scope='col'>#id</th>
                                         <th scope='col'>Name</th>
                                         <th scope='col'>Last Name</th>
                                         <th scope='col'>Password</th>
                                         <th scope='col'>Phone</th>
                                         <th scope='col'>Country</th>
-                                        <th scope='col'>Email</th>
+                                        <th style={{width:"300px"}} scope='col'>Email</th>
                                         <th scope='col'>Balance</th>
                                     </tr>
                                 </thead>
@@ -80,13 +80,13 @@ function AdminProfile() {
                                         data?.map((item) => (
                                             <tr key={item.user_id}>
                                                 {console.log(item)}
-                                                <td>{item?.user_id}</td>
+                                                <td style={{width:"100px"}}>{item?.user_id}</td>
                                                 <td>{item?.username}</td>
                                                 <td>{item?.lastname}</td>
                                                 <td>{item?.password}</td>
                                                 <td>{item?.contact}</td>
                                                 <td>{item?.country}</td>
-                                                <td>{item?.email}</td>
+                                                <td style={{width:"300px"}}>{item?.email}</td>
                                                 <td>{item?.score}</td>
                                             </tr>
                                         ))
