@@ -27,6 +27,7 @@ function AdminProfile() {
     let id = useRef(null)
     let userName = useRef(null)
     let lastName = useRef(null)
+    let userId = useRef(null)
     let email = useRef(null)
     let password = useRef(null)
     let balanceChange = useRef(null)
@@ -39,6 +40,23 @@ function AdminProfile() {
             getInfo()
         }
     }, [JSON.parse(localStorage.getItem("admin"))])
+    async function userDelete(e) {
+        e.preventDefault()
+        let res = await fetch(`https://freedomen.herokuapp.com/admin/user/delete/${userId.current.value}`, {
+            method: "DELETE",
+            headers: {
+                "content-Type": "application/json",
+                "token": `${JSON.parse(localStorage.getItem("admin"))}`
+            }
+        })
+        res = await res.json()
+        setTimeout(() => {
+            alert("user deleted successfully")
+        }, 1000)
+        setTimeout(() => {
+            window.location.reload()
+        }, 2000)
+    }
     async function changeVal(e) {
         e.preventDefault()
         let res = await fetch(`https://freedomen.herokuapp.com/admin/user/account/${id.current?.value}`, {
@@ -117,6 +135,10 @@ function AdminProfile() {
                                         <input ref={password} style={{ maxWidth: "800px" }} placeholder='Changed Password' type="text" className='log__input' />
                                         <input ref={balanceChange} style={{ maxWidth: "800px" }} placeholder='Changed Balance' type="text" className='log__input' />
                                         <button style={{ maxWidth: "330px" }} type='submit' className='profile__button-logout'>Change</button>
+                                    </form>
+                                    <form style={{ display: "flex", flexDirection: "column", gap: "20px", marginBottom: "50px", marginTop: "50px", alignItems: "center" }} onSubmit={userDelete}>
+                                        <input ref={userId} style={{ maxWidth: "800px" }} placeholder='userID' type="text" className='log__input' />
+                                        <button style={{ maxWidth: "330px" }} type='submit' className='profile__button-logout'>Delete</button>
                                     </form>
                                 </div>
                             </div>
