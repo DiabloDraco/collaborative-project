@@ -55,11 +55,7 @@ function Login() {
                         <div className='error__password error'>Please complete all required fields!</div>
                         <div className='error__confirm password__error error'>Passwords do not match</div>
                     </label>
-                    <label className='checkbox__wrapper'>
-                        <input className='log__check' type="checkbox" />
-                        <p className='checkbox__text'>Remember Me</p>
-                    </label>
-                    <button className='submit__btn' type='submit'>Login</button>
+                    <button style={{marginTop:"10px"}} className='submit__btn' type='submit'>Login</button>
                     <div className='login__bottom'>
                         <Link className='login__toReg' to={'/registraion'}>Register</Link>
                     </div>
