@@ -50,7 +50,27 @@ function Profile() {
         localStorage.removeItem("token")
         navigate('/')
     }
+
+
+   
+
+
     function handleChange() {
+
+        function getRandomInt(min, max) {
+            min = Math.ceil(min);
+            max = Math.floor(max);
+            return Math.floor(Math.random() * (max - min)) + min; 
+        }
+    
+        var random_id = getRandomInt(1000000, 9000000);
+
+    
+        console.log(random_id);
+        // let key = process.env.SECRET_KEY;
+
+
+        document.querySelector("#order").value = random_id;
        document.querySelector("#sign").value =  md5(`${merchant.current.value}:${val.current.value}:TI2r8LVtXq0DNbKWMeqHTAjk174a0YDH:${payId.current.value}`);
     }
 
@@ -80,10 +100,29 @@ function Profile() {
     //     .catch((err)=> console.log(err)) 
     // }
 
+ 
+
 
     return (
         (data) ? (<>
             <div className='profile__container'>
+
+            <div id="billingcx-modal-wrap" className='modal_wrap'>
+                <div id="billingcx-modal">
+                    <h3>Deposit to be credited</h3>
+                    <form id='form' method="get" action="https://billing.cx/pay/step-one">
+                        <input ref={merchant} type="hidden" name="m" defaultValue="49445" />
+                        <input className='input-payment' ref={val} type="number" name="oa" onChange={handleChange} defaultValue="" />
+                        <input id="order" ref={payId} type="hidden"  name="o" />
+                        <input type="hidden" name="s" id='sign' />
+                        <input className='button' type="submit" value="PAY NOW" />
+                    </form>
+                </div>
+            </div>
+              
+
+
+
                 <div className='profile__header'>
                     <p ref={copycha} className='copied'>Your ID has been copied</p>
                     <Link className='profile__header-logo' to={'/'}>
@@ -142,34 +181,6 @@ function Profile() {
 
 
 
-                        <div>
-                            <form id='form' method="get" action="https://billing.cx/pay/step-one">
-                                <input ref={merchant} type="hidden" name="m" defaultValue="49445" />
-                                <input ref={val} type="number" name="oa" onChange={handleChange} defaultValue="100" />
-                                <input ref={payId} type="hidden" name="o" defaultValue="10" />
-                                <input type="hidden" name="s" id='sign' />
-                                <input type="submit" defaultValue="Оплатить" />
-                            </form>
-                        </div>
-
-
-
-
-
-
-
-
-
-
-
-                        <form>
-                            <div>
-                                <h3>
-                                    Amount to be credited
-                                </h3>
-                                <input type="number" />
-                            </div>
-
 
                             <div className='profile__payment'>
                                 <h3 className='profile__payment-title'>
@@ -177,42 +188,29 @@ function Profile() {
                                 </h3>
 
                                 <div>
-                                    <input type="radio" id="huey" name="drone" defaultValue="huey" defaultChecked />
-                                    <label htmlFor="huey">
-                                        <div className='card__link' href='https://hillhouse-capital.com/billingx'>
+                                    <div id='billingcx' className='card__link' href='https://hillhouse-capital.com/billingx'>
                                             <div className='card__wrapper'>
                                                 <div className='card__head'>
                                                     <img src={profilPaymentItem}></img>
-                                                    <h3>BillingX</h3>
+                                                    <h3>BillingСX</h3>
                                                 </div>
                                                 <p>bank transfer / cryptocurrency / qiwi</p>
                                             </div>
-                                        </div>
-                                    </label>
+                                    </div>
                                 </div>
 
                                 <div>
-                                    <input type="radio" id="dewey" name="drone" defaultValue="dewey" />
-                                    <label htmlFor="dewey">
-                                        <div className='card__link' href='https://hillhouse-capital.com/test'>
-                                            <div className='card__wrapper'>
-                                                <div className='card__head'>
-                                                    <img src={profilPaymentItem2}></img>
-                                                    <h3>Grow pay</h3>
-                                                </div>
-                                                <p>bank transfer / cryptocurrency / qiwi</p>
+                                    <div className='card__link' href='https://hillhouse-capital.com/test'>
+                                        <div className='card__wrapper'>
+                                            <div className='card__head'>
+                                                <img src={profilPaymentItem2}></img>
+                                                <h3>Grow pay</h3>
                                             </div>
+                                            <p>bank transfer / cryptocurrency / qiwi</p>
                                         </div>
-                                    </label>
+                                    </div>
                                 </div>
                             </div>
-
-                            <button type='submit'>PAY NOW</button>
-                        </form>
-
-
-
-
                     </div>
                 </div>
             </div>

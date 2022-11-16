@@ -65,6 +65,7 @@ function Registration() {
     return (
         <>
             <div className='reg__wrapper container'>
+
                 <img className='reg__logo' src={fullLogo} alt="logo" />
                 <form onSubmit={postInfo} ref={form} className="registration__form">
                     <label className='reg__label'>

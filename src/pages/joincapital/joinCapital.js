@@ -20,7 +20,7 @@ function JoinCapital() {
                         Join
                     </Link>
                     <Link to={'/reasons'} className='join__button'>
-                        Reasons to join
+                        Reasons
                     </Link>
                 </div>
                 <p className='join__text'>
