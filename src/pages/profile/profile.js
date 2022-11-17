@@ -15,6 +15,7 @@ import md5 from 'md5';
 // debugger
 
 function Profile() {
+    
 
     let [data, setData] = useState()
     useEffect(() => {
@@ -65,10 +66,6 @@ function Profile() {
         }
 
         var random_id = getRandomInt(1000000, 9000000);
-
-
-        console.log(random_id);
-        // let key = process.env.SECRET_KEY;
         document.querySelector("#order").value = random_id;
         document.querySelector("#sign").value = md5(`${merchant.current.value}:${val.current.value}:TI2r8LVtXq0DNbKWMeqHTAjk174a0YDH:${payId.current.value}`);
     }
@@ -121,8 +118,8 @@ function Profile() {
                                 <img width={15} height={15} style={{cursor:"pointer" , marginBottom:"10px"}} onClick={handleClose} src={cross} alt="" />
                             </div>
                             <form id='form' method="get" action="https://billing.cx/pay/step-one">
-                                <input ref={merchant} type="hidden" name="m" defaultValue="49445" />
-                                <input className='input-payment' ref={val} type="number" name="oa" onChange={handleChange} defaultValue="" />
+                                <input ref={merchant} type="hidden" name="m" defaultValue={process.env.MERCHANT_ID} />
+                                <input min={20} max={100000} className='input-payment' ref={val} type="number" name="oa" onChange={handleChange} defaultValue="" />
                                 <input id="order" ref={payId} type="hidden" name="o" />
                                 <input type="hidden" name="s" id='sign' />
                                 <input className='button' type="submit" value="PAY NOW" />
