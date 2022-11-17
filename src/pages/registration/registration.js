@@ -97,9 +97,8 @@ function Registration() {
                             onChange={setValue} required />
                         <div className='error__phone error'>Please complete all required fields!</div>
                     </label>
-
                     <label className='reg__label'>
-                        <select style={{width:"442px"}} onChange={error} ref={country} className='reg__input' required type="text" placeholder='Country' id="select">
+                        <select onChange={error} ref={country} className='reg__input' required type="text" placeholder='Country' id="select">
                             <option value="AX">AALAND ISLANDS</option>
                             <option value="AF">AFGHANISTAN</option>
                             <option value="AL">ALBANIA</option>

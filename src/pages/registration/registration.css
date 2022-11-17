@@ -139,5 +139,9 @@
         max-width: 350px;
     }
 
+    .reg__select {
+        max-width: 90vw;
+    }
+
     
 }
