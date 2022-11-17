@@ -99,7 +99,6 @@ function Registration() {
                     </label>
 
                     <label className='reg__label'>
-<<<<<<< HEAD
                         <select style={{width:"442px"}} onChange={error} ref={country} className='reg__input' required type="text" placeholder='Country' id="select">
                             <option value="AX">AALAND ISLANDS</option>
                             <option value="AF">AFGHANISTAN</option>
@@ -326,11 +325,6 @@ function Registration() {
                             <option value="ZM">ZAMBIA</option>
                             <option value="ZW">ZIMBABWE</option>
                         </select>
-=======
-                        <input onChange={error} ref={country} className='reg__input' required type="text" placeholder='Country' />
-
-
->>>>>>> 8a86346648e8d5bb570970c825540cf36adf4774
                         <div className='error__country error'>Please complete all required fields!</div>
                     </label>
 
