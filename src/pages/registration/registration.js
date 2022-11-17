@@ -338,7 +338,7 @@ function Registration() {
                         <div className='error__confirm error'>Please complete all required fields!</div>
                     </label>
                     <label className='pp_wrapper'>
-                    <input type='checkbox' checked/>
+                    <input required type='checkbox'/>
                     <p className='pp'>I have read the <Link to={'/documents'}>privacy policy and agree to the terms</Link> </p>
                     </label>
                     
