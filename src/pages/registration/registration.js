@@ -98,7 +98,7 @@ function Registration() {
                         <div className='error__phone error'>Please complete all required fields!</div>
                     </label>
                     <label className='reg__label'>
-                        <select onChange={error} ref={country} className='reg__input' required type="text" placeholder='Country' id="select">
+                        <select onChange={error} ref={country} className='county-input' required type="text" placeholder='Country' id="select" autocomplete="off">
                             <option value="AX">AALAND ISLANDS</option>
                             <option value="AF">AFGHANISTAN</option>
                             <option value="AL">ALBANIA</option>
@@ -264,7 +264,7 @@ function Registration() {
                             <option value="RE">REUNION</option>
                             <option value="RO">ROMANIA</option>
                             <option selected value="RU">RUSSIAN FEDERATION</option>
-                            <option value="RW">RWANDA</option>
+                            {/* <option value="RW">RWANDA</option>
                             <option value="SH">SAINT HELENA</option>
                             <option value="KN">SAINT KITTS AND NEVIS</option>
                             <option value="LC">SAINT LUCIA</option>
@@ -275,7 +275,7 @@ function Registration() {
                             <option value="ST">SAO TOME AND PRINCIPE</option>
                             <option value="SA">SAUDI ARABIA</option>
                             <option value="SN">SENEGAL</option>
-                            <option value="CS">SERBIA AND MONTENEGRO</option>
+                            <option value="CS">SERBIA AND MONTENEGRO</option> */}
                             <option value="SC">SEYCHELLES</option>
                             <option value="SL">SIERRA LEONE</option>
                             <option value="SG">SINGAPORE</option>
@@ -315,14 +315,14 @@ function Registration() {
                             <option value="UM">UNITED STATES MINOR OUTLYING ISLANDS</option>
                             <option value="UY">URUGUAY</option>
                             <option value="UZ">UZBEKISTAN</option>
-                            <option value="VU">VANUATU</option>
+                            {/* <option value="VU">VANUATU</option>
                             <option value="VE">VENEZUELA</option>
                             <option value="VN">VIET NAM</option>
                             <option value="WF">WALLIS AND FUTUNA ISLANDS</option>
                             <option value="EH">WESTERN SAHARA</option>
                             <option value="YE">YEMEN</option>
                             <option value="ZM">ZAMBIA</option>
-                            <option value="ZW">ZIMBABWE</option>
+                            <option value="ZW">ZIMBABWE</option> */}
                         </select>
                         <div className='error__country error'>Please complete all required fields!</div>
                     </label>
@@ -338,7 +338,7 @@ function Registration() {
                     </label>
                     <label className='pp_wrapper'>
                     <input required type='checkbox'/>
-                    <p className='pp'>I have read the <Link to={'/documents'}>privacy policy and agree to the terms</Link> </p>
+                    <p className='pp'>I have read the <Link to={'/documents'}>privacy policy</Link> and agree to the terms </p>
                     </label>
                     
                     <button className='submit__btn' type='submit'>Register</button>

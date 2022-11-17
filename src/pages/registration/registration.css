@@ -115,11 +115,45 @@
     transform: translateX(-5px) rotate(90deg);
 }
 
+.county-input {
+    /* width: 100%;
+    margin: 0 !important; */
+    margin-right: 0 !important;
+
+    width: 100%;
+    padding: 10px;
+    border-radius: 5px;
+    background-color: #fafafa;
+
+}
+
+
+.PhoneInputInput {
+    border: 0;
+    background-color: #fafafa !important;
+    background: #fafafa !important;
+}
+
+.PhoneInputInput:focus-visible {
+    outline: 0 !important;
+}
+
+
+
 @media only screen and (max-width: 900px) {
     /* MOBILE */
 
     .registration__form {
         max-width: 90vw;
+    }
+
+    .county-input {
+        /* width: 100%;
+        margin: 0 !important; */
+        margin-right: 0 !important;
+    
+        width: 371px;
+    
     }
 
     .reg__homeButton {
@@ -135,12 +169,13 @@
         transform: translateX(-5px) rotate(90deg);
     }
 
-    .reg__input {
-        max-width: 350px;
-    }
 
     .reg__select {
         max-width: 90vw;
+    }
+
+    .reg__input {
+        width: 349px;
     }
 
     
