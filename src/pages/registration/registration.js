@@ -100,6 +100,8 @@ function Registration() {
 
                     <label className='reg__label'>
                         <input onChange={error} ref={country} className='reg__input' required type="text" placeholder='Country' />
+
+
                         <div className='error__country error'>Please complete all required fields!</div>
                     </label>
                     <label className='reg__label'>
@@ -111,6 +113,11 @@ function Registration() {
                         <input onChange={error} ref={confirm} className='reg__input' required type="password" placeholder='Confirm Password' />
                         <div className='error__confirm error'>Please complete all required fields!</div>
                     </label>
+                    <label className='pp_wrapper'>
+                    <input type='checkbox' checked/>
+                    <p className='pp'>I have read the <Link to={'/documents'}>privacy policy and agree to the terms</Link> </p>
+                    </label>
+                    
                     <button className='submit__btn' type='submit'>Register</button>
                     <div className='login__bottom'>
                         <Link className='login__toReg' to={'/login'}>Login</Link>
