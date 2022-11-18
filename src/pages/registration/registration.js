@@ -90,6 +90,7 @@ function Registration() {
                     </label>
                     <label className='reg__label'>
                         <PhoneInput
+                            limitMaxLength="14"
                             className='reg__input'
                             placeholder='Phone'
                             ref={phone}
@@ -330,7 +331,7 @@ function Registration() {
                     <label className='reg__label'>
                         <input onChange={error} ref={password} className='reg__input' required type="password" placeholder='Password' />
                         <div className='error__password error'>Please complete all required fields!</div>
-                        <div className='error__confirm password__error error'>Passwords do not match</div>
+                        <div className='error__confirm password__error error'>Passwords do not match or <br/> the password is less than 8 characters long</div>
                     </label>
                     <label className='reg__label m'>
                         <input onChange={error} ref={confirm} className='reg__input' required type="password" placeholder='Confirm Password' />

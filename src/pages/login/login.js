@@ -19,7 +19,7 @@ function Login() {
                 navigator("/profile")
             }
         }
-        if (mail && password) {
+        if (mail.current.value && password.current.value.length >= 8) {
             let res = await fetch("https://freedomen.herokuapp.com/login", {
                 method: "POST",
                 headers: {
@@ -48,12 +48,11 @@ function Login() {
                 <form onSubmit={postInfo} ref={form} className="login__form">
                     <label className='log__label'>
                         <input ref={mail} className='log__input' required type="email" placeholder='Email' />
-                        <div className='error__mail error'>Please complete all required fields!</div>
+                        <div className=' error'>Please complete all required fields!</div>
                     </label>
                     <label className='log__label'>
                         <input ref={password} className='log__input' required type="password" placeholder='Password' />
-                        <div className='error__password error'>Please complete all required fields!</div>
-                        <div className='error__confirm password__error error'>Passwords do not match</div>
+                        <div className='password__error error'>Password must be 8 characters or more</div>
                     </label>
                     <button style={{marginTop:"10px"}} className='submit__btn' type='submit'>Login</button>
                     <div className='login__bottom'>
