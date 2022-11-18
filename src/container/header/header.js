@@ -47,7 +47,7 @@ function Header() {
                             <a className='header__left-mail' href='mailto:kaban.jobs@gmail.com'>E-Mail: capital@hillhouse-capital.com</a>
                         </div>
                             <button onClick={handleLang} style={{background:"none" , border:"none"}} className='header__right-register'>
-                                LANGUAGE
+                                LANG
                             </button>
                         <div ref={on} className='header__right'>
                             <Link to={'/login'} className='header__right-login'>
