@@ -22,6 +22,11 @@ function Header() {
         }
     }, 500)
 
+    function handleLang() {
+        document.querySelector(".gt-wrapper").style.display = "flex"
+        document.querySelector("html").style.overflowY = "hidden"
+    }
+
     function close() {
         if (window.innerWidth < 900) {
             navbar.current.style.display = 'none'
@@ -41,6 +46,9 @@ function Header() {
                             <a className='header__left-adress' href='#'>Suite 1608 One Exchange Square, 6 Connaught Place, Hong Kong</a>
                             <a className='header__left-mail' href='mailto:kaban.jobs@gmail.com'>E-Mail: capital@hillhouse-capital.com</a>
                         </div>
+                            <button onClick={handleLang} style={{background:"none" , border:"none"}} className='header__right-register'>
+                                LANGUAGE
+                            </button>
                         <div ref={on} className='header__right'>
                             <Link to={'/login'} className='header__right-login'>
                                 <img className='header__login-icon' src={Login} alt="Login" />
@@ -50,11 +58,6 @@ function Header() {
                                 <img className='header__register-icon' src={Register} alt="Register" />
                                 REGISTER
                             </Link>
-
-                            <div id="google_translate_element">
-
-                            </div>
-
                         </div>
                         <div ref={off} className='header__right off'>
                             <Link to={'/profile'} className='header__right-register'>
