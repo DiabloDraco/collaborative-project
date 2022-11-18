@@ -72,7 +72,7 @@
       z-index: 9998;
       position: absolute;
       overflow-y: none;
-      background-color: rgba(0, 0, 0, 0.281);
+      background-color: #F29C37;
     }
 
     .gt {
@@ -84,7 +84,9 @@
       background: white;
       bottom: 0;
       left: 30%;
-      top: 10%;
+      font-size: 20px;
+      font-weight: bold;
+      top: 30%;
     }
 
     .gflag {
@@ -106,7 +108,7 @@
       height: 30px;
       object-fit: contain;
       z-index: 100000;
-      top: 6%;
+      top: 26%;
       cursor: pointer;
       right: 28%;
     }
@@ -114,6 +116,14 @@
 
     body {
       top: 0 !important;
+    }
+
+    .gt-text {
+      margin-top: 10%;
+      margin-left: auto;
+      margin-right: auto;
+      font-weight: bold;
+      font-style: "Montserrat";
     }
 
     @media only screen and (max-width: 900px) {
@@ -126,20 +136,24 @@
         z-index: 9998;
         position: absolute;
         overflow-y: none;
-        background-color: rgba(0, 0, 0, 0.466);
+        background-color: #F29C37;
       }
 
       .gt-close-btn {
         position: absolute;
         border: none;
         background: none;
-        width: 40px;
-        height: 40px;
+        width: 30px;
+        height: 30px;
         object-fit: cover;
         z-index: 100000;
-        top: 6%;
+        top: 16%;
         cursor: pointer;
-        right: 8%;
+        right: 4%;
+      }
+
+      .gt-text {
+        text-align: center;
       }
 
       .gt {
@@ -148,15 +162,18 @@
         padding: 40px 40px;
         height: 20%;
         width: 80%;
+        font-weight: bold;
+        font-size: 20px;
         background: white;
         bottom: 0;
         left: 10%;
-        top: 10%;
+        top: 20%;
       }
     }
   </style>
 
   <div class="gt-wrapper">
+    <h2 class="gt-text">Choose a language for translation</h2>
     <button class="gt-close-btn">
       <img src="./cross-svgrepo-com.svg" alt="">
     </button>
