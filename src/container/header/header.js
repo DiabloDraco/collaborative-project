@@ -232,6 +232,11 @@ function Header() {
                                                 Portfolio Review
                                             </Link>
                                         </li>
+                                        <li className='header__drop-item'>
+                                            <Link onClick={close} className='header__drop-link' to={'/documents'}>
+                                                Documents
+                                            </Link>
+                                        </li>
                                     </ul>
                                 </div>
                             </li>
@@ -271,6 +276,9 @@ function Header() {
                     <a href='https://coinumm.com/ru/fast-flow-landing' rel="noopener noreferrer" target="_blank" className='header__bottom-open'>
                         OPEN ACCOUNT
                     </a>
+                    {/* <Link  to={'/registraion'} rel="noopener noreferrer" target="_blank" className='header__bottom-open'>
+                        OPEN ACCOUNT
+                    </Link> */}
                     <button onClick={open} className='header__brg'>
                         <img src={hamburger} alt="hamburger" />
                     </button>
