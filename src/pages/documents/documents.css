@@ -52,11 +52,43 @@
 }
 
 .doc {
-    height: 60vh;
-    text-align: center;
-    display: grid;
+    height: 45vh;
+    /* text-align: center; */
+    /* display: grid; */
+    width: 600px;
 }
 
 .doc a {
-    height: 30px;
+    /* height: 30px; */
+    margin-top: 30px;
+    margin-bottom: 10px;
+}
+
+.doc__top-wrapper {
+    background-image: url('./../../assets/images/doc.jpg');
+}
+
+.doc__header {
+    color: white;
+}
+
+.doc__link {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+@media only screen and (max-width: 900px) {
+    /* MOBILE */
+    .doc__link{
+
+    }
+
+    .doc__bottom-open {
+        display: none;
+    }
+
+    .doc {
+        width: 100%;
+    }
 }

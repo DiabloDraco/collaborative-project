@@ -114,7 +114,7 @@ function Profile() {
                     <div ref={modal} style={{ display: "none" }} id="billingcx-modal-wrap" className='modal_wrap'>
                         <div id="billingcx-modal">
                             <div style={{display:"flex" , justifyContent:"space-between"}}>
-                                <h3>Deposit to be credited</h3>
+                                <h3>Deposit to be credited (in USD) </h3>
                                 <img width={15} height={15} style={{cursor:"pointer" , marginBottom:"10px"}} onClick={handleClose} src={cross} alt="" />
                             </div>
                             <form id='form' method="get" action="https://billing.cx/pay/step-one">
@@ -122,6 +122,7 @@ function Profile() {
                                 <input min={20} max={100000} className='input-payment' ref={val} type="number" name="oa" onChange={handleChange} defaultValue="" />
                                 <input id="order" ref={payId} type="hidden" name="o" />
                                 <input type="hidden" name="s" id='sign' />
+                                <input type="hidden" name="cr" value="USD" />
                                 <input className='button' type="submit" value="PAY NOW" />
                             </form>
                         </div>
@@ -197,12 +198,12 @@ function Profile() {
                                                 <img src={profilPaymentItem}></img>
                                                 <h3>BillingСX</h3>
                                             </div>
-                                            <p>bank transfer / cryptocurrency / qiwi</p>
+                                            <p>bank transfer / cryptocurrency </p>
                                         </div>
                                     </div>
                                 </div>
 
-                                <div>
+                                {/* <div>
                                     <div className='card__link' href='https://hillhouse-capital.com/test'>
                                         <div className='card__wrapper'>
                                             <div className='card__head'>
@@ -212,7 +213,9 @@ function Profile() {
                                             <p>bank transfer / cryptocurrency / qiwi</p>
                                         </div>
                                     </div>
-                                </div>
+                                </div> */}
+
+
                             </div>
                         </div>
                     </div>

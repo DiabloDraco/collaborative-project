@@ -1,36 +1,66 @@
-import './documents.css'
-import CRSCIG from './../../assets/files/CRSCIG1.pdf'
-import CRSCIB from './../../assets/files/CRSCIB1.pdf'
-import CRSCOUNSEL from './../../assets/files/CRSCOUNSEL1.pdf'
-import CRSCIAS from './../../assets/files/CRSCIAS1.pdf'
-import BusinessContinuityPlanNotice from './../../assets/files/BusinessContinuityPlanNotice.pdf'
-import { useEffect } from 'react'
+import './documents.css';
+import CRSCIB from './../../assets/files/CRSCIB1.pdf';
+import BusinessContinuityPlanNotice from './../../assets/files/BusinessContinuityPlanNotice.pdf';
+import CompositionReceived from './../../assets/files/CompensationReceived.pdf';
+import PrivacyNotaice from './../../assets/files/PrivacyNotice.pdf';
+import { useEffect } from 'react';
 
 function Documents() {
     useEffect(() => {
         document.querySelector(".header-wrapper").style.display = 'block'
         document.querySelector(".footer__wrapper").style.display = 'flex'
-    }, [])
+    }, []);
+
     return (
         <>
+              <div className='counsel__top-wrapper doc__top-wrapper'>
+                    <div className='counsel__top container'>
+                        <h2 className='capitalI__header doc__header'>
+                            DOCUMENTS
+                        </h2>
+                    </div>
+                </div>
             <div className='container doc'>
+          
                 <div>
                     <h2 className='compilance__title bigger'>
-                        title 
+                        
                     </h2>
-                    <a className='project__links' href={CRSCIG} target="_blank">
-                        document one
-                    </a>
-                    <a className='project__links' href={CRSCIB} target={'_blank'}>
-                        document two
-                    </a>
-                    <a className='project__links' href={CRSCOUNSEL} target={'_blank'}>
-                        document three
-                    </a>
-                    <a className='project__links' href={CRSCIAS} target={'_blank'}>
-                        document four
-                    </a>
-                </div>     
+                    <div className='doc__link'>
+                        <a className='project__links' href={CRSCIB} target="_blank">
+                            CRSCIB
+                        </a>
+                        <a className='header__bottom-open doc__bottom-open'>OPEN</a>
+                    </div>
+             
+                    <hr></hr>
+                    <div className='doc__link'>
+                        <a className='project__links' href={BusinessContinuityPlanNotice} target={'_blank'}>
+                            Business Continuity Plan Notice
+                        </a>
+                        <a className='header__bottom-open doc__bottom-open'>OPEN</a>
+                    </div>
+    
+                    <hr></hr>
+
+                    <div className='doc__link'>
+                        <a className='project__links' href={CompositionReceived} target={'_blank'}>
+                            Compensation Received
+                        </a>
+                        <a className='header__bottom-open doc__bottom-open'>OPEN</a>
+                    </div>
+
+                      
+                    <hr></hr>
+                    <div className='doc__link'>
+                        <a className='project__links' href={PrivacyNotaice} target={'_blank'}>
+                            Privacy Notice
+                        </a>
+                        <a className='header__bottom-open doc__bottom-open'>OPEN</a>
+                    </div>
+                 
+                    <hr></hr>
+                </div> 
             </div>
         </>
     )

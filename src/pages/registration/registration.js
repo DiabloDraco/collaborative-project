@@ -6,6 +6,11 @@ import { ReactComponent as DownArrow } from './../../assets/images/downArrow.svg
 import 'react-phone-number-input/style.css'
 import PhoneInput from 'react-phone-number-input'
 
+import CRSCIB from './../../assets/files/CRSCIB1.pdf';
+import BusinessContinuityPlanNotice from './../../assets/files/BusinessContinuityPlanNotice.pdf';
+import CompositionReceived from './../../assets/files/CompensationReceived.pdf';
+import PrivacyNotaice from './../../assets/files/PrivacyNotice.pdf';
+
 function Registration() {
     const [value, setValue] = useState()
     useEffect(() => {
@@ -342,7 +347,24 @@ function Registration() {
                     </label>
                     <label className='pp_wrapper'>
                         <input required type='checkbox' />
-                        <p className='pp'>I have read the <Link to={'/documents'}>privacy policy</Link> and agree to the terms </p>
+                        <p className='pp'>
+                            I have read the &ensp;
+                                <a className='' href={CRSCIB} target="_blank">
+                                    CRSCIB 
+                                </a>
+                                ,&ensp;
+                                <a className='' href={BusinessContinuityPlanNotice} target={'_blank'}>
+                                    Business Continuity Plan Notice 
+                                </a>
+                                ,<br/>
+                                <a className='' href={CompositionReceived} target={'_blank'}>
+                                    Compensation Received 
+                                </a>
+                                ,&ensp;
+                                <a className='' href={PrivacyNotaice} target={'_blank'}>
+                                    Privacy Notice 
+                                </a><br/>
+                            and agree to the terms </p>
                     </label>
 
                     <button className='submit__btn' type='submit'>Register</button>
