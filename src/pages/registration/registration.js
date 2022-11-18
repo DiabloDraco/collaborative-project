@@ -66,6 +66,8 @@ function Registration() {
     }
 
 
+
+
     return (
         <>
             <div className='reg__wrapper container'>
@@ -90,7 +92,7 @@ function Registration() {
                     </label>
                     <label className='reg__label'>
                         <PhoneInput
-                            limitMaxLength="14"
+                            limitMaxLength
                             className='reg__input'
                             placeholder='Phone'
                             ref={phone}
@@ -99,7 +101,8 @@ function Registration() {
                         <div className='error__phone error'>Please complete all required fields!</div>
                     </label>
                     <label className='reg__label'>
-                        <select onChange={error} ref={country} className='county-input' required type="text" placeholder='Country' id="select" autocomplete="off">
+                        <select onChange={error} ref={country} className='county-input' required type="text" 
+                        defaultValue={"RU"} placeholder='Country' id="select" autoComplete="off">
                             <option value="AX">AALAND ISLANDS</option>
                             <option value="AF">AFGHANISTAN</option>
                             <option value="AL">ALBANIA</option>
@@ -264,7 +267,7 @@ function Registration() {
                             <option value="QA">QATAR</option>
                             <option value="RE">REUNION</option>
                             <option value="RO">ROMANIA</option>
-                            <option selected value="RU">RUSSIAN FEDERATION</option>
+                            <option value="RU">RUSSIAN FEDERATION</option>
                             {/* <option value="RW">RWANDA</option>
                             <option value="SH">SAINT HELENA</option>
                             <option value="KN">SAINT KITTS AND NEVIS</option>
@@ -331,17 +334,17 @@ function Registration() {
                     <label className='reg__label'>
                         <input onChange={error} ref={password} className='reg__input' required type="password" placeholder='Password' />
                         <div className='error__password error'>Please complete all required fields!</div>
-                        <div className='error__confirm password__error error'>Passwords do not match or <br/> the password is less than 8 characters long</div>
+                        <div className='error__confirm password__error error'>Passwords do not match or <br /> the password is less than 8 characters long</div>
                     </label>
                     <label className='reg__label m'>
                         <input onChange={error} ref={confirm} className='reg__input' required type="password" placeholder='Confirm Password' />
                         <div className='error__confirm error'>Please complete all required fields!</div>
                     </label>
                     <label className='pp_wrapper'>
-                    <input required type='checkbox'/>
-                    <p className='pp'>I have read the <Link to={'/documents'}>privacy policy</Link> and agree to the terms </p>
+                        <input required type='checkbox' />
+                        <p className='pp'>I have read the <Link to={'/documents'}>privacy policy</Link> and agree to the terms </p>
                     </label>
-                    
+
                     <button className='submit__btn' type='submit'>Register</button>
                     <div className='login__bottom'>
                         <Link className='login__toReg' to={'/login'}>Login</Link>
