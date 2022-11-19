@@ -37,6 +37,18 @@ function Header() {
         navbar.current.style.display = 'flex'
     }
 
+
+    let sel = document.querySelector(".glink")
+    sel.addEventListener("click", function () {
+      document.querySelector(".gt-wrapper").style.display = 'none'
+      document.querySelector("html").style.overflowY = "scroll"
+    })
+    let btn = document.querySelector(".gt-close-btn");
+    btn.addEventListener("click", function () {
+      document.querySelector(".gt-wrapper").style.display = 'none';
+      document.querySelector("html").style.overflowY = "scroll";
+    })
+
     return (
         <>
             <div className='header-wrapper'>
