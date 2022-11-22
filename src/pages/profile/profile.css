@@ -468,6 +468,12 @@
     margin-right: 10px;
 }
 
+.card__head svg {
+    width: 67px;
+    height: 67px;
+    margin-right: 10px;
+}
+
 .profile__payment {
     width: 400px;
 }
