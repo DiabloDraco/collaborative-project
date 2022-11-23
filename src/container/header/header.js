@@ -66,7 +66,7 @@ function Header() {
                                 <img className='header__login-icon' src={Login} alt="Login" />
                                 LOGIN
                             </Link>
-                            <Link to={'/registraion'} className='header__right-register'>
+                            <Link to={'/registration'} className='header__right-register'>
                                 <img className='header__register-icon' src={Register} alt="Register" />
                                 REGISTER
                             </Link>
@@ -291,7 +291,7 @@ function Header() {
                     <a href='https://coinumm.com/ru/fast-flow-landing' rel="noopener noreferrer" target="_blank" className='header__bottom-open'>
                         OPEN ACCOUNT
                     </a>
-                    {/* <Link  to={'/registraion'} rel="noopener noreferrer" target="_blank" className='header__bottom-open'>
+                    {/* <Link  to={'/registration'} rel="noopener noreferrer" target="_blank" className='header__bottom-open'>
                         OPEN ACCOUNT
                     </Link> */}
                     <button onClick={open} className='header__brg'>
