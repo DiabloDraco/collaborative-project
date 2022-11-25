@@ -2,14 +2,20 @@ export const lang = {
     en: {
         translation: {
             header: {
-                lang : "LANG"
+                lang : "LANG",
+                login : "LOGIN",
+                reg : "REGISTRATION",
+                prof : "PROFILE",
             }
         }
     },
     ru: {
         translation: {
             header : {
-                lang : "ЯЗЫКИ" 
+                lang : "ЯЗЫКИ",
+                login : "ВХОД",
+                reg : "РЕГИСТРАЦИЯ",
+                prof : "ПРОФИЛЬ",
             }
         }
     }

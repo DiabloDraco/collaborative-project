@@ -71,17 +71,17 @@ function Header() {
                         <div ref={on} className='header__right'>
                             <Link to={'/login'} className='header__right-login'>
                                 <img className='header__login-icon' src={Login} alt="Login" />
-                                LOGIN
+                                {t("header.login")}
                             </Link>
                             <Link to={'/registration'} className='header__right-register'>
                                 <img className='header__register-icon' src={Register} alt="Register" />
-                                REGISTER
+                                {t("header.reg")}
                             </Link>
                         </div>
                         <div ref={off} className='header__right off'>
                             <Link to={'/profile'} className='header__right-register'>
                                 <img className='header__login-icon' src={Login} alt="Login" />
-                                PROFILE
+                                {t("header.prof")}
                             </Link>
                         </div>
                     </div>
