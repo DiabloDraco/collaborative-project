@@ -39,24 +39,29 @@ function Registration() {
             }
         }
         if (password.current.value === confirm.current.value && password.current.value.length >= 8) {
-            document.querySelector(".submit__btn").type = "disabled"
-            let req = await fetch("https://freedomen.herokuapp.com/register", {
-                method: "POST",
-                headers: {
-                    "content-Type": "Application/json"
-                },
-                body: JSON.stringify({
-                    "username": `${name.current.value}`,
-                    "lastname": `${last.current.value}`,
-                    "password": `${password.current.value}`,
-                    "email": `${mail.current.value}`,
-                    "contact": `${value}`,
-                    "country": `${country.current.value}`,
-                    "brithday": `${country.current.value}`
+            if (value.length > 12) {
+                document.querySelector(".submit__btn").type = "disabled"
+                let req = await fetch("https://freedomen.herokuapp.com/register", {
+                    method: "POST",
+                    headers: {
+                        "content-Type": "Application/json"
+                    },
+                    body: JSON.stringify({
+                        "username": `${name.current.value}`,
+                        "lastname": `${last.current.value}`,
+                        "password": `${password.current.value}`,
+                        "email": `${mail.current.value}`,
+                        "contact": `${value}`,
+                        "country": `${country.current.value}`,
+                        "brithday": `${country.current.value}`
+                    })
                 })
-            })
-            req = await req.json()
-            await checkTo(req)
+                req = await req.json()
+                await checkTo(req)
+                document.querySelector(".error__phone").style.display = "none"
+            }else{
+                document.querySelector(".error__phone").style.display = "flex"
+            }
             document.querySelector(".password__error").style.display = 'none'
         } else {
             document.querySelector(".password__error").style.display = 'flex'
@@ -126,8 +131,8 @@ function Registration() {
                         <div className='error__phone error'>Please complete all required fields!</div>
                     </label>
                     <label className='reg__label'>
-                        <select onChange={error} ref={country} className='county-input' required type="text" 
-                        defaultValue={"RU"} placeholder='Country' id="select" autoComplete="off">
+                        <select onChange={error} ref={country} className='county-input' required type="text"
+                            defaultValue={"RU"} placeholder='Country' id="select" autoComplete="off">
                             <option value="AX">AALAND ISLANDS</option>
                             <option value="AF">AFGHANISTAN</option>
                             <option value="AL">ALBANIA</option>
@@ -371,21 +376,21 @@ function Registration() {
                         <input required type='checkbox' />
                         <p className='pp'>
                             I have read the &ensp;
-                                <a className='' href={CRSCIB} target="_blank">
-                                    CRSCIB 
-                                </a>
-                                ,&ensp;
-                                <a className='' href={BusinessContinuityPlanNotice} target={'_blank'}>
-                                    Business Continuity Plan Notice 
-                                </a>
-                                ,<br/>
-                                <a className='' href={CompositionReceived} target={'_blank'}>
-                                    Compensation Received 
-                                </a>
-                                ,&ensp;
-                                <a className='' href={PrivacyNotaice} target={'_blank'}>
-                                    Privacy Notice 
-                                </a><br/>
+                            <a className='' href={CRSCIB} target="_blank">
+                                CRSCIB
+                            </a>
+                            ,&ensp;
+                            <a className='' href={BusinessContinuityPlanNotice} target={'_blank'}>
+                                Business Continuity Plan Notice
+                            </a>
+                            ,<br />
+                            <a className='' href={CompositionReceived} target={'_blank'}>
+                                Compensation Received
+                            </a>
+                            ,&ensp;
+                            <a className='' href={PrivacyNotaice} target={'_blank'}>
+                                Privacy Notice
+                            </a><br />
                             and agree to the terms </p>
                     </label>
 
