@@ -39,6 +39,7 @@ function Registration() {
             }
         }
         if (password.current.value === confirm.current.value && password.current.value.length >= 8) {
+            document.querySelector(".submit__btn").type = "disabled"
             let req = await fetch("https://freedomen.herokuapp.com/register", {
                 method: "POST",
                 headers: {

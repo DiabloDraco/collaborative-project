@@ -7,6 +7,7 @@ import { ReactComponent as DownArrow } from './../../assets/images/downArrow.svg
 import { useEffect, useRef } from 'react'
 import cross from './../../assets/images/cross-svgrepo-com.svg'
 import hamburger from './../../assets/images/hamburger-menu-svgrepo-com.svg'
+import { useTranslation } from 'react-i18next'
 
 function Header() {
     let navbar = useRef(null)
@@ -21,6 +22,7 @@ function Header() {
             on.current.style.display = 'flex'
         }
     }, 500)
+    let { t, i18n } = useTranslation()
 
     function handleLang() {
         document.querySelector(".gt-wrapper").style.display = "flex"
@@ -36,17 +38,22 @@ function Header() {
     function open() {
         navbar.current.style.display = 'flex'
     }
-
+    document.querySelector("#russian").addEventListener("click" , function () {
+        i18n.changeLanguage("ru")
+    })
+    document.querySelector("#English").addEventListener("click" , function () {
+        i18n.changeLanguage("en")
+    })
 
     let sel = document.querySelector(".glink")
     sel.addEventListener("click", function () {
-      document.querySelector(".gt-wrapper").style.display = 'none'
-      document.querySelector("html").style.overflowY = "scroll"
+        document.querySelector(".gt-wrapper").style.display = 'none'
+        document.querySelector("html").style.overflowY = "scroll"
     })
     let btn = document.querySelector(".gt-close-btn");
     btn.addEventListener("click", function () {
-      document.querySelector(".gt-wrapper").style.display = 'none';
-      document.querySelector("html").style.overflowY = "scroll";
+        document.querySelector(".gt-wrapper").style.display = 'none';
+        document.querySelector("html").style.overflowY = "scroll";
     })
 
     return (
@@ -58,9 +65,9 @@ function Header() {
                             <a className='header__left-adress' href='#'>Suite 1608 One Exchange Square, 6 Connaught Place, Hong Kong</a>
                             <a className='header__left-mail' href='mailto:kaban.jobs@gmail.com'>E-Mail: capital@hillhouse-capital.com</a>
                         </div>
-                            <button onClick={handleLang} style={{background:"none" , border:"none"}} className='header__right-register'>
-                                LANG
-                            </button>
+                        <button onClick={handleLang} style={{ background: "none", border: "none" }} className='header__right-register'>
+                            {t("header.lang")}
+                        </button>
                         <div ref={on} className='header__right'>
                             <Link to={'/login'} className='header__right-login'>
                                 <img className='header__login-icon' src={Login} alt="Login" />
