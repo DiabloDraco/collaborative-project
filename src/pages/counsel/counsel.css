@@ -36,7 +36,7 @@
     margin: 0;
     margin-bottom: 15px;
     color: #898989;
-   font-family: 'Montserrat';
+   font-family: 'Open Sans', sans-serif;
     font-weight: 400;
     -webkit-font-smoothing: antialiased;
     overflow-x: hidden;
@@ -71,7 +71,7 @@
 .counsel__span-text {
     margin: 0;
     color: #898989;
-   font-family: 'Montserrat';
+   font-family: 'Open Sans', sans-serif;
     font-weight: 400;
     -webkit-font-smoothing: antialiased;
     overflow-x: hidden;
@@ -81,7 +81,7 @@
 
 .counsel__subtitle-pre {
     color: #898989;
-   font-family: 'Montserrat';
+   font-family: 'Open Sans', sans-serif;
     font-weight: 400;
     -webkit-font-smoothing: antialiased;
     overflow-x: hidden;

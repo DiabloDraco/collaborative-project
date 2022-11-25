@@ -20,7 +20,7 @@
 /* .homeCard__img {} */
 
 .homeCard__heading {
-    font-family: 'Montserrat';
+    font-family: 'Open Sans', sans-serif;
     font-style: normal;
     font-weight: 700;
     font-size: 32px;
@@ -32,7 +32,7 @@
 }
 
 .homeCard__text {
-    font-family: 'Montserrat';
+    font-family: 'Open Sans', sans-serif;
     font-style: normal;
     font-weight: 400;
     font-size: 16px;

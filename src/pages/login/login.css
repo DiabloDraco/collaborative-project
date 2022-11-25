@@ -118,7 +118,7 @@
 .error__confirm {} */
 
 .submit__btn {
-    font-family: 'Montserrat';
+    font-family: 'Open Sans', sans-serif;
     display: inline-block;
     cursor: pointer;
     text-align: center;

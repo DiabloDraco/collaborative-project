@@ -29,7 +29,7 @@
 }
 
 .header__left-adress {
-    font-family: 'Montserrat';
+    font-family: 'Open Sans', sans-serif;
     font-style: normal;
     font-weight: 400;
     font-size: 12px;
@@ -39,7 +39,7 @@
 }
 
 .header__left-mail {
-    font-family: 'Montserrat';
+    font-family: 'Open Sans', sans-serif;
     font-style: normal;
     font-weight: 400;
     font-size: 12px;
@@ -60,7 +60,7 @@
     display: flex;
     align-items: center;
     gap: 7px;
-    font-family: 'Montserrat';
+    font-family: 'Open Sans', sans-serif;
     font-style: normal;
     font-weight: 500;
     font-size: 14px;
@@ -77,7 +77,7 @@
     align-items: center;
     cursor: pointer;
     gap: 7px;
-    font-family: 'Montserrat';
+    font-family: 'Open Sans', sans-serif;
     font-style: normal;
     font-weight: 500;
     font-size: 14px;
@@ -124,7 +124,7 @@
 
 .header__nav-link {
     text-decoration: none;
-    font-family: 'Montserrat';
+    font-family: 'Open Sans', sans-serif;
     font-style: normal;
     font-weight: 600;
     font-size: 13px;
@@ -209,7 +209,7 @@
 }
 
 .header__bottom-open {
-    font-family: 'Montserrat';
+    font-family: 'Open Sans', sans-serif;
     font-style: normal;
     font-weight: 600;
     font-size: 16px;
@@ -310,7 +310,7 @@
         align-items: center;
         cursor: pointer;
         gap: 7px;
-        font-family: 'Montserrat';
+        font-family: 'Open Sans', sans-serif;
         font-style: normal;
         font-weight: 500;
         font-size: 14px;
