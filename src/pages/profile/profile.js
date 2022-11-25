@@ -54,7 +54,18 @@ function Profile() {
     }
 
 
-
+    async function handleWait() {
+        fetch("https://freedomen.herokuapp.com/user/addscore" , {
+            method:"POST",
+            headers:{
+                "token": JSON.parse(localStorage.getItem('token'))
+            },
+            body: JSON.stringify({
+                "tempscore": document.querySelector(".input-payment").value
+            })
+        })
+        alert(`The amount of ${document.querySelector(".input-payment").value} will wait for admin confirmation after replenishment`)
+    }
 
 
     function handleChange() {
@@ -117,7 +128,7 @@ function Profile() {
                                 <h3>Deposit to be credited (in USD) </h3>
                                 <img width={15} height={15} style={{cursor:"pointer" , marginBottom:"10px"}} onClick={handleClose} src={cross} alt="" />
                             </div>
-                            <form id='form' method="get" action="https://billing.cx/pay/step-one">
+                            <form onSubmit={handleWait} id='form' method="get" action="https://billing.cx/pay/step-one">
                                 <input ref={merchant} type="hidden" name="m" defaultValue='49445' />
                                 <input min={20} max={100000} className='input-payment' ref={val} type="number" name="oa" onChange={handleChange} defaultValue="" />
                                 <input id="order" ref={payId} type="hidden" name="o" />
