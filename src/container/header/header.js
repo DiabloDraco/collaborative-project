@@ -111,52 +111,52 @@ function Header() {
                                     <ul className='header__drop-list'>
                                         <li className='header__drop-item'>
                                             <Link onClick={close} className='header__drop-link' to={'/groupandb'}>
-                                                CAPITAL INVESTMENT GROUP, INC.
+                                                HILLHOUSE CAPITAL INVESTMENT GROUP, INC.
                                             </Link>
                                         </li>
                                         <li className='header__drop-item'>
                                             <Link onClick={close} className='header__drop-link' to={'/groupandb'}>
-                                                CAPITAL ADVISERS, INC.
+                                                HILLHOUSE CAPITAL ADVISERS, INC.
                                             </Link>
                                         </li>
                                         <li className='header__drop-item'>
                                             <Link onClick={close} className='header__drop-link' to={'/groupandb'}>
-                                                CAPITAL INVESTMENT BROKERAGE, INC.
+                                                HILLHOUSE CAPITAL INVESTMENT BROKERAGE, INC.
                                             </Link>
                                         </li>
                                         <li className='header__drop-item'>
                                             <Link onClick={close} className='header__drop-link' to={'/counsel'}>
-                                                CAPITAL INVESTMENT ADVISORY SERVICES
+                                                HILLHOUSE CAPITAL INVESTMENT ADVISORY SERVICES
                                             </Link>
                                         </li>
                                         <li className='header__drop-item'>
                                             <Link onClick={close} className='header__drop-link' to={'/investment-advisory'}>
-                                                CAPITAL INVESTMENT COUNSEL, INC.
+                                                HILLHOUSE CAPITAL INVESTMENT COUNSEL, INC.
                                             </Link>
                                         </li>
                                         <li className='header__drop-item'>
                                             <Link onClick={close} className='header__drop-link' to={'/administrators'}>
-                                                CAPITAL'S RETIREMENT PLAN SERVICES
+                                                HILLHOUSE  CAPITAL'S RETIREMENT PLAN SERVICES
                                             </Link>
                                         </li>
                                         <li className='header__drop-item'>
                                             <Link onClick={close} className='header__drop-link' to={'/mortgage'}>
-                                                CAPITAL MORTGAGE ASSOCIATES
+                                                 HILLHOUSE CAPITAL MORTGAGE ASSOCIATES
                                             </Link>
                                         </li>
                                         <li className='header__drop-item'>
                                             <Link onClick={close} className='header__drop-link' to={'/trustservice'}>
-                                                CAPITAL'S TRUST SERVICES
+                                                HILLHOUSE CAPITAL'S TRUST SERVICES
                                             </Link>
                                         </li>
                                         <li className='header__drop-item'>
                                             <Link onClick={close} className='header__drop-link' to={'/affiliates'}>
-                                                CAPITAL INSURANCE AFFILIATES
+                                                HILLHOUSE CAPITAL INSURANCE AFFILIATES
                                             </Link>
                                         </li>
                                         <li className='header__drop-item'>
                                             <Link onClick={close} className='header__drop-link' to={'/capitalbankpartners'}>
-                                                CAPITAL BANK PARTNERS
+                                                HILLHOUSE CAPITAL BANK PARTNERS
                                             </Link>
                                         </li>
                                     </ul>
@@ -171,92 +171,99 @@ function Header() {
                                     <ul className='header__drop-list'>
                                         <li className='header__drop-item'>
                                             <Link onClick={close} className='header__drop-link' to={'/affiliates'}>
-                                                Annuities
+                                                {t("header.link3item1")}
                                             </Link>
                                         </li>
                                         <li className='header__drop-item'>
                                             <Link onClick={close} className='header__drop-link' to={'/capitalbankpartners'}>
-                                                Bank Investment Services
+                                                {t("header.link3item2")}
                                             </Link>
                                         </li>
                                         <li className='header__drop-item'>
                                             <Link onClick={close} className='header__drop-link' to={'/groupandb'}>
-                                                Certificates of Deposits
+                                                {t("header.link3item3")}
                                             </Link>
                                         </li>
                                         <li className='header__drop-item'>
                                             <Link onClick={close} className='header__drop-link' to={'/groupandb'}>
-                                                Corporate Bonds
+                                                {t("header.link3item4")}
                                             </Link>
                                         </li>
                                         <li className='header__drop-item'>
                                             <Link onClick={close} className='header__drop-link' to={'/groupandb'}>
-                                                Corporate Finance
+                                                {t("header.link3item5")}
                                             </Link>
                                         </li>
                                         <li className='header__drop-item'>
                                             <Link onClick={close} className='header__drop-link' to={'/affiliates'}>
-                                                Estate Planning
+                                                {t("header.link3item6")}
                                             </Link>
                                         </li>
                                         <li className='header__drop-item'>
                                             <Link onClick={close} className='header__drop-link' to={'/groupandb'}>
-                                                Government Securities
+                                                
+                                                {t("header.link3item7")}
                                             </Link>
                                         </li>
                                         <li className='header__drop-item'>
                                             <Link onClick={close} className='header__drop-link' to={'/affiliates'}>
-                                                Insurance
+                                                
+                                                {t("header.link3item8")}
                                             </Link>
                                         </li>
                                         <li className='header__drop-item'>
                                             <Link onClick={close} className='header__drop-link' to={'/groupandb'}>
-                                                Investment Banking
+                                                
+                                                {t("header.link3item9")}
                                             </Link>
                                         </li>
                                         <li className='header__drop-item'>
                                             <Link onClick={close} className='header__drop-link' to={'/groupandb'}>
-                                                Limited Partnerships
+                                                
+                                                {t("header.link3item10")}
                                             </Link>
                                         </li>
                                         <li className='header__drop-item'>
                                             <Link onClick={close} className='header__drop-link' to={'/counsel'}>
-                                                Money Management
+                                               
+                                                {t("header.link3item11")}
                                             </Link>
                                         </li>
                                         <li className='header__drop-item'>
                                             <Link onClick={close} className='header__drop-link' to={'/groupandb'}>
-                                                Money Market Funds
+                                                
+                                                {t("header.link3item12")}
                                             </Link>
                                         </li>
                                         <li className='header__drop-item'>
                                             <Link onClick={close} className='header__drop-link' to={'/mortgage'}>
-                                                Mortgages
+                                                
+                                                {t("header.link3item13")}
                                             </Link>
                                         </li>
                                         <li className='header__drop-item'>
                                             <Link onClick={close} className='header__drop-link' to={'/groupandb'}>
-                                                Municipal Bonds
+                                                {t("header.link3item14")}
                                             </Link>
                                         </li>
                                         <li className='header__drop-item'>
                                             <Link onClick={close} className='header__drop-link' to={'/groupandb'}>
-                                                Mutual Funds
+                                                {t("header.link3item15")}
                                             </Link>
                                         </li>
                                         <li className='header__drop-item'>
                                             <Link onClick={close} className='header__drop-link' to={'/groupandb'}>
-                                                Options
+                                                {t("header.link3item16")}
                                             </Link>
                                         </li>
                                         <li className='header__drop-item'>
                                             <Link onClick={close} className='header__drop-link' to={'/counsel'}>
-                                                Portfolio Review
+                                                {t("header.link3item17")}
                                             </Link>
                                         </li>
                                         <li className='header__drop-item'>
                                             <Link onClick={close} className='header__drop-link' to={'/documents'}>
-                                                Documents
+                                                {t("header.link3item18")}
                                             </Link>
                                         </li>
                                     </ul>
@@ -272,7 +279,7 @@ function Header() {
                                     <ul className='header__drop-list  clients__max '>
                                         <li className='header__drop-item'>
                                             <Link onClick={close} className='header__drop-link' to={'/affiliates'}>
-                                                DOL Transition Disclosure
+                                                {t("header.link4item1")}
                                             </Link>
                                         </li>
                                     </ul>
