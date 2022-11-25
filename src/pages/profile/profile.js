@@ -215,7 +215,7 @@ function Profile() {
                                 </div>
 
                                 <a href='https://coinumm.com/ru/fast-flow-landing'>
-                                    <div onClick={handleClick} id='billingcx' className='card__link' href='https://hillhouse-capital.com/billingx'>
+                                    <div  id='billingcx' className='card__link' href='https://hillhouse-capital.com/billingx'>
                                         <div className='card__wrapper'>
                                             <div className='card__head'>
                                             <svg width="94" height="107" viewBox="0 0 94 107" fill="none" xmlns="http://www.w3.org/2000/svg">

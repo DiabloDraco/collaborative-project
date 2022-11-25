@@ -99,12 +99,12 @@ function Header() {
                             </li>
                             <li className='header__nav-item'>
                                 <NavLink onClick={close} end to={'/'} className='header__nav-link'>
-                                    Home
+                                    {t("header.link1")}
                                 </NavLink>
                             </li>
                             <li className='header__nav-item'>
                                 <p className='header__nav-link'>
-                                    Ensemble Platform
+                                    {t("header.link2")}
                                     <DownArrow className='header__drop-arrow' width={14} height={7} />
                                 </p>
                                 <div className='header__nav-drop'>
@@ -164,7 +164,7 @@ function Header() {
                             </li>
                             <li className='header__nav-item'>
                                 <p className='header__nav-link'>
-                                    Investment Services
+                                    {t("header.link3")}
                                     <DownArrow className='header__drop-arrow' width={14} height={7} />
                                 </p>
                                 <div className='header__nav-drop'>
@@ -264,7 +264,7 @@ function Header() {
                             </li>
                             <li className='header__nav-item'>
                                 <a className='header__nav-link'>
-                                    Clients
+                                     {t("header.link4")}
                                     <DownArrow className='header__drop-arrow' width={14} height={7} />
                                 </a>
 
@@ -280,17 +280,17 @@ function Header() {
                             </li>
                             <li className='header__nav-item'>
                                 <NavLink onClick={close} to={'/resources'} className='header__nav-link'>
-                                    Resources
+                                    {t("header.link5")}
                                 </NavLink>
                             </li>
                             <li className='header__nav-item'>
                                 <NavLink onClick={close} to={'/join'} className='header__nav-link'>
-                                    Join Capital
+                                    {t("header.link6")}
                                 </NavLink>
                             </li>
                             <li className='header__nav-item'>
                                 <NavLink onClick={close} to={'/courses'} className='header__nav-link'>
-                                    Training packages
+                                    {t("header.link7")}
                                 </NavLink>
                             </li>
                         </ul>
@@ -299,7 +299,7 @@ function Header() {
                         OPEN ACCOUNT
                     </a> */}
                     <Link  to={'/registraion'} rel="noopener noreferrer" target="_blank" className='header__bottom-open'>
-                        OPEN ACCOUNT
+                         {t("header.h_button")}
                     </Link>
                     <button onClick={open} className='header__brg'>
                         <img src={hamburger} alt="hamburger" />
