@@ -288,12 +288,12 @@ function Header() {
                             </li>
                         </ul>
                     </nav>
-                    <a href='https://coinumm.com/ru/fast-flow-landing' rel="noopener noreferrer" target="_blank" className='header__bottom-open'>
+                    {/* <a href='https://coinumm.com/ru/fast-flow-landing' rel="noopener noreferrer" target="_blank" className='header__bottom-open'>
                         OPEN ACCOUNT
-                    </a>
-                    {/* <Link  to={'/registraion'} rel="noopener noreferrer" target="_blank" className='header__bottom-open'>
+                    </a> */}
+                    <Link  to={'/registraion'} rel="noopener noreferrer" target="_blank" className='header__bottom-open'>
                         OPEN ACCOUNT
-                    </Link> */}
+                    </Link>
                     <button onClick={open} className='header__brg'>
                         <img src={hamburger} alt="hamburger" />
                     </button>
