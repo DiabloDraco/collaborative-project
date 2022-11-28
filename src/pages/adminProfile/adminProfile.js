@@ -202,22 +202,26 @@ function AdminProfile() {
 
                             <ul className={styles.pending__list}>
                                 {
-                                    pending?.map((req, i) => (
-                                        <li style={{ listStyle: "none", padding: "0px" }} key={i}>
-                                            <p><span style={{ color: "#F29C37", fontWeight: "700" }}>UserId</span> : {req.user_id}</p>
-                                            <p><span style={{ color: "#F29C37", fontWeight: "700" }}>Payment ID</span> : <span className='userId'>{req.user_id}</span></p>
-                                            <p><span style={{ color: "#F29C37", fontWeight: "700" }}>Amount</span> : {req.temp_score}</p>
-                                            <p><span style={{ color: "#F29C37", fontWeight: "700" }}>Created at</span> : {req.created_at}</p>
-                                            <div className={styles.buttons__wrapper}>
-                                                <button onClick={accept} className={`${styles.btn} ${styles.accept} ${req.user_id}`}>
-                                                    Accept
-                                                </button>
-                                                <button onClick={reject} className={`${styles.btn} ${styles.reject} ${req.user_id}`}>
-                                                    Reject
-                                                </button>
-                                            </div>
-                                        </li>
-                                    ))
+                                    pending.user_id ? (
+                                        pending?.map((req, i) => (
+                                            <li style={{ listStyle: "none", padding: "0px" }} key={i}>
+                                                <p><span style={{ color: "#F29C37", fontWeight: "700" }}>UserId</span> : {req.user_id}</p>
+                                                <p><span style={{ color: "#F29C37", fontWeight: "700" }}>Payment ID</span> : <span className='userId'>{req.user_id}</span></p>
+                                                <p><span style={{ color: "#F29C37", fontWeight: "700" }}>Amount</span> : {req.temp_score}</p>
+                                                <p><span style={{ color: "#F29C37", fontWeight: "700" }}>Created at</span> : {req.created_at}</p>
+                                                <div className={styles.buttons__wrapper}>
+                                                    <button onClick={accept} className={`${styles.btn} ${styles.accept} ${req.user_id}`}>
+                                                        Accept
+                                                    </button>
+                                                    <button onClick={reject} className={`${styles.btn} ${styles.reject} ${req.user_id}`}>
+                                                        Reject
+                                                    </button>
+                                                </div>
+                                            </li>
+                                        ))
+                                    ):(
+                                        <h2 style={{color: "#F29C37", fontWeight: "700" , marginLeft:"auto" , marginRight:"auto" , marginTop:"50px"}}>No requests yet</h2>
+                                    )
                                 }
                             </ul>
 
