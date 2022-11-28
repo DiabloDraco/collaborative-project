@@ -11,7 +11,7 @@ function Reasons() {
         <div className='capitalI__top-wrapper'>
             <div className='capitalI__top container'>
                  <h2 className='capitalI__header'>
-                    RAESONS
+                    REASONS
                 </h2>
             </div>
         </div>

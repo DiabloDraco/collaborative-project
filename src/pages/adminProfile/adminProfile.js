@@ -12,6 +12,7 @@ function AdminProfile() {
         document.querySelector(".footer__wrapper").style.display = 'none'
     }, [])
     let [data, setData] = useState()
+    let [pending, setPending] = useState()
 
     function getInfo() {
         fetch("https://freedomen.herokuapp.com/admin/user", {
@@ -23,6 +24,30 @@ function AdminProfile() {
             .then(req => req.json())
             .then(data => setData(data.data))
     }
+
+    function getPending() {
+        fetch("https://freedomen.herokuapp.com/user/balance/pending", {
+            method: "GET",
+            headers: {
+                "token": `${JSON.parse(localStorage.getItem('admin'))}`
+            }
+        })
+            .then(req => req.json())
+            .then(data => setPending(data.data))
+    }
+
+    function accept(e) {
+        for (let i = 0; i < 3; i++) {
+            if (e.target.classList.value.split(" ")[i] != "undefined") {
+                console.log(e.target.classList.value.split(" ")[i]);
+            }
+        }
+    }
+
+    function reject(params) {
+
+    }
+
     let id = useRef(null)
     let userName = useRef(null)
     let lastName = useRef(null)
@@ -31,12 +56,14 @@ function AdminProfile() {
     let password = useRef(null)
     let balanceChange = useRef(null)
 
+
     useEffect(() => {
         if (!JSON.parse(localStorage.getItem("admin"))) {
             navigator('/')
         }
         if (JSON.parse(localStorage.getItem("admin"))) {
             getInfo()
+            getPending()
         }
     }, [JSON.parse(localStorage.getItem("admin"))])
     async function userDelete(e) {
@@ -93,14 +120,14 @@ function AdminProfile() {
                         <div className={styles.fixed}>
                             <header className={styles.admin__profile_header}>
                                 <NavLink className={"header__nav-link"} to={'/'}>
-                                    <img style={{marginRight:"70px"}} width={50} height={50} src={logo} alt="" />
+                                    <img style={{ marginRight: "70px" }} width={50} height={50} src={logo} alt="" />
                                 </NavLink>
                                 <NavLink className={"header__nav-link"} to={'/'}>
                                     HOME
                                 </NavLink>
-                                <h2 style={{marginLeft: "550px" , fontSize:"30px" , fontWeight:"700"}} className='compilance__title'>Admin</h2>
+                                <h2 style={{ marginLeft: "550px", fontSize: "30px", fontWeight: "700" }} className='compilance__title'>Admin</h2>
                             </header>
-                            <h2 style={{ marginLeft:"30px" , fontSize:"20px" , fontWeight:"700"}} className='compilance__title'>Admin Table</h2>
+                            <h2 style={{ marginLeft: "30px", fontSize: "20px", fontWeight: "700" }} className='compilance__title'>Admin Table</h2>
                             <table className={`${styles.table} ${styles.table_light}`}>
                                 <thead>
                                     <tr>
@@ -119,7 +146,6 @@ function AdminProfile() {
                                     {
                                         data?.map((item) => (
                                             <tr key={item.user_id}>
-                                                {console.log(item)}
                                                 <td style={{ width: "50px" }}>{item?.user_id}</td>
                                                 <td>{item?.username}</td>
                                                 <td>{item?.lastname}</td>
@@ -150,6 +176,29 @@ function AdminProfile() {
                                 </form>
                             </div>
 
+                            <h3 style={{ marginLeft: "auto", marginRight: "auto", fontSize: "20px", fontWeight: "700" }} className='compilance__title'>Pending payment list</h3>
+
+                            <ul className={styles.pending__list}>
+                                {
+                                    pending?.map((req, i) => (
+                                        <li style={{ listStyle: "none", padding: "0px" }} key={i}>
+                                            <p>UserId : {req.user_id}</p>
+                                            <p>Payment ID : <span className='userId'>{req.user_id}</span></p>
+                                            <p>Amount : {req.temp_score}</p>
+                                            <p>Created at : {req.created_at}</p>
+                                            <div className={styles.buttons__wrapper}>
+                                                <button onClick={accept} className={`${styles.btn} ${styles.accept} ${req.user_id}`}>
+                                                    Accept
+                                                </button>
+                                                <button onClick={reject} className={`${styles.btn} ${styles.reject} ${req.user_id}`}>
+                                                    Reject
+                                                </button>
+                                            </div>
+                                        </li>
+                                    ))
+                                }
+                            </ul>
+
                         </div>
                     </div>
                 ) : (<div style={{ paddingTop: "250px" }} className='container'>
@@ -157,7 +206,7 @@ function AdminProfile() {
                         <div></div><div></div><div></div>
                     </div></div>
                 </div>)
-                
+
             }
         </>
     )
