@@ -78,6 +78,25 @@ function Registration() {
 
 
 
+    const password2 = document.querySelector('#password2');
+
+  function show() {
+        // toggle the type attribute
+        const type = password2.getAttribute('type') === 'password' ? 'text' : 'password';
+        password2.setAttribute('type', type);
+        // toggle the eye slash icon
+        this.classList.toggle('fa-eye-slash');
+    };
+
+    const password3 = document.querySelector('#password3');
+
+    function show2() {
+          // toggle the type attribute
+          const type = password3.getAttribute('type') === 'password' ? 'text' : 'password';
+          password3.setAttribute('type', type);
+          // toggle the eye slash icon
+          this.classList.toggle('fa-eye-slash');
+      };
 
     return (
         <>
@@ -343,12 +362,14 @@ function Registration() {
                     </label>
 
                     <label className='reg__label'>
-                        <input onChange={error} ref={password} className='reg__input' required type="password" placeholder='Password' />
+                        <input id='password2' onChange={error} ref={password} className='reg__input' required type="password" placeholder='Password' />
+                        <div onClick={show} id='togglePassword'><p>Show password</p></div>
                         <div className='error__password error'>Please complete all required fields!</div>
                         <div className='error__confirm password__error error'>Passwords do not match or <br /> the password is less than 8 characters long</div>
                     </label>
                     <label className='reg__label m'>
-                        <input onChange={error} ref={confirm} className='reg__input' required type="password" placeholder='Confirm Password' />
+                        <input id='password3' onChange={error} ref={confirm} className='reg__input' required type="password" placeholder='Confirm Password' />
+                        <div onClick={show2} id='togglePassword'><p>Show password</p></div>
                         <div className='error__confirm error'>Please complete all required fields!</div>
                     </label>
                     <label className='pp_wrapper'>

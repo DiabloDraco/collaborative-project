@@ -142,6 +142,16 @@
     margin-right: 10px;
 }
 
+#togglePassword ,#togglePassword p{
+    margin-top: 4px;
+    margin-bottom: 0;
+    text-align: right !important;
+    font-size: 13px;
+    font-weight: 600;
+}
+
+
+
 
 
 @media only screen and (max-width: 900px) {
