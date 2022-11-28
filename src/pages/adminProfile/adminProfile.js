@@ -44,8 +44,12 @@ function AdminProfile() {
         }
     }
 
-    function reject(params) {
-
+    function reject(e) {
+        for (let i = 0; i < 3; i++) {
+            if (e.target.classList.value.split(" ")[i] != "undefined") {
+                console.log(e.target.classList.value.split(" ")[i]);
+            }
+        }
     }
 
     let id = useRef(null)
