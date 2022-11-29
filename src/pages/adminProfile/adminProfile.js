@@ -37,37 +37,34 @@ function AdminProfile() {
     }
 
     async function accept(e) {
-        for (let i = 0; i < 3; i++) {
-            if (e.target.classList.value.split(" ")[i] != "undefined") {
-                fetch(`https://freedomen.herokuapp.com/user/balance/rejected/${e.target.classList.value.split(" ")[i]}`, {
-                    method: "PUT",
-                    headers: {
-                        "content-Type": "application/json",
-                        "token": `${JSON.parse(localStorage.getItem('admin'))}`
-                    }
-                })
-                setTimeout(() => {
-                    window.location.reload()
-                }, 1000)
-            }
-        }
+        fetch(`https://freedomen.herokuapp.com/user/balance/successful/${e.target.dataset.id}`, {
+            method: "PUT",
+            headers: {
+                "content-Type": "application/json",
+                "token": `${JSON.parse(localStorage.getItem('admin'))}`
+            },
+            body: JSON.stringify({
+                "tempId": e.target.parentNode.dataset.id
+            })
+        })
+        .then(req => req.json())
+        .then(data => window.location.reload())
     }
 
     function reject(e) {
-        for (let i = 0; i < 3; i++) {
-            if (e.target.classList.value.split(" ")[i] != "undefined") {
-                fetch(`https://freedomen.herokuapp.com/user/balance/successful/${e.target.classList.value.split(" ")[i]}`, {
-                    method: "PUT",
-                    headers: {
-                        "content-Type": "application/json",
-                        "token": `${JSON.parse(localStorage.getItem('admin'))}`
-                    }
-                })
-                setTimeout(() => {
-                    window.location.reload()
-                }, 1000)
-            }
-        }
+        fetch(`https://freedomen.herokuapp.com/user/balance/rejected/${e.target.dataset.id}`, {
+            method: "PUT",
+            headers: {
+                "content-Type": "application/json",
+                "token": `${JSON.parse(localStorage.getItem('admin'))}`
+            },
+            body: JSON.stringify({
+                "tempId": e.target.parentNode.dataset.id
+            })
+            
+        })
+        .then(req => req.json())
+        .then(data => console.log(data))
     }
 
     let id = useRef(null)
@@ -206,13 +203,14 @@ function AdminProfile() {
                                         <li style={{ listStyle: "none", padding: "0px" }} key={i}>
                                             <p><span style={{ color: "#F29C37", fontWeight: "700" }}>UserId</span> : {req.user_id}</p>
                                             <p><span style={{ color: "#F29C37", fontWeight: "700" }}>Payment ID</span> : <span className='userId'>{req.user_id}</span></p>
+                                            <p><span style={{ color: "#F29C37", fontWeight: "700" }}>Temporary id</span> : <span className='tempId'>{req.temporary_id}</span></p>
                                             <p><span style={{ color: "#F29C37", fontWeight: "700" }}>Amount</span> : {req.temp_score}</p>
                                             <p><span style={{ color: "#F29C37", fontWeight: "700" }}>Created at</span> : {req.created_at}</p>
-                                            <div className={styles.buttons__wrapper}>
-                                                <button onClick={accept} className={`${styles.btn} ${styles.accept} ${req.user_id}`}>
+                                            <div className={styles.buttons__wrapper} data-id={req.temporary_id}>
+                                                <button data-id={req.user_id} onClick={accept} className={`${styles.btn} ${styles.accept}`}>
                                                     Accept
                                                 </button>
-                                                <button onClick={reject} className={`${styles.btn} ${styles.reject} ${req.user_id}`}>
+                                                <button data-id={req.user_id} onClick={reject} className={`${styles.btn} ${styles.reject}`}>
                                                     Reject
                                                 </button>
                                             </div>
