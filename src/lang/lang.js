@@ -50,6 +50,9 @@ export const lang = {
                 textcard3 : "In the rapidly changing investment world, we strive to create new processes and services based on leading edge technologies. Our goal is to continue to implement new methods and processes rather than relying on strategies that worked in the past thus initiating positive change for you.",
                 crs : "Form CRS (Customer Relationship Summary) for our entities",
             },
+            capitalInvestment : {
+                title : "PRODUCTS AND SERVICES OFFERED THROUGH THE CAPITAL INVESTMENT COMPANIES:",
+            }
             
         }
     },
@@ -103,6 +106,9 @@ export const lang = {
                 textcard3 : "В быстро меняющемся инвестиционном мире мы стремимся создавать новые процессы и услуги на основе передовых технологий. Наша цель — продолжать внедрять новые методы и процессы, а не полагаться на стратегии, которые работали в прошлом, тем самым инициируя положительные изменения для вас.",
                 crs : "Форма CRS (Сводка взаимоотношений с клиентами) для нашей организации",
             },
+            capitalInvestment : {
+                title : "ПРОДУКТЫ И УСЛУГИ, ПРЕДЛАГАЕМЫЕ ЧЕРЕЗ КАПИТАЛЬНЫЕ ИНВЕСТИЦИОННЫЕ КОМПАНИИ:",
+            }
         }
     }
 }

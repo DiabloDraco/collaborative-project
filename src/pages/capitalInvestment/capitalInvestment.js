@@ -1,24 +1,27 @@
 import { useEffect } from 'react'
 import './capitalInvestment.css'
+import { useTranslation } from 'react-i18next';
 
 function CapitalInvestment() {
     useEffect(() => {
         document.querySelector(".header-wrapper").style.display = 'block'
         document.querySelector(".footer__wrapper").style.display = 'flex'
-    }, [])
+    }, []);
+
+    let { t, i18n } = useTranslation();
     return (
         <>
             <div className='capitalI__top-wrapper'>
                 <div className='capitalI__top container'>
                     <h2 className='capitalI__header'>
-                        CAPITAL INVESTMENT GROUP, INC.
+                        HILLHOSE CAPITAL INVESTMENT GROUP, INC.
+                        
                     </h2>
                 </div>
             </div>
             <div className='capitalI__bottom container'>
                 <h3 className='capitalI__bottom-heading'>
-                    PRODUCTS AND SERVICES OFFERED THROUGH THE
-                    CAPITAL INVESTMENT COMPANIES:
+                    {t("capitalInvestment.title")}
                 </h3>
                 <ul className='capitalI__bottom-list'>
                     <li className='capitalI__bottom-item'>
