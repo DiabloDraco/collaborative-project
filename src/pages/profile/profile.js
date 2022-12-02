@@ -156,7 +156,7 @@ function Profile() {
                         </Link>
                         <div className='profile__header-right'>
                             <div className='profile__user-wrapper'>
-                                <img src={profileAva} alt="ava" className='profile__ava' />
+                                {/* <img src={profileAva} alt="ava" className='profile__ava' /> */}
                                 <div className='profile__user-right'>
                                     <h3 className='profile__user-name'>
                                         {data?.data.username} {data?.data.lastname}
