@@ -52,16 +52,12 @@ function AdminProfile() {
     }
 
     function reject(e) {
-        fetch(`https://freedomen.herokuapp.com/user/balance/rejected/${e.target.dataset.id}`, {
+        fetch(`https://freedomen.herokuapp.com/user/balance/rejected/${e.target.parentNode.dataset.id}`, {
             method: "PUT",
             headers: {
                 "content-Type": "application/json",
                 "token": `${JSON.parse(localStorage.getItem('admin'))}`
-            },
-            body: JSON.stringify({
-                "tempId": e.target.parentNode.dataset.id
-            })
-            
+            }
         })
         .then(req => req.json())
         .then(data => console.log(data))
