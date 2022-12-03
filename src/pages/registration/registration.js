@@ -132,7 +132,7 @@ function Registration() {
                     </label>
                     <label className='reg__label'>
                         <select onChange={error} ref={country} className='county-input' required type="text"
-                            defaultValue={"RU"} placeholder='Country' id="select" autoComplete="off">
+                            defaultValue={"SG"} placeholder='Country' id="select" autoComplete="off">
                             <option value="AX">AALAND ISLANDS</option>
                             <option value="AF">AFGHANISTAN</option>
                             <option value="AL">ALBANIA</option>
