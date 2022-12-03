@@ -38,18 +38,20 @@ function Header() {
     function open() {
         navbar.current.style.display = 'flex'
     }
-    document.querySelector("#russian").addEventListener("click" , function () {
+    document.querySelector("#russian").addEventListener("click", function () {
         i18n.changeLanguage("ru")
     })
-    document.querySelector("#English").addEventListener("click" , function () {
+    document.querySelector("#English").addEventListener("click", function () {
         i18n.changeLanguage("en")
     })
 
-    let sel = document.querySelector(".glink")
-    sel.addEventListener("click", function () {
-        document.querySelector(".gt-wrapper").style.display = 'none'
-        document.querySelector("html").style.overflowY = "scroll"
-    })
+    let sel = document.querySelectorAll(".glink")
+    for (let i = 0; i < sel.length; i++) {
+        sel[i].addEventListener("click", function () {
+            document.querySelector(".gt-wrapper").style.display = 'none'
+            document.querySelector("html").style.overflowY = "scroll"
+        })
+    }
     let btn = document.querySelector(".gt-close-btn");
     btn.addEventListener("click", function () {
         document.querySelector(".gt-wrapper").style.display = 'none';
@@ -141,7 +143,7 @@ function Header() {
                                         </li>
                                         <li className='header__drop-item'>
                                             <Link onClick={close} className='header__drop-link' to={'/mortgage'}>
-                                                 HILLHOUSE CAPITAL MORTGAGE ASSOCIATES
+                                                HILLHOUSE CAPITAL MORTGAGE ASSOCIATES
                                             </Link>
                                         </li>
                                         <li className='header__drop-item'>
@@ -201,43 +203,43 @@ function Header() {
                                         </li>
                                         <li className='header__drop-item'>
                                             <Link onClick={close} className='header__drop-link' to={'/groupandb'}>
-                                                
+
                                                 {t("header.link3item7")}
                                             </Link>
                                         </li>
                                         <li className='header__drop-item'>
                                             <Link onClick={close} className='header__drop-link' to={'/affiliates'}>
-                                                
+
                                                 {t("header.link3item8")}
                                             </Link>
                                         </li>
                                         <li className='header__drop-item'>
                                             <Link onClick={close} className='header__drop-link' to={'/groupandb'}>
-                                                
+
                                                 {t("header.link3item9")}
                                             </Link>
                                         </li>
                                         <li className='header__drop-item'>
                                             <Link onClick={close} className='header__drop-link' to={'/groupandb'}>
-                                                
+
                                                 {t("header.link3item10")}
                                             </Link>
                                         </li>
                                         <li className='header__drop-item'>
                                             <Link onClick={close} className='header__drop-link' to={'/counsel'}>
-                                               
+
                                                 {t("header.link3item11")}
                                             </Link>
                                         </li>
                                         <li className='header__drop-item'>
                                             <Link onClick={close} className='header__drop-link' to={'/groupandb'}>
-                                                
+
                                                 {t("header.link3item12")}
                                             </Link>
                                         </li>
                                         <li className='header__drop-item'>
                                             <Link onClick={close} className='header__drop-link' to={'/mortgage'}>
-                                                
+
                                                 {t("header.link3item13")}
                                             </Link>
                                         </li>
@@ -271,7 +273,7 @@ function Header() {
                             </li>
                             <li className='header__nav-item'>
                                 <a className='header__nav-link'>
-                                     {t("header.link4")}
+                                    {t("header.link4")}
                                     <DownArrow className='header__drop-arrow' width={14} height={7} />
                                 </a>
 
@@ -305,8 +307,8 @@ function Header() {
                     {/* <a href='https://coinumm.com/ru/fast-flow-landing' rel="noopener noreferrer" target="_blank" className='header__bottom-open'>
                         OPEN ACCOUNT
                     </a> */}
-                    <Link  to={'/registraion'} rel="noopener noreferrer" target="_blank" className='header__bottom-open'>
-                         {t("header.h_button")}
+                    <Link to={'/registraion'} rel="noopener noreferrer" target="_blank" className='header__bottom-open'>
+                        {t("header.h_button")}
                     </Link>
                     <button onClick={open} className='header__brg'>
                         <img src={hamburger} alt="hamburger" />
