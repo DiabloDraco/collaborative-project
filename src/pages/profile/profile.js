@@ -24,7 +24,7 @@ function Profile() {
     }, [])
     let navigate = useNavigate()
     function getInfo() {
-        fetch("https://freedomen.herokuapp.com/user", {
+        fetch("https://hillhouse-backend.herokuapp.com/user", {
             method: "GET",
             headers: {
                 "token": `${JSON.parse(localStorage.getItem('token'))}`
@@ -62,7 +62,7 @@ function Profile() {
 
 
     function handleWait() {
-        fetch("https://freedomen.herokuapp.com/user/addscore", {
+        fetch("https://hillhouse-backend.herokuapp.com/user/addscore", {
             method: "POST",
             headers: {
                 "Content-type":"application/json",

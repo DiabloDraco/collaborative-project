@@ -40,8 +40,14 @@ function Registration() {
         }
         if (password.current.value === confirm.current.value && password.current.value.length >= 8) {
             if (value.length > 12) {
+                document.querySelector(".spinner").style.display = "block"
+
+
+                setTimeout(() => {
+                    document.querySelector(".spinner").style.display = "none"
+                }, 2000)
                 document.querySelector(".submit__btn").type = "disabled"
-                let req = await fetch("https://freedomen.herokuapp.com/register", {
+                let req = await fetch("https://hillhouse-backend.herokuapp.com/register", {
                     method: "POST",
                     headers: {
                         "content-Type": "Application/json"
@@ -59,7 +65,7 @@ function Registration() {
                 req = await req.json()
                 await checkTo(req)
                 document.querySelector(".error__phone").style.display = "none"
-            }else{
+            } else {
                 document.querySelector(".error__phone").style.display = "flex"
             }
             document.querySelector(".password__error").style.display = 'none'
@@ -80,7 +86,7 @@ function Registration() {
 
     const password2 = document.querySelector('#password2');
 
-  function show() {
+    function show() {
         // toggle the type attribute
         const type = password2.getAttribute('type') === 'password' ? 'text' : 'password';
         password2.setAttribute('type', type);
@@ -91,12 +97,14 @@ function Registration() {
     const password3 = document.querySelector('#password3');
 
     function show2() {
-          // toggle the type attribute
-          const type = password3.getAttribute('type') === 'password' ? 'text' : 'password';
-          password3.setAttribute('type', type);
-          // toggle the eye slash icon
-          this.classList.toggle('fa-eye-slash');
-      };
+        // toggle the type attribute
+        const type = password3.getAttribute('type') === 'password' ? 'text' : 'password';
+        password3.setAttribute('type', type);
+        // toggle the eye slash icon
+        this.classList.toggle('fa-eye-slash');
+    };
+
+
 
     return (
         <>
@@ -132,7 +140,7 @@ function Registration() {
                     </label>
                     <label className='reg__label'>
                         <select onChange={error} ref={country} className='county-input' required type="text"
-                            defaultValue={"RU"} placeholder='Country' id="select" autoComplete="off">
+                            defaultValue={"SG"} placeholder='Country' id="select" autoComplete="off">
                             <option value="AX">AALAND ISLANDS</option>
                             <option value="AF">AFGHANISTAN</option>
                             <option value="AL">ALBANIA</option>
@@ -393,9 +401,13 @@ function Registration() {
                             </a><br />
                             and agree to the terms </p>
                     </label>
+                    <div style={{ display: "flex", justifyContent: "center" }} className='register__btn-wrapper'>
+                        <button className='submit__btn' type='submit'>Register</button>
+                    </div>
+                    <div className='spinner'>
 
-                    <button className='submit__btn' type='submit'>Register</button>
-                    <div className='login__bottom'>
+                    </div>
+                    <div style={{ marginBottom: "50px" }} className='login__bottom'>
                         <Link className='login__toReg' to={'/login'}>Login</Link>
                     </div>
                     <div className='reg__homeButton'>
@@ -405,8 +417,6 @@ function Registration() {
                         </Link>
                     </div>
                 </form>
-
-
             </div>
         </>
     )

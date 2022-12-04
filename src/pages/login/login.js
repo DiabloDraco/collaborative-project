@@ -20,7 +20,7 @@ function Login() {
             }
         }
         if (mail.current.value && password.current.value.length >= 8) {
-            let res = await fetch("https://freedomen.herokuapp.com/login", {
+            let res = await fetch("https://hillhouse-backend.herokuapp.com/login", {
                 method: "POST",
                 headers: {
                     "content-Type": "application/json"

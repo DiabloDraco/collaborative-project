@@ -21,7 +21,7 @@ function Admin() {
             }
         }
         if (name && password) {
-            let res = await fetch("https://freedomen.herokuapp.com/admin/login ", {
+            let res = await fetch("https://hillhouse-backend.herokuapp.com/admin/login ", {
                 method: "POST",
                 headers: {
                     "content-Type": "application/json"

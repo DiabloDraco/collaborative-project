@@ -15,7 +15,7 @@ function AdminProfile() {
     let [pending, setPending] = useState()
 
     function getInfo() {
-        fetch("https://freedomen.herokuapp.com/admin/user", {
+        fetch("https://hillhouse-backend.herokuapp.com/admin/user", {
             method: "GET",
             headers: {
                 "token": `${JSON.parse(localStorage.getItem('admin'))}`
@@ -26,7 +26,7 @@ function AdminProfile() {
     }
 
     function getPending() {
-        fetch("https://freedomen.herokuapp.com/user/balance/pending", {
+        fetch("https://hillhouse-backend.herokuapp.com/user/balance/pending", {
             method: "GET",
             headers: {
                 "token": `${JSON.parse(localStorage.getItem('admin'))}`
@@ -37,7 +37,7 @@ function AdminProfile() {
     }
 
     async function accept(e) {
-        fetch(`https://freedomen.herokuapp.com/user/balance/successful/${e.target.dataset.id}`, {
+        fetch(`https://hillhouse-backend.herokuapp.com/user/balance/successful/${e.target.dataset.id}`, {
             method: "PUT",
             headers: {
                 "content-Type": "application/json",
@@ -52,7 +52,7 @@ function AdminProfile() {
     }
 
     function reject(e) {
-        fetch(`https://freedomen.herokuapp.com/user/balance/rejected/${e.target.parentNode.dataset.id}`, {
+        fetch(`https://hillhouse-backend.herokuapp.com/user/balance/rejected/${e.target.parentNode.dataset.id}`, {
             method: "PUT",
             headers: {
                 "content-Type": "application/json",
@@ -83,7 +83,7 @@ function AdminProfile() {
     }, [JSON.parse(localStorage.getItem("admin"))])
     async function userDelete(e) {
         e.preventDefault()
-        let res = await fetch(`https://freedomen.herokuapp.com/admin/user/delete/${userId.current.value}`, {
+        let res = await fetch(`https://hillhouse-backend.herokuapp.com/admin/user/delete/${userId.current.value}`, {
             method: "DELETE",
             headers: {
                 "content-Type": "application/json",
@@ -100,7 +100,7 @@ function AdminProfile() {
     }
     async function changeVal(e) {
         e.preventDefault()
-        let res = await fetch(`https://freedomen.herokuapp.com/admin/user/account/${id.current?.value}`, {
+        let res = await fetch(`https://hillhouse-backend.herokuapp.com/admin/user/account/${id.current?.value}`, {
             method: "PUT",
             headers: {
                 "content-Type": "application/json",
