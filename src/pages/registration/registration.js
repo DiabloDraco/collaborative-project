@@ -65,7 +65,7 @@ function Registration() {
             }
         }
         if (password.current.value === confirm.current.value && password.current.value.length >= 8) {
-            if (value.length <= 12) {
+            if (value.length >= 10) {
                 document.querySelector(".spinner").style.display = "block"
 
 
