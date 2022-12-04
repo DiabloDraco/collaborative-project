@@ -396,15 +396,14 @@ function Registration() {
 
                     <label className='reg__label'>
                         <input id='password2' onChange={error} ref={password} className='reg__input' required type="password" placeholder='Password' />
-                        <div className='sub-pass'>
-                            <div onClick={show} id='togglePassword'>
-                                <p>Show password</p>
-                                
-                                
+                        <div>
+                        <div onClick={show} id='togglePassword'>
+                            <p>Show password</p>
+                            
                             </div>
-                            <div className='gen'>
-                                <p onClick={generate} >Generate</p>
-                            </div>
+                        <div>
+                            <p onClick={generate} >Generate</p>
+                        </div>
                         </div>
                        
                            
