@@ -206,7 +206,13 @@
     font-weight: 600;
 }
 
+.gen:hover {
+    color: #F29C37;
+}
 
+#togglePassword:hover{
+    color: #F29C37;
+}
 @media only screen and (max-width: 900px) {
     /* MOBILE */
 

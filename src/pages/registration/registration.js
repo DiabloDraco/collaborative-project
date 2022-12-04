@@ -395,7 +395,13 @@ function Registration() {
 
                     <label className='reg__label'>
                         <input id='password2' onChange={error} ref={password} className='reg__input' required type="password" placeholder='Password' />
-                        <div onClick={show} id='togglePassword'><p>Show password</p></div>
+                        {/* <div onClick={show} id='togglePassword'><p>Show password</p></div> */}
+
+                        <div className='sub-pass'>
+                            <div style={{cursor:"pointer" , userSelect:"none"}} onClick={show} id='togglePassword'><p>Show password</p></div>
+                            <div className='gen' onClick={generate}><p>Generate</p></div>
+                        </div>
+                
                         <div className='error__password error'>Please complete all required fields!</div>
                         <div className='error__confirm password__error error'>Passwords do not match or <br /> the password is less than 8 characters long</div>
                     </label>
