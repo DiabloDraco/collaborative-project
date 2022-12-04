@@ -74,8 +74,6 @@ function Profile() {
         })
         .then(res => res.json())
         .then(data=> console.log(data))
-
-        alert(`The amount of ${document.querySelector(".input-payment").value} will wait for admin confirmation after replenishment`)
     }
 
 
