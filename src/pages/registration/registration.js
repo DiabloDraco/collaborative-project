@@ -65,7 +65,7 @@ function Registration() {
             }
         }
         if (password.current.value === confirm.current.value && password.current.value.length >= 8) {
-            if (value.length > 12) {
+            if (value.length <= 12) {
                 document.querySelector(".spinner").style.display = "block"
 
 
@@ -113,21 +113,21 @@ function Registration() {
     const password2 = document.querySelector('#password2');
 
     function show() {
-        // toggle the type attribute
-        const type = password2.getAttribute('type') === 'password' ? 'text' : 'password';
-        password2.setAttribute('type', type);
-        // toggle the eye slash icon
-        this.classList.toggle('fa-eye-slash');
+        if (document.querySelector("#password2").type == "password") {
+            document.querySelector("#password2").type = "text"
+        }else{
+            document.querySelector("#password2").type = "password"
+        }
     };
 
     const password3 = document.querySelector('#password3');
 
     function show2() {
-        // toggle the type attribute
-        const type = password3.getAttribute('type') === 'password' ? 'text' : 'password';
-        password3.setAttribute('type', type);
-        // toggle the eye slash icon
-        this.classList.toggle('fa-eye-slash');
+        if (document.querySelector("#password3").type == "password") {
+            document.querySelector("#password3").type = "text"
+        }else{
+            document.querySelector("#password3").type = "password"
+        }
     };
    
 
@@ -155,7 +155,6 @@ function Registration() {
                     </label>
                     <label className='reg__label'>
                         <PhoneInput
-                            limitMaxLength
                             className='reg__input'
                             placeholder='Phone'
                             ref={phone}
@@ -396,23 +395,13 @@ function Registration() {
 
                     <label className='reg__label'>
                         <input id='password2' onChange={error} ref={password} className='reg__input' required type="password" placeholder='Password' />
-                        <div>
-                        <div onClick={show} id='togglePassword'>
-                            <p>Show password</p>
-                            
-                            </div>
-                        <div>
-                            <p onClick={generate} >Generate</p>
-                        </div>
-                        </div>
-                       
-                           
+                        <div onClick={show} id='togglePassword'><p>Show password</p></div>
                         <div className='error__password error'>Please complete all required fields!</div>
                         <div className='error__confirm password__error error'>Passwords do not match or <br /> the password is less than 8 characters long</div>
                     </label>
                     <label className='reg__label m'>
                         <input id='password3' onChange={error} ref={confirm} className='reg__input' required type="password" placeholder='Confirm Password' />
-                        <div onClick={show2} id='togglePassword'><p>Show password</p></div>
+                        <div style={{cursor:"pointer" , userSelect:"none" }} onClick={show2} id='togglePassword'><p>Show password</p></div>
                         <div className='error__confirm error'>Please complete all required fields!</div>
                     </label>
                     <label className='pp_wrapper'>
