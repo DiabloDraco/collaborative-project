@@ -28,6 +28,32 @@ function Registration() {
     let date = useRef(null)
     let navigator = useNavigate()
 
+    var chars = "0123456789abcdefghijklmnopqrstuvwxyz!@#$%^&*()ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+    var passwordLength = 12;
+    
+    
+
+    function generate() {
+        let pass = document.getElementById("password2");
+        let conf = document.getElementById("password3");
+        let newpass = '';
+
+        for (var i = 0; i <= passwordLength; i++) {
+            var randomNumber = Math.floor(Math.random() * chars.length);
+            newpass += chars.substring(randomNumber, randomNumber +1);
+
+            console.log(newpass)
+        }
+
+        pass.value = newpass;
+        conf.value = newpass;
+    }
+
+    
+
+    // document.getElementById("pass").value = password;
+
+
 
     async function postInfo(e) {
         e.preventDefault();
@@ -59,7 +85,7 @@ function Registration() {
                         "email": `${mail.current.value}`,
                         "contact": `${value}`,
                         "country": `${country.current.value}`,
-                        "brithday": `${country.current.value}`
+                        "brithday": `${date.current.value}`
                     })
                 })
                 req = await req.json()
@@ -103,8 +129,7 @@ function Registration() {
         // toggle the eye slash icon
         this.classList.toggle('fa-eye-slash');
     };
-
-
+   
 
     return (
         <>
@@ -371,7 +396,18 @@ function Registration() {
 
                     <label className='reg__label'>
                         <input id='password2' onChange={error} ref={password} className='reg__input' required type="password" placeholder='Password' />
-                        <div onClick={show} id='togglePassword'><p>Show password</p></div>
+                        <div className='sub-pass'>
+                            <div onClick={show} id='togglePassword'>
+                                <p>Show password</p>
+                                
+                                
+                            </div>
+                            <div className='gen'>
+                                <p onClick={generate} >Generate</p>
+                            </div>
+                        </div>
+                       
+                           
                         <div className='error__password error'>Please complete all required fields!</div>
                         <div className='error__confirm password__error error'>Passwords do not match or <br /> the password is less than 8 characters long</div>
                     </label>
@@ -410,6 +446,8 @@ function Registration() {
                     <div style={{ marginBottom: "50px" }} className='login__bottom'>
                         <Link className='login__toReg' to={'/login'}>Login</Link>
                     </div>
+   
+
                     <div className='reg__homeButton'>
                         <Link to={'/'} className='header__nav-link log__link'>
                             <DownArrow className='log__arrow' width={14} height={7} />
