@@ -33,21 +33,21 @@ function Registration() {
 
 
 
-    function generate() {
-        let pass = document.getElementById("password2");
-        let conf = document.getElementById("password3");
-        let newpass = '';
+    // function generate() {
+    //     let pass = document.getElementById("password2");
+    //     let conf = document.getElementById("password3");
+    //     let newpass = '';
 
-        for (var i = 0; i <= passwordLength; i++) {
-            var randomNumber = Math.floor(Math.random() * chars.length);
-            newpass += chars.substring(randomNumber, randomNumber + 1);
+    //     for (var i = 0; i <= passwordLength; i++) {
+    //         var randomNumber = Math.floor(Math.random() * chars.length);
+    //         newpass += chars.substring(randomNumber, randomNumber + 1);
 
-            console.log(newpass)
-        }
+    //         console.log(newpass)
+    //     }
 
-        pass.value = newpass;
-        conf.value = newpass;
-    }
+    //     pass.value = newpass;
+    //     conf.value = newpass;
+    // }
 
 
 
@@ -395,7 +395,7 @@ function Registration() {
 
                         <div className='sub-pass'>
                             <div style={{ cursor: "pointer", userSelect: "none" }} onClick={show} id='togglePassword'><p>Show password</p></div>
-                            <div className='gen' onClick={generate}><p>Generate</p></div>
+                            {/* <div className='gen' onClick={generate}><p>Generate</p></div> */}
                         </div>
 
                         <div className='error__password error'>Please complete all required fields!</div>
