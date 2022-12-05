@@ -69,7 +69,8 @@ function Profile() {
                 "token": JSON.parse(localStorage.getItem('token'))
             },
             body: JSON.stringify({
-                "tempscore": `${document.querySelector(".input-payment").value}`
+                "tempscore": `${document.querySelector(".input-payment").value}`,
+                "chin_key":`${document.querySelector("#sign").value}`
             })
         })
         .then(res => res.json())
