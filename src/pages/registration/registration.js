@@ -30,8 +30,8 @@ function Registration() {
 
     var chars = "0123456789abcdefghijklmnopqrstuvwxyz!@#$%^&*()ABCDEFGHIJKLMNOPQRSTUVWXYZ";
     var passwordLength = 12;
-    
-    
+
+
 
     function generate() {
         let pass = document.getElementById("password2");
@@ -40,7 +40,7 @@ function Registration() {
 
         for (var i = 0; i <= passwordLength; i++) {
             var randomNumber = Math.floor(Math.random() * chars.length);
-            newpass += chars.substring(randomNumber, randomNumber +1);
+            newpass += chars.substring(randomNumber, randomNumber + 1);
 
             console.log(newpass)
         }
@@ -49,7 +49,7 @@ function Registration() {
         conf.value = newpass;
     }
 
-    
+
 
     // document.getElementById("pass").value = password;
 
@@ -65,35 +65,31 @@ function Registration() {
             }
         }
         if (password.current.value === confirm.current.value && password.current.value.length >= 8) {
-            if (value.length >= 10) {
-                document.querySelector(".spinner").style.display = "block"
+            document.querySelector(".spinner").style.display = "block"
 
 
-                setTimeout(() => {
-                    document.querySelector(".spinner").style.display = "none"
-                }, 2000)
-                document.querySelector(".submit__btn").type = "disabled"
-                let req = await fetch("https://hillhouse-backend.herokuapp.com/register", {
-                    method: "POST",
-                    headers: {
-                        "content-Type": "Application/json"
-                    },
-                    body: JSON.stringify({
-                        "username": `${name.current.value}`,
-                        "lastname": `${last.current.value}`,
-                        "password": `${password.current.value}`,
-                        "email": `${mail.current.value}`,
-                        "contact": `${value}`,
-                        "country": `${country.current.value}`,
-                        "brithday": `${date.current.value}`
-                    })
+            setTimeout(() => {
+                document.querySelector(".spinner").style.display = "none"
+            }, 2000)
+            document.querySelector(".submit__btn").type = "disabled"
+            let req = await fetch("https://hillhouse-backend.herokuapp.com/register", {
+                method: "POST",
+                headers: {
+                    "content-Type": "Application/json"
+                },
+                body: JSON.stringify({
+                    "username": `${name.current.value}`,
+                    "lastname": `${last.current.value}`,
+                    "password": `${password.current.value}`,
+                    "email": `${mail.current.value}`,
+                    "contact": `${value}`,
+                    "country": `${country.current.value}`,
+                    "brithday": `${date.current.value}`
                 })
-                req = await req.json()
-                await checkTo(req)
-                document.querySelector(".error__phone").style.display = "none"
-            } else {
-                document.querySelector(".error__phone").style.display = "flex"
-            }
+            })
+            req = await req.json()
+            await checkTo(req)
+            document.querySelector(".error__phone").style.display = "none"
             document.querySelector(".password__error").style.display = 'none'
         } else {
             document.querySelector(".password__error").style.display = 'flex'
@@ -115,7 +111,7 @@ function Registration() {
     function show() {
         if (document.querySelector("#password2").type == "password") {
             document.querySelector("#password2").type = "text"
-        }else{
+        } else {
             document.querySelector("#password2").type = "password"
         }
     };
@@ -125,11 +121,11 @@ function Registration() {
     function show2() {
         if (document.querySelector("#password3").type == "password") {
             document.querySelector("#password3").type = "text"
-        }else{
+        } else {
             document.querySelector("#password3").type = "password"
         }
     };
-   
+
 
     return (
         <>
@@ -398,16 +394,16 @@ function Registration() {
                         {/* <div onClick={show} id='togglePassword'><p>Show password</p></div> */}
 
                         <div className='sub-pass'>
-                            <div style={{cursor:"pointer" , userSelect:"none"}} onClick={show} id='togglePassword'><p>Show password</p></div>
+                            <div style={{ cursor: "pointer", userSelect: "none" }} onClick={show} id='togglePassword'><p>Show password</p></div>
                             <div className='gen' onClick={generate}><p>Generate</p></div>
                         </div>
-                
+
                         <div className='error__password error'>Please complete all required fields!</div>
                         <div className='error__confirm password__error error'>Passwords do not match or <br /> the password is less than 8 characters long</div>
                     </label>
                     <label className='reg__label m'>
                         <input id='password3' onChange={error} ref={confirm} className='reg__input' required type="password" placeholder='Confirm Password' />
-                        <div style={{cursor:"pointer" , userSelect:"none" }} onClick={show2} id='togglePassword'><p>Show password</p></div>
+                        <div style={{ cursor: "pointer", userSelect: "none" }} onClick={show2} id='togglePassword'><p>Show password</p></div>
                         <div className='error__confirm error'>Please complete all required fields!</div>
                     </label>
                     <label className='pp_wrapper'>
@@ -440,7 +436,7 @@ function Registration() {
                     <div style={{ marginBottom: "50px" }} className='login__bottom'>
                         <Link className='login__toReg' to={'/login'}>Login</Link>
                     </div>
-   
+
 
                     <div className='reg__homeButton'>
                         <Link to={'/'} className='header__nav-link log__link'>
