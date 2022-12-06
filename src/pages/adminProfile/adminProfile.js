@@ -200,7 +200,7 @@ function AdminProfile() {
                                             <p><span style={{ color: "#F29C37", fontWeight: "700" }}>UserId</span> : {req.user_id}</p>
                                             <p><span style={{ color: "#F29C37", fontWeight: "700" }}>Payment ID</span> : <span className='userId'>{req.user_id}</span></p>
                                             <p><span style={{ color: "#F29C37", fontWeight: "700" }}>Temporary id</span> : <span className='tempId'>{req.temporary_id}</span></p>
-                                            <p><span style={{ color: "#F29C37", fontWeight: "700" }}>Sign id</span> : <span className='tempId'>{req?.chin_key}</span></p>
+                                            <p><span style={{ color: "#F29C37", fontWeight: "700" }}>Sign id</span> : <span className='tempId'>{(req?.chin_key)?.toUpperCase()}</span></p>
                                             <p><span style={{ color: "#F29C37", fontWeight: "700" }}>Amount</span> : {req.temp_score}</p>
                                             <p><span style={{ color: "#F29C37", fontWeight: "700" }}>Created at</span> : {req.created_at}</p>
                                             <div className={styles.buttons__wrapper} data-id={req.temporary_id}>
