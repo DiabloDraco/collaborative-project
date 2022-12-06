@@ -52,6 +52,10 @@ export const lang = {
             },
             capitalInvestment : {
                 title : "PRODUCTS AND SERVICES OFFERED THROUGH THE CAPITAL INVESTMENT COMPANIES:",
+            },
+            registration : {
+                but1 : "Registration",
+                home : "Home",
             }
             
         }
@@ -108,6 +112,10 @@ export const lang = {
             },
             capitalInvestment : {
                 title : "ПРОДУКТЫ И УСЛУГИ, ПРЕДЛАГАЕМЫЕ ЧЕРЕЗ КАПИТАЛЬНЫЕ ИНВЕСТИЦИОННЫЕ КОМПАНИИ:",
+            },
+            registration : {
+                but1 : "Регистрация",
+                home : "Главная",
             }
         }
     }
