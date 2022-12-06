@@ -22,7 +22,9 @@ function AdminProfile() {
             }
         })
             .then(req => req.json())
-            .then(data => setData(data.data))
+            .then(data => setData(data.data.sort((a ,b)=>{
+                return a.user_id - b.user_id
+            })))
     }
 
     function getPending() {
