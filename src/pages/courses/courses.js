@@ -1,4 +1,5 @@
 import { useEffect } from 'react'
+import { Link, NavLink, useNavigate } from 'react-router-dom'
 import './courses.css'
 
 function Courses() {
@@ -65,7 +66,7 @@ function Courses() {
                             </li>
                         </ul>
                         <div className='courses__bottom-wrapper'>
-                                 <a href="#"className='header__bottom-open'>Get more info...</a>
+                                 <Link className='header__bottom-open' to={'/login'}>Get more info...</Link>
                         </div>
                         <p className='courses__bottom-text'>
                             no consultations
@@ -125,7 +126,7 @@ function Courses() {
                           
                         </ul>
                         <div className='courses__bottom-wrapper'>
-                                 <a href="#"className='header__bottom-open'>Get more info...</a>
+                            <Link className='header__bottom-open' to={'/login'}>Get more info...</Link>
                         </div>
                         <p className='courses__bottom-text'>
                             no consultations
@@ -185,7 +186,7 @@ function Courses() {
                   
                         </ul>
                         <div className='courses__bottom-wrapper'>
-                                 <a href="#"className='header__bottom-open'>Get more info...</a>
+                            <Link className='header__bottom-open' to={'/login'}>Get more info...</Link>
                         </div>
                         <p className='courses__bottom-text'>
                              consultation included
@@ -246,7 +247,7 @@ function Courses() {
                       
                         </ul>
                         <div className='courses__bottom-wrapper'>
-                                 <a href="#"className='header__bottom-open'>Get more info...</a>
+                            <Link className='header__bottom-open' to={'/login'}>Get more info...</Link>
                         </div>
                         <p className='courses__bottom-text'>
                             consultation included
