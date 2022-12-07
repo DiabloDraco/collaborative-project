@@ -75,10 +75,6 @@ function Header() {
                                 <img className='header__login-icon' src={Login} alt="Login" />
                                 {t("header.login")}
                             </Link>
-                            <Link to={'/registration'} className='header__right-register'>
-                                <img className='header__register-icon' src={Register} alt="Register" />
-                                {t("header.reg")}
-                            </Link>
                         </div>
                         <div ref={off} className='header__right off'>
                             <Link to={'/profile'} className='header__right-register'>
@@ -307,7 +303,7 @@ function Header() {
                     {/* <a href='https://coinumm.com/ru/fast-flow-landing' rel="noopener noreferrer" target="_blank" className='header__bottom-open'>
                         OPEN ACCOUNT
                     </a> */}
-                    <Link to={'/registraion'} rel="noopener noreferrer" target="_blank" className='header__bottom-open'>
+                    <Link to={'/registration'} rel="noopener noreferrer" target="_blank" className='header__bottom-open'>
                         {t("header.h_button")}
                     </Link>
                     <button onClick={open} className='header__brg'>
