@@ -10,6 +10,7 @@ import CRSCIB from './../../assets/files/CRSCIB1.pdf';
 import BusinessContinuityPlanNotice from './../../assets/files/BusinessContinuityPlanNotice.pdf';
 import CompositionReceived from './../../assets/files/CompensationReceived.pdf';
 import PrivacyNotaice from './../../assets/files/PrivacyNotice.pdf';
+import { useTranslation } from 'react-i18next';
 
 function Registration() {
     const [value, setValue] = useState()
@@ -126,7 +127,7 @@ function Registration() {
         }
     };
 
-
+    let { t, i18n } = useTranslation();
     return (
         <>
             <div className='reg__wrapper container'>
@@ -428,7 +429,7 @@ function Registration() {
                             and agree to the terms </p>
                     </label>
                     <div style={{ display: "flex", justifyContent: "center" }} className='register__btn-wrapper'>
-                        <button className='submit__btn' type='submit'>Register</button>
+                        <button className='submit__btn' type='submit'>{t("registration.but1")}</button>
                     </div>
                     <div className='spinner'>
 
@@ -441,7 +442,7 @@ function Registration() {
                     <div className='reg__homeButton'>
                         <Link to={'/'} className='header__nav-link log__link'>
                             <DownArrow className='log__arrow' width={14} height={7} />
-                            Home
+                            {t("registration.home")}
                         </Link>
                     </div>
                 </form>

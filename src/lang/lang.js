@@ -56,7 +56,16 @@ export const lang = {
             registration : {
                 but1 : "Registration",
                 home : "Home",
-            }
+            },
+            prof : {
+                title : "OVER 110 000 ACTIVE USERS NOW",
+                button : "Withdraw",
+                payment1 : "BillingСX",
+                payment2 : "Coinumm",
+                button2 : "OPEN PLATFORM",
+                subtitle : "Activate your account today and get a free trading guide",
+  
+            },
             
         }
     },
@@ -116,7 +125,17 @@ export const lang = {
             registration : {
                 but1 : "Регистрация",
                 home : "Главная",
-            }
+            },
+            prof : {
+                title : "БОЛЕЕ 110 000 АКТИВНЫХ ПОЛЬЗОВАТЕЛЕЙ",
+                button : "Вывод средств",
+                payment1 : "BillingСX",
+                payment2 : "Coinumm",
+                button2 : "Открыть платформу",
+                subtitle : "Активируйте свою учетную запись сегодня и получите бесплатное руководство по торговле",
+              
+
+            },
         }
     }
 }
