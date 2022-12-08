@@ -56,7 +56,7 @@ function Login() {
                     </label>
                     <button style={{marginTop:"10px"}} className='submit__btn' type='submit'>Login</button>
                     <div className='login__bottom'>
-                        <Link className='login__toReg' to={'/registraion'}>Register</Link>
+                        <Link className='login__toReg' to={'/registration'}>Registrate</Link>
                     </div>
                 </form>
 
