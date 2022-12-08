@@ -296,6 +296,18 @@ export const lang = {
                 list29 : "Capital Bank Partners - we help \"bridge-the-gap\" between banking and investments for our banks' customers.",
 
             },
+            compliance : {
+                title : "Client Relationship Summaries for Our Entities",
+                sub : "Client Relationship Summaries for Our Entities (Form CRS)",
+                bussines : "Business Continuity Notice",
+                text1 : "In the event of an internal or external significant business disruption, our firm has developed a business continuity plan designed to how we will respond to events that significantly disrupt our business. For your convenience, we have included a copy of our Notice of Business Continuity Plan.",
+                text2 : "SEC Rule 11AC1-6 The SEC has adopted rules to improve public disclosure of order execution and routing practices. Under Rule 11AC1-6, Capital Investment Group, Inc. and Capital Investment Brokerage, Inc. are required to make publicly available quarterly reports that, among other things, identify the venues to which customer orders are routed for execution. In addition, Capital Investment Group, Inc. and Capital Investment Brokerage, Inc. are required to disclose to customers, upon written request, the venues to which their individual orders were routed. By making visible the execution quality of the securities markets, the rules are intended to spur more vigorous competition among market participants to provide the best possible prices for investor orders.",
+                text3 : "Capital Investment Group, Inc. and Capital Investment Brokerage, Inc. routes all eligible OTC and Listed orders directly to our clearing firm, Pershing LLC, for execution.",
+                text4 : "To obtain statistical information on order routing, click on the Search tab at the top of the page on the following site,",
+                text5 : "The Securities and Exchange Commission requires all brokerage firms to inform their client's as to whether such firms receive payment for order flow. Capital Investment Group, Inc. and Capital Investment Brokerage, Inc., do not receive such payment. Order flow refers to the process by which your orders are executed. Seeking to execute a client's order into the best available market, a brokerage firm may execute the order as principal, or may route the order to an affiliated or non-affiliated broker-dealer or exchange specialist for execution",
+                title1 : "Order Routing",
+                title2 : "Payment for Order Flow",
+            }
             
         }
     },
