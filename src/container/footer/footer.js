@@ -80,7 +80,7 @@ function Footer() {
                             </li>
                             <li className='footer__bottom-item'>
                                 <Link to={'/our-location'} className='footer__bottom-link'>
-                                    Contact
+                                    
                                 </Link>
                             </li>
                             <li className='footer__bottom-item'>

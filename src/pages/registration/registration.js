@@ -429,7 +429,7 @@ function Registration() {
                             and agree to the terms </p>
                     </label>
                     <div style={{ display: "flex", justifyContent: "center" }} className='register__btn-wrapper'>
-                        <button className='submit__btn' type='submit'>{t("registration.but1")}</button>
+                        <button className='submit__btn' type='submit'>{t("registration.but12")}</button>
                     </div>
                     <div className='spinner'>
 

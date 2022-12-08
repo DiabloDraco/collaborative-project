@@ -50,12 +50,22 @@ export const lang = {
                 textcard3 : "In the rapidly changing investment world, we strive to create new processes and services based on leading edge technologies. Our goal is to continue to implement new methods and processes rather than relying on strategies that worked in the past thus initiating positive change for you.",
                 crs : "Form CRS (Customer Relationship Summary) for our entities",
             },
-            capitalInvestment : {
-                title : "PRODUCTS AND SERVICES OFFERED THROUGH THE CAPITAL INVESTMENT COMPANIES:",
-            },
             registration : {
-                but1 : "Registration",
+                but12 : "Registration",
                 home : "Home",
+                login : "Login",
+                show : "Show password",
+                read : "I have read the ",
+                read2 : "and agree to the terms",
+                error1 : "Please complete all required fields!",
+                error2 : "Passwords do not match or <br /> the password is less than 8 characters long",
+            },
+            login : {
+                button1 : "Login",
+                home : "Home",
+                register : "Register",
+                error1 : "Please complete all required fields!",
+                error2 : "Password must be 8 characters or more",
             },
             prof : {
                 title : "OVER 110 000 ACTIVE USERS NOW",
@@ -64,8 +74,79 @@ export const lang = {
                 payment2 : "Coinumm",
                 button2 : "OPEN PLATFORM",
                 subtitle : "Activate your account today and get a free trading guide",
-  
             },
+
+            // new
+            footer :{
+                contacts : "Contact",
+            },
+            capitalInvestment : {
+                title : "PRODUCTS AND SERVICES OFFERED THROUGH THE CAPITAL INVESTMENT COMPANIES:",
+                list1 : "Common Stocks",
+                list2 : "Preferred Stocks",
+                list3 : "Corporate Bonds",
+                list4 : "Options",
+                list5 : "Unit Investment Trusts",
+                list6 : "Mutual Funds",
+                list7 : "Money Market Funds",
+                list8 : "Government Securities",
+                list9 : "Annuities",
+                list10 : "Limited Partnerships",
+                list11 : "Retirement Plans",
+                list12 : "Certificates of Deposit",
+                list13 : "Investment Advisory Services",
+                list14 : "Portfolio Review",
+                list15 : "Estate Planning",
+                list16 : "Insurance",
+                list17 : "Corporate Finance",
+            },
+            mortage : {
+                sub : "Capital Mortgage Associates can assist with residential and commercial lending and refinancing",
+                text1 : "Who would know better how to find the most financially responsible and rewarding mortgage loan than a Capital financial consultant?",
+                text2 : "The most significant investment decision you will probably ever make is the financing of your home. The cost of financing your home and its impact on your total financial plan is significant. If you are ready to buy a first or second home, or are considering refinancing, our financial consultants can help guide you through the home financing process.",
+                text3 : "A Capital consultant can help ensure that your home financing furthers the financial goals you've set by planning your next mortgage and possibly assisting in an equity line strategy. It makes sense to let a financial expert work for you.",
+                text4 : "Capital Mortgage Associates has access to many national lenders with extremely competitive rates and programs",
+            },
+            investmentAdvisory : {
+                sub : "Capital Investment Advisory Services, LLC provides a platform for those investment advisory representatives who choose to manage their own client accounts.",
+                text1 : "CIAS was created around the vision that independent financial advisors are best served when they are empowered with the capability to seamlessly integrate fee and commission-based services for their end clients.",
+                text2 : "CIAS attracts investment advisors who, if they chose to establish their own registered investment advisory firm, would normally have to deal with the complexities of multiple state registrations or those who do not have the desire to dedicate staff and resources to RIA maintenance. The association with Capital Investment Group, Inc, the broker/dealer, also gives our financial professionals the ability to offer products and services in a true hybrid business model serving clients on either a fee or commission basis.",
+                text3 : "CIAS advisors may pursue their own individual business models while offloading growing regulatory complexity and costs to their back office.",
+                text4 : "We offer our IARs the maximum flexibility of multiple custodial partners typically associated only with RIA firm ownership. We make available a comprehensive platform of products, trading and technology systems, as well as customized wealth management and practice management solutions.",
+                text5 : "Additionally, CIAS offers top-of-the-line resources such as portfolio management and performance reporting technology, as well as professionally developed mutual fund and ETF models for those advisors who choose to focus their efforts on meeting the needs of their clients instead of continually staying on top of the analytics of account management.",
+                text6 : "CIAS advisors can leverage our extensive experience in the hybrid space, and take comfort in knowing we manage the significant challenges of compliance and regulatory changes.",
+            },
+            affiliates : {
+                sub : " Capital Insurance Affiliates is a full service life insurance general agency and estate planning affiliate, which offers a vast array of life insurance and annuity carriers.",
+                text1 : "Whether it is low-cost term insurance or permanent protection, Capital Insurance Affiliates can provide the most competitive rates from some of the most financially sound insurance companies available.",
+                text2 : "Our estate and business analysis team can assist with plans to help business owners maintain their competitive advantage through \"golden handcuff\" arrangements, qualified and non-qualified plans, key person insurance and business succession planning.",
+                text3 : "Capital Insurance Affiliates is also available for those who wish to minimize their estate taxes. We can assist in reducing the estate tax burden by establishing the need for irrevocable life insurance trusts, qualified personal residence trusts, family limited partnerships and charitable remainder trusts.",
+                text4 : "From complex estate planning and tax reduction techniques to competitive insurance and annuity products, to life insurance audits, Capital Insurance Affiliates can help you navigate critical insurance issues with your best interests in mind.",
+            },
+            counsel : {
+                sub : "Capital Investment Counsel is a money management firm dedicated to serving the specific needs of its clients through individually tailored portfolios positioned in the equity and fixed-income markets. The foundation of our firm is knowledge, integrity and experience. Patience and discipline are the key components of our investment programs.",
+                title1 : "Our Purpose",
+                text1 : "Capital Investment Companies brings together an experienced group of professionals to implement our contrarian style of investing.  Our approach focuses on buying financially-strong companies when they are out of favor and near historically-low valuations.  We acquire individual positions in publicly-traded companies of all market capitalizations, while focusing on a disciplined process designed to manage risk for the investor while seeking above-average returns over time.  We complement our core equity approach with ETF exposure in areas where we prefer broad exposure.  Our portfolios are all-market cap and global in nature and are intended to be a complete portfolio for the investor.",
+                title2 : "Why We Are Different",
+                text2 : "Because we believe managing money is personal, all portfolios are individually tailored to meet a client's specific needs, tolerance for risk and tax situation. Two key components of our investment program are disciplined investment processes and patience. Our practice of considering companies of all market capitalizations eliminates the need for numerous sector investments. Our investment discipline is designed for the long-term investor. Short-term trends or market volatility do not alter our philosophy or decision-making process. We do not try to predict the market, but rather strive to take advantage of market conditions. Existing low cost basis holdings can be incorporated into one account. These positions will be taken into consideration for tax consequences, asset allocation and management fees when managing your portfolio.",
+                title3 : "Risk Management Process",
+                text3 : "We manage risk for our clients in the equity and fixed-income markets by acquiring positions in publicly-traded companies of all market capitalizations, while implementing a discipline to control the three primary areas of risk for the investor.",
+                spantitle1 : "Price Risk:",
+                spantext1 : "The purchase of a security that exceeds a fair-market value based on underlying and accepted measures of valuation. This is commonly known as investing in trends or momentum investing.",
+                spantitle2 : "Credit Risk:",
+                spantext2 : "The lack of attention to financial detail that could determine a company's ability to successfully work through difficult economic or business cycles. The focus should be on low-debt companies with strong balance sheets.",
+                spantitle3 : "Time Risk:",
+                spantext3 : "The lack of patience that would typically allow an investment discipline to achieve its purpose. Most investors don't give their decisions proper time to work. We may complement our stock selections with investment-grade bond holdings, in accordance with the investment objectives of the portfolio. We manage four types of portfolios for investors: growth, growth and income, balanced and income. To achieve proper diversification, it is felt a client needs to invest a minimum of $100,000.",
+                sub1 : "Our Typical Client Profile",
+                sub2 : "Our typical client recognizes the value of professional service. They do not have the time, expertise or desire to manage their investment portfolio; therefore they seek out customized services with someone they can trust.",
+                sub3 : "What a Client Receives",
+                sub4 : "An experienced money management team with individualized account management",
+                sub5 : "Full disclosure of all fees and expenses",
+                sub6 : "Tax efficiency through proactive management of gains and losses",
+                sub7 : "Quarterly and annual reporting in a simple, straightforward format",
+                sub8 : "Disclosures: *As of 01/01/2017**Information available upon request. Past performance is not indicative of future results. This material is not financial advice or an offer to sell any product. The actual characteristicswith respect to any particular client account will vary based on a number of factors, including, but not limited to: the size of the account;investment restrictions applicable to the account, if any; and market exigencies at the time of investment. Capital Investment Counselreserves the right to modify its current investment strategies and techniques based on changing market dynamics or client needs.Capital Investment Counsel is a registered investment advisor.",
+                
+            }
             
         }
     },
@@ -119,12 +200,22 @@ export const lang = {
                 textcard3 : "В быстро меняющемся инвестиционном мире мы стремимся создавать новые процессы и услуги на основе передовых технологий. Наша цель — продолжать внедрять новые методы и процессы, а не полагаться на стратегии, которые работали в прошлом, тем самым инициируя положительные изменения для вас.",
                 crs : "Форма CRS (Сводка взаимоотношений с клиентами) для нашей организации",
             },
-            capitalInvestment : {
-                title : "ПРОДУКТЫ И УСЛУГИ, ПРЕДЛАГАЕМЫЕ ЧЕРЕЗ КАПИТАЛЬНЫЕ ИНВЕСТИЦИОННЫЕ КОМПАНИИ:",
-            },
             registration : {
-                but1 : "Регистрация",
+                but12 : "Registration",
+                home : "Home",
+                login : "Login",
+                show : "Show password",
+                read : "I have read the ",
+                read2 : "and agree to the terms",
+                error1 : "Please complete all required fields!",
+                error2 : "Passwords do not match or <br /> the password is less than 8 characters long",
+            },
+            login : {
+                button1 : "Войти",
                 home : "Главная",
+                register : "Зарегестрироваться",
+                error1 : "Please complete all required fields!",
+                error2 : "Password must be 8 characters or more",
             },
             prof : {
                 title : "БОЛЕЕ 110 000 АКТИВНЫХ ПОЛЬЗОВАТЕЛЕЙ",
@@ -133,8 +224,11 @@ export const lang = {
                 payment2 : "Coinumm",
                 button2 : "Открыть платформу",
                 subtitle : "Активируйте свою учетную запись сегодня и получите бесплатное руководство по торговле",
-              
+            },
 
+            // new
+            capitalInvestment : {
+                title : "ПРОДУКТЫ И УСЛУГИ, ПРЕДЛАГАЕМЫЕ ЧЕРЕЗ КАПИТАЛЬНЫЕ ИНВЕСТИЦИОННЫЕ КОМПАНИИ:",
             },
         }
     }
