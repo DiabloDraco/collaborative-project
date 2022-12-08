@@ -14,13 +14,13 @@ function Trustservice() {
             <div className='counsel__top-wrapper'>
                 <div className='counsel__top container'>
                     <h2 className='capitalI__header'>
-                        CAPITAL'S TRUST SERVICES
+                       HILLHOUSE CAPITAL'S TRUST SERVICES
                     </h2>
                 </div>
             </div>
             <div className='counsel__wrapper container'>
                 <h2 className='counsel__heading'>
-                    CAPITAL'S TRUST SERVICES
+                    HILLHOUSE CAPITAL'S TRUST SERVICES
                 </h2>
                 <p className='counsel__text'>
                     {t("trustservice.sub")}

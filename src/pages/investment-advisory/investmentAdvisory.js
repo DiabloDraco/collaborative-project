@@ -14,13 +14,13 @@ function InvestmentAdvisory() {
             <div className='counsel__top-wrapper'>
                 <div className='counsel__top container'>
                     <h2 className='capitalI__header'>
-                        CAPITAL INVESTMENT ADVISORY SERVICES
+                        HILLHOUSE CAPITAL INVESTMENT ADVISORY SERVICES
                     </h2>
                 </div>
             </div>
             <div className='counsel__wrapper container'>
                 <h2 className='counsel__heading'>
-                    CAPITAL INVESTMENT ADVISORY SERVICES
+                    HILLHOUSE CAPITAL INVESTMENT ADVISORY SERVICES
                 </h2>
                 <p className='counsel__text'>
                     {t("investmentAdvisory.sub")}

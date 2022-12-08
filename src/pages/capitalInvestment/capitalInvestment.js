@@ -14,7 +14,7 @@ function CapitalInvestment() {
             <div className='capitalI__top-wrapper'>
                 <div className='capitalI__top container'>
                     <h2 className='capitalI__header'>
-                        HILLHOSE CAPITAL INVESTMENT GROUP, INC.
+                        HILLHOUSE CAPITAL INVESTMENT GROUP, INC.
                     </h2>
                 </div>
             </div>

@@ -14,13 +14,13 @@ function Mortgage() {
             <div className='counsel__top-wrapper'>
                 <div className='counsel__top container'>
                     <h2 className='capitalI__header'>
-                        CAPITAL MORTGAGE ASSOCIATES
+                        HILLHOUSE CAPITAL MORTGAGE ASSOCIATES
                     </h2>
                 </div>
             </div>
             <div className='counsel__wrapper container'>
                 <h2 className='counsel__heading'>
-                    CAPITAL MORTGAGE ASSOCIATES
+                    HILLHOUSE CAPITAL MORTGAGE ASSOCIATES
                 </h2>
                 <p className='counsel__text'>
                     {t("mortage.sub")}
