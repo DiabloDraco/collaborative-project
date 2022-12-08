@@ -14,13 +14,13 @@ function Capitalbankpartners() {
             <div className='counsel__top-wrapper'>
                 <div className='counsel__top container'>
                     <h2 className='capitalI__header'>
-                        CAPITAL BANK PARTNERS
+                        HILLHOUSE CAPITAL BANK PARTNERS
                     </h2>
                 </div>
             </div>
             <div className='counsel__wrapper container'>
                 <h2 className='counsel__heading'>
-                    CAPITAL BANK PARTNERS
+                    HILLHOUSE CAPITAL BANK PARTNERS
                 </h2>
                 <p className='counsel__text'>
                     {t("capitalbankpartners.sub")}

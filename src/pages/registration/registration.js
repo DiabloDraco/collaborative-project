@@ -29,8 +29,8 @@ function Registration() {
     let date = useRef(null)
     let navigator = useNavigate()
 
-    var chars = "0123456789abcdefghijklmnopqrstuvwxyz!@#$%^&*()ABCDEFGHIJKLMNOPQRSTUVWXYZ";
-    var passwordLength = 12;
+    // var chars = "0123456789abcdefghijklmnopqrstuvwxyz!@#$%^&*()ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+    // var passwordLength = 12;
 
 
 
