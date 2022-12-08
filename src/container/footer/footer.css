@@ -48,6 +48,7 @@
 
 .footer__bottom {
     background: #292f38;
+    padding-bottom: 50px;
 }
 .footer__bottom-inner-wrapper {
     display: flex;

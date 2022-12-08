@@ -3,8 +3,12 @@ import { Link, NavLink, useNavigate } from 'react-router-dom'
 import fullLogo from './../../assets/images/fullLogo.svg'
 import { ReactComponent as DownArrow } from './../../assets/images/downArrow.svg'
 import './login.css'
+import { useTranslation } from 'react-i18next';
+
+
 
 function Login() {
+    let { t, i18n } = useTranslation();
     let navigator = useNavigate()
     useEffect(() => {
         document.querySelector(".header-wrapper").style.display = 'none'
@@ -48,22 +52,22 @@ function Login() {
                 <form onSubmit={postInfo} ref={form} className="login__form">
                     <label className='log__label'>
                         <input ref={mail} className='log__input' required type="email" placeholder='Email' />
-                        <div className=' error'>Please complete all required fields!</div>
+                        <div className=' error'>{t("login.error1")}</div>
                     </label>
                     <label className='log__label'>
                         <input ref={password} className='log__input' required type="password" placeholder='Password' />
-                        <div className='password__error error'>Password must be 8 characters or more</div>
+                        <div className='password__error error'>{t("login.error2")}</div>
                     </label>
-                    <button style={{marginTop:"10px"}} className='submit__btn' type='submit'>Login</button>
+                    <button style={{marginTop:"10px"}} className='submit__btn' type='submit'>{t("login.button1")}</button>
                     <div className='login__bottom'>
-                        <Link className='login__toReg' to={'/registration'}>Registrate</Link>
+                        <Link className='login__toReg' to={'/registraion'}>{t("login.register")}</Link>
                     </div>
                 </form>
 
                 <div className='log__homeButton'>
                     <Link to={'/'} className='header__nav-link log__link'>
                         <DownArrow className='log__arrow' width={14} height={7} />
-                        Home
+                        {t("login.home")}
                     </Link>
                 </div>
             </div>

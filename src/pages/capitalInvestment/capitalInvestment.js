@@ -14,8 +14,7 @@ function CapitalInvestment() {
             <div className='capitalI__top-wrapper'>
                 <div className='capitalI__top container'>
                     <h2 className='capitalI__header'>
-                        HILLHOSE CAPITAL INVESTMENT GROUP, INC.
-                        
+                        HILLHOUSE CAPITAL INVESTMENT GROUP, INC.
                     </h2>
                 </div>
             </div>
@@ -25,55 +24,55 @@ function CapitalInvestment() {
                 </h3>
                 <ul className='capitalI__bottom-list'>
                     <li className='capitalI__bottom-item'>
-                        Common Stocks
+                        {t("capitalInvestment.list1")}
                     </li>
                     <li className='capitalI__bottom-item'>
-                        Preferred Stocks
+                         {t("capitalInvestment.list2")}
                     </li>
                     <li className='capitalI__bottom-item'>
-                        Corporate Bonds
+                        {t("capitalInvestment.list3")}
                     </li>
                     <li className='capitalI__bottom-item'>
-                        Options
+                        {t("capitalInvestment.list4")}
                     </li>
                     <li className='capitalI__bottom-item'>
-                        Unit Investment Trusts
+                        {t("capitalInvestment.list5")}
                     </li>
                     <li className='capitalI__bottom-item'>
-                        Mutual Funds
+                        {t("capitalInvestment.list6")}
                     </li>
                     <li className='capitalI__bottom-item'>
-                        Money Market Funds
+                        {t("capitalInvestment.list7")}
                     </li>
                     <li className='capitalI__bottom-item'>
-                        Government Securities
+                        {t("capitalInvestment.list8")}
                     </li>
                     <li className='capitalI__bottom-item'>
-                        Annuities
+                        {t("capitalInvestment.list9")}
                     </li>
                     <li className='capitalI__bottom-item'>
-                        Limited Partnerships
+                        {t("capitalInvestment.list10")}
                     </li>
                     <li className='capitalI__bottom-item'>
-                        Retirement Plans
+                        {t("capitalInvestment.list11")}
                     </li>
                     <li className='capitalI__bottom-item'>
-                        Certificates of Deposit
+                        {t("capitalInvestment.list12")}
                     </li>
                     <li className='capitalI__bottom-item'>
-                        Investment Advisory Services
+                         {t("capitalInvestment.list13")}
                     </li>
                     <li className='capitalI__bottom-item'>
-                        Portfolio Review
+                         {t("capitalInvestment.list14")}
                     </li>
                     <li className='capitalI__bottom-item'>
-                        Estate Planning
+                        {t("capitalInvestment.list15")}
                     </li>
                     <li className='capitalI__bottom-item'>
-                        Insurance
+                        {t("capitalInvestment.list16")}
                     </li>
                     <li className='capitalI__bottom-item'>
-                        Corporate Finance
+                        {t("capitalInvestment.list17")}
                     </li>
 
                 </ul>
