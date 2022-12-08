@@ -136,19 +136,19 @@ function Registration() {
                 <form onSubmit={postInfo} ref={form} className="registration__form">
                     <label className='reg__label'>
                         <input onChange={error} ref={name} className='reg__input' required type="text" placeholder='First Name' />
-                        <div className='error__name error'>Please complete all required fields!</div>
+                        <div className='error__name error'>{t("registration.error1")}</div>
                     </label>
                     <label className='reg__label'>
                         <input onChange={error} ref={last} className='reg__input' required type="text" placeholder='Last Name' />
-                        <div className='error__last error'>Please complete all required fields!</div>
+                        <div className='error__last error'>{t("registration.error1")}</div>
                     </label>
                     <label className='reg__label'>
                         <input onChange={error} ref={mail} className='reg__input' required type="email" placeholder='Email' />
-                        <div className='error__mail error'>Please complete all required fields!</div>
+                        <div className='error__mail error'>{t("registration.error1")}</div>
                     </label>
                     <label className='reg__label'>
                         <input onChange={error} ref={date} className='reg__input' required type="date" placeholder='Birthday' />
-                        <div className='error__mail error'>Please complete all required fields!</div>
+                        <div className='error__mail error'>{t("registration.error1")}</div>
                     </label>
                     <label className='reg__label'>
                         <PhoneInput
@@ -157,7 +157,7 @@ function Registration() {
                             ref={phone}
                             value={value}
                             onChange={setValue} required />
-                        <div className='error__phone error'>Please complete all required fields!</div>
+                        <div className='error__phone error'>{t("registration.error1")}</div>
                     </label>
                     <label className='reg__label'>
                         <select onChange={error} ref={country} className='county-input' required type="text"
@@ -387,7 +387,7 @@ function Registration() {
                             <option value="ZM">ZAMBIA</option>
                             <option value="ZW">ZIMBABWE</option> */}
                         </select>
-                        <div className='error__country error'>Please complete all required fields!</div>
+                        <div className='error__country error'>{t("registration.error1")}</div>
                     </label>
 
                     <label className='reg__label'>
@@ -395,22 +395,22 @@ function Registration() {
                         {/* <div onClick={show} id='togglePassword'><p>Show password</p></div> */}
 
                         <div className='sub-pass'>
-                            <div style={{ cursor: "pointer", userSelect: "none" }} onClick={show} id='togglePassword'><p>Show password</p></div>
+                            <div style={{ cursor: "pointer", userSelect: "none" }} onClick={show} id='togglePassword'><p>{t("registration.show")}</p></div>
                             {/* <div className='gen' onClick={generate}><p>Generate</p></div> */}
                         </div>
 
-                        <div className='error__password error'>Please complete all required fields!</div>
-                        <div className='error__confirm password__error error'>Passwords do not match or <br /> the password is less than 8 characters long</div>
+                        <div className='error__password error'>{t("registration.error1")}</div>
+                        <div className='error__confirm password__error error'>{t("registration.error2")}</div>
                     </label>
                     <label className='reg__label m'>
                         <input id='password3' onChange={error} ref={confirm} className='reg__input' required type="password" placeholder='Confirm Password' />
-                        <div style={{ cursor: "pointer", userSelect: "none" }} onClick={show2} id='togglePassword'><p>Show password</p></div>
-                        <div className='error__confirm error'>Please complete all required fields!</div>
+                        <div style={{ cursor: "pointer", userSelect: "none" }} onClick={show2} id='togglePassword'><p>{t("registration.show")}</p></div>
+                        <div className='error__confirm error'>{t("registration.error1")}</div>
                     </label>
                     <label className='pp_wrapper'>
                         <input required type='checkbox' />
                         <p className='pp'>
-                            I have read the &ensp;
+                            {t("registration.read")} &ensp;
                             <a className='' href={CRSCIB} target="_blank">
                                 CRSCIB
                             </a>
@@ -426,7 +426,7 @@ function Registration() {
                             <a className='' href={PrivacyNotaice} target={'_blank'}>
                                 Privacy Notice
                             </a><br />
-                            and agree to the terms </p>
+                            {t("registration.read2")} </p>
                     </label>
                     <div style={{ display: "flex", justifyContent: "center" }} className='register__btn-wrapper'>
                         <button className='submit__btn' type='submit'>{t("registration.but12")}</button>
@@ -435,7 +435,7 @@ function Registration() {
 
                     </div>
                     <div style={{ marginBottom: "50px" }} className='login__bottom'>
-                        <Link className='login__toReg' to={'/login'}>Login</Link>
+                        <Link className='login__toReg' to={'/login'}>{t("registration.login")}</Link>
                     </div>
 
 

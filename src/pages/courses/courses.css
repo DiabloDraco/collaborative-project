@@ -24,6 +24,7 @@
     box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.13);
     padding: 15px 20px;
     border-radius: 20px;
+    max-width: 245px;
     transition: 0.4s;
     cursor: pointer;
 }
@@ -52,10 +53,14 @@
 
 .courses__descr li {
     margin-bottom: 10px;
+    display: flex;
+    padding-left: 20px;
 }
 
 .courses__descr li svg {
-    margin-right: 5px;
+    margin-left: -22px;
+    margin-top: 4px;
+    position: absolute;
 }
 
 .courses__card a {
