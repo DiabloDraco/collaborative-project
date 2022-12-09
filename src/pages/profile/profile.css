@@ -491,7 +491,7 @@ input[type="radio" i] {
     display: flex;
     justify-content: center;
     align-items: center;
-    position: absolute;
+    position: fixed;
     background-color: #0000002d;
     z-index: 999;
     backdrop-filter: blur(2px);

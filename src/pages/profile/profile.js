@@ -100,10 +100,12 @@ function Profile() {
 
     function handleClick() {
         modal.current.style.display = "flex"
+        document.querySelector("html").style.overflowY = "hidden"
     }
 
     function handleClose() {
         modal.current.style.display = "none"
+        document.querySelector("html").style.overflowY = "scroll"
     }
 
 
