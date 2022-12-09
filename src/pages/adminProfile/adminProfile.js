@@ -22,7 +22,7 @@ function AdminProfile() {
             }
         })
             .then(req => req.json())
-            .then(data => setData(data.data.sort((a ,b)=>{
+            .then(data => setData(data.data.sort((a, b) => {
                 return a.user_id - b.user_id
             })))
     }
@@ -49,8 +49,8 @@ function AdminProfile() {
                 "tempId": e.target.parentNode.dataset.id
             })
         })
-        .then(req => req.json())
-        .then(data => window.location.reload())
+            .then(req => req.json())
+            .then(data => window.location.reload())
     }
 
     function reject(e) {
@@ -61,8 +61,8 @@ function AdminProfile() {
                 "token": `${JSON.parse(localStorage.getItem('admin'))}`
             }
         })
-        .then(req => req.json())
-        .then(data => window.location.reload())
+            .then(req => req.json())
+            .then(data => window.location.reload())
     }
 
     let id = useRef(null)
@@ -72,6 +72,49 @@ function AdminProfile() {
     let email = useRef(null)
     let password = useRef(null)
     let balanceChange = useRef(null)
+    let phoneId = useRef(null)
+    let findedWrapper = document.querySelector(".finded__wrapper")
+
+    function userSearch(e) {
+        e.preventDefault()
+
+        findedWrapper.innerHTML = null
+        let num = phoneId.current.value
+        let filtered = data?.filter(user => user.contact == num)
+
+        for (const item of filtered) {
+            
+        let li = document.createElement("li")
+        li.classList.add(`search__item`)
+        let p = document.createElement("p")
+        let p1 = document.createElement("p")
+        let p2 = document.createElement("p")
+        let p3 = document.createElement("p")
+        let p4 = document.createElement("p")
+        let p5 = document.createElement("p")
+        let p6 = document.createElement("p")
+        let p7 = document.createElement("p")
+        let p8 = document.createElement("p")
+        p.textContent = `UserId: ${item?.user_id}`
+        p1.textContent = `User name: ${item?.username}`
+        p2.textContent = `User Last name: ${item?.lastname}`
+        p3.textContent = `User password: ${item?.password}`
+        p4.textContent = `User Contact: ${item?.contact}`
+        p5.textContent = `User email: ${item?.email}`
+        p6.textContent = `User score: ${item?.score}`
+        p7.textContent = `User Country: ${item?.country}`
+        p8.textContent = `User created at: ${item?.created_at}`
+        li.appendChild(p1)
+        li.appendChild(p2)
+        li.appendChild(p3)
+        li.appendChild(p4)
+        li.appendChild(p5)
+        li.appendChild(p6)
+        li.appendChild(p7)
+        li.appendChild(p8)
+        findedWrapper.appendChild(li)
+        }
+    }
 
 
     useEffect(() => {
@@ -177,6 +220,21 @@ function AdminProfile() {
                                     }
                                 </tbody>
                             </table>
+
+                            <h3 style={{ marginLeft: "auto", marginRight: "auto", fontSize: "20px", fontWeight: "700" }} className='compilance__title'>Search users</h3>
+
+                            <form style={{ display: "flex", flexDirection: "column", gap: "20px", marginBottom: "50px", marginTop: "50px", alignItems: "center" }} onSubmit={userSearch}>
+                                <input ref={phoneId} style={{ maxWidth: "800px" }} placeholder='Phone' type="text" className='log__input' />
+                                <button style={{ maxWidth: "330px" }} type='submit' className='profile__button-logout'>Search</button>
+                            </form>
+
+                            <ul style={{listStyleType:"none" , padding:"0" , marginLeft:"auto" , "marginRight":"auto" , width:"430px" , height:"350px", overflowY:"scroll"}} className='finded__wrapper '>
+
+                            </ul>
+
+
+                            <h3 style={{ marginLeft: "auto", marginRight: "auto", fontSize: "20px", fontWeight: "700" }} className='compilance__title'>Users Control</h3>
+
                             <div>
                                 <form style={{ display: "flex", flexDirection: "column", gap: "20px", marginBottom: "50px", marginTop: "50px", alignItems: "center" }} onSubmit={changeVal}>
                                     <input ref={id} style={{ maxWidth: "800px" }} placeholder='userID' type="text" className='log__input' />
