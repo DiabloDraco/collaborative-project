@@ -544,6 +544,12 @@ input[type="radio" i] {
         padding: 10px;
     }
 
+    .profile__header-right {
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+    }
+
     .profile__left {
         max-width: 900px;
         height: 221px;
@@ -570,6 +576,7 @@ input[type="radio" i] {
 
     .profile__bottom-btn {
         margin-top: 10px;
+        margin-bottom: 10px;
         font-family: 'Open Sans', sans-serif;
         font-style: normal;
         font-weight: 600;
@@ -579,6 +586,10 @@ input[type="radio" i] {
         padding: 9px 13px 9px 13px;
         margin-left: 0;
         min-width: 146px;
+    }
+
+    .profile__left-bottom-wrapper {
+        padding-left: 20px;
     }
 
     .profile__bottom {
