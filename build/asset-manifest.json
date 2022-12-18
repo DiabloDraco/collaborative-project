@@ -1,10 +1,10 @@
 {
   "files": {
-    "main.css": "/static/css/main.1f524bf9.css",
-    "main.js": "/static/js/main.ab00612c.js",
+    "main.css": "/static/css/main.e267c2bb.css",
+    "main.js": "/static/js/main.3130b720.js",
     "static/media/CompensationReceived.pdf": "/static/media/CompensationReceived.ede0ea9cde03803d1513.pdf",
     "static/media/PrivacyNotice.pdf": "/static/media/PrivacyNotice.3658e3597bf444e1eee5.pdf",
-    "static/media/office.jpg": "/static/media/office.d28dda6977e0554d5b80.jpg",
+    "static/media/office.webp": "/static/media/office.63d06fa12dd690d8b131.webp",
     "static/media/FinancialCalculators.pdf": "/static/media/FinancialCalculators.1d61832ef759111f072d.pdf",
     "static/media/eagle.png": "/static/media/eagle.febd9dc77a08f972ba35.png",
     "static/media/eagleBackground.png": "/static/media/eagleBackground.46887c93b82b1f218ca3.png",
@@ -30,9 +30,9 @@
     "static/media/1.png": "/static/media/1.d9e2fffd29f3a41c7fd3.png",
     "static/media/3.png": "/static/media/3.5c5724b71a6fa9e1c96e.png",
     "static/media/2.png": "/static/media/2.e23fe84458aa889a46c3.png",
+    "index.html": "/index.html",
     "static/media/montserrat-v25-latin-800.woff2": "/static/media/montserrat-v25-latin-800.1d6a43e98bd10cc3f86d.woff2",
     "static/media/montserrat-v25-latin-700.woff2": "/static/media/montserrat-v25-latin-700.56c09b9a46af6a54eeb3.woff2",
-    "index.html": "/index.html",
     "static/media/montserrat-v25-latin-500.woff2": "/static/media/montserrat-v25-latin-500.38a674fae449557fef97.woff2",
     "static/media/montserrat-v25-latin-regular.woff2": "/static/media/montserrat-v25-latin-regular.acb6629fe45c43ad5d8b.woff2",
     "static/media/montserrat-v25-latin-600.woff2": "/static/media/montserrat-v25-latin-600.5d6df38dd70f631c488b.woff2",
@@ -48,11 +48,11 @@
     "static/media/profile__error.svg": "/static/media/profile__error.a1a8b937530a701dc70c7824030daef2.svg",
     "static/media/downArrow.svg": "/static/media/downArrow.dfa093cc1e7e8374d044661584d0bc54.svg",
     "static/media/profileAva.svg": "/static/media/profileAva.463f4922a52991a5bedede7311a83fe9.svg",
-    "main.1f524bf9.css.map": "/static/css/main.1f524bf9.css.map",
-    "main.ab00612c.js.map": "/static/js/main.ab00612c.js.map"
+    "main.e267c2bb.css.map": "/static/css/main.e267c2bb.css.map",
+    "main.3130b720.js.map": "/static/js/main.3130b720.js.map"
   },
   "entrypoints": [
-    "static/css/main.1f524bf9.css",
-    "static/js/main.ab00612c.js"
+    "static/css/main.e267c2bb.css",
+    "static/js/main.3130b720.js"
   ]
 }

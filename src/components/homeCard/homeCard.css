@@ -13,12 +13,6 @@
     max-height: 334px;
 }
 
-.search__item {
-    border: 1px solid black;
-    padding: 15px;
-    border-radius: 20px;
-}
-
 .homeCard:hover {
     transform: scale(1.03);
 }
