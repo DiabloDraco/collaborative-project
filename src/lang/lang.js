@@ -66,6 +66,9 @@ export const lang = {
                 register : "Register",
                 error1 : "Please complete all required fields!",
                 error2 : "Password must be 8 characters or more",
+                forgot : "Forgot password",
+                change_password: "Change",
+                password__error: "wrong mail"
             },
             prof : {
                 title : "OVER 110 000 ACTIVE USERS NOW",
@@ -377,6 +380,7 @@ export const lang = {
                 register : "Зарегестрироваться",
                 error1 : "Please complete all required fields!",
                 error2 : "Password must be 8 characters or more",
+                forgot : "Забыл пароль"
             },
             prof : {
                 title : "БОЛЕЕ 110 000 АКТИВНЫХ ПОЛЬЗОВАТЕЛЕЙ",

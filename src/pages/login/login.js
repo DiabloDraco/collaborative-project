@@ -58,9 +58,10 @@ function Login() {
                         <input ref={password} className='log__input' required type="password" placeholder='Password' />
                         <div className='password__error error'>{t("login.error2")}</div>
                     </label>
+                    <Link className='forgot__password' to={'/forgot'}>{t("login.forgot")}</Link>
                     <button style={{marginTop:"10px"}} className='submit__btn' type='submit'>{t("login.button1")}</button>
                     <div className='login__bottom'>
-                        <Link className='login__toReg' to={'/registraion'}>{t("login.register")}</Link>
+                        <Link className='login__toReg' to={'/registration'}>{t("login.register")}</Link>
                     </div>
                 </form>
 

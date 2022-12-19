@@ -314,10 +314,6 @@
     cursor: pointer;
 }
 
-.profile__payment-item-icon {}
-
-.profile__payment-item-right {}
-
 .profile__payment-item-title {
     margin: 0;
     font-family: 'Open Sans', sans-serif;

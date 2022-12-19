@@ -25,6 +25,7 @@ import Courses from "./pages/courses";
 import Admin from "./pages/admin";
 import AdminProfile from "./pages/adminProfile";
 import Documents from "./pages/documents";
+import PasswordForgot from "./pages/passwordForgot";
 
 function App() {
   return (
@@ -54,6 +55,7 @@ function App() {
           <Route path="/admin" element={<Admin />} />
           <Route path="/admin-profile" element={<AdminProfile />} />
           <Route path="/documents" element={<Documents />} />
+          <Route path="/forgot" element={<PasswordForgot />} />
         </Routes>
         <Footer />
       </div>

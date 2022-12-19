@@ -197,6 +197,12 @@
     font-size: 18px;
 }
 
+.forgot__password {
+    text-decoration: none;
+    font-size: 13px;
+    color: #F29C37;
+}
+
 @media only screen and (max-width: 900px) {
     /* MOBILE */
 
