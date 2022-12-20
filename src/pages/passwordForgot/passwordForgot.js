@@ -128,9 +128,9 @@ function PasswordForgot() {
                                 <button onClick={postPassword} style={{ marginTop: "10px", display: "flex", alignItems: "center", justifyContent: "center" }} className='submit__btn' type='submit'>{t("login.change_password")}</button>
                             </>
                         ) : (status == "successful") ? (
-                            <h1 className="successful__text">Password changed successful</h1>
+                            <h1 className="successful__text">{t("login.password__good")}</h1>
                         ) : (
-                            <h2>Ooops something went wrong</h2>
+                            <h2>{t("login.something__wrong")}</h2>
                         )
                     }
                 </form>
