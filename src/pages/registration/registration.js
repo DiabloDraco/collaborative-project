@@ -65,7 +65,10 @@ function Registration() {
                 navigator("/profile")
             }
         }
-        if (password.current.value === confirm.current.value && password.current.value.length >= 8) {
+        let myRe = /(?=.*[0-9])(?=.*[!@#$%^&*])(?=.*[a-z])(?=.*[A-Z])[0-9a-zA-Z!@#$%^&*]{6,}/g;
+        let value = password.current.value
+        let myValid = myRe.exec(value);
+        if (password.current.value === confirm.current.value && myValid) {
             document.querySelector(".spinner").style.display = "block"
 
 

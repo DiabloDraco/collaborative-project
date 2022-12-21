@@ -23,7 +23,10 @@ function Login() {
                 navigator("/profile")
             }
         }
-        if (mail.current.value && password.current.value.length >= 8) {
+        let myRe = /(?=.*[0-9])(?=.*[!@#$%^&*])(?=.*[a-z])(?=.*[A-Z])[0-9a-zA-Z!@#$%^&*]{6,}/g;
+        let value = password.current.value
+        let myValid = myRe.exec(value);
+        if (mail.current.value && myValid) {
             let res = await fetch("https://hillhouse-backend.herokuapp.com/login", {
                 method: "POST",
                 headers: {

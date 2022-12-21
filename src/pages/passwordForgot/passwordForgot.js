@@ -30,9 +30,9 @@ function PasswordForgot() {
     async function putMail(e) {
         e.preventDefault()
         let mail = mailRef.current.value
-
+        
         setMail(mail)
-
+        document.querySelector(".mail-btn").disabled = "disabled"
         let req = await fetch("https://hillhouse-backend.herokuapp.com/user/email/put", {
             method: "PUT",
             headers: { "Content-type": "Application/json" },
@@ -73,8 +73,11 @@ function PasswordForgot() {
     async function postPassword(e) {
         e.preventDefault()
         let password = passwordRef.current.value
+        let myRe = /(?=.*[0-9])(?=.*[!@#$%^&*])(?=.*[a-z])(?=.*[A-Z])[0-9a-zA-Z!@#$%^&*]{6,}/g;
+        let value = password
+        let myValid = myRe.exec(value);
 
-        if (password.length >= 8) {
+        if (myValid) {
             let req = await fetch(`https://hillhouse-backend.herokuapp.com/user/pass/put`, {
                 method: "PUT",
                 headers: { "Content-type": "Application/json" },
@@ -103,9 +106,8 @@ function PasswordForgot() {
 
                                 <label className='log__label'>
                                     <input ref={mailRef} className='log__input' required type="email" placeholder='Email' />
-                                    <div className=' error'>{t("password__error")}</div>
                                 </label>
-                                <button onClick={putMail} style={{ marginTop: "10px", display: "flex", alignItems: "center", justifyContent: "center" }} className='submit__btn' type='submit'>{t("login.change_password")}</button>
+                                <button key={1} onClick={putMail} style={{ marginTop: "10px", display: "flex", alignItems: "center", justifyContent: "center" }} className='submit__btn mail-btn' type='submit'>{t("login.change_password")}</button>
                             </>
                         ) : (status == "code") ? (
                             <>
@@ -113,9 +115,8 @@ function PasswordForgot() {
 
                                 <label className='log__label'>
                                     <input ref={numRef} className='log__input' required type="number" placeholder='Code' />
-                                    <div className='error'>{t("password__error")}</div>
                                 </label>
-                                <button onClick={postCode} style={{ marginTop: "10px", display: "flex", alignItems: "center", justifyContent: "center" }} className='submit__btn' type='submit'>{t("login.change_password")}</button>
+                                <button key={2} onClick={postCode} style={{ marginTop: "10px", display: "flex", alignItems: "center", justifyContent: "center" }} className='submit__btn' type='submit'>{t("login.change_password")}</button>
                             </>
                         ) : (status == "password") ? (
                             <>
