@@ -214,15 +214,14 @@
 
 .giv__left {
     color: whitesmoke;
-
     display: grid;
-    align-items: stretch;
     justify-items: start;
-    align-content: space-around; 
+    align-items: start;
+    align-content: center;
 }
 
-.giv__left-bottom button {
-    margin-top: 10px;
+.giv__button{
+    transform: translateY(20px);
 }
 
 .giv__text {
@@ -253,7 +252,7 @@
     border-radius: 50px 0px 0px 50px;
 
     height: 300px;
-    padding-left: 90px;
+    padding-left: 80px;
     position: absolute;
     width: 50%;
     z-index: 1;
