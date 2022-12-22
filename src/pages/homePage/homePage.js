@@ -43,7 +43,7 @@ function HomePage() {
                                 {t("homePage.givtext4")}
                             </h3>
 
-                            <div className=''>
+                            <div className='giv__button'>
                                
                                 <Link className='header__bottom-open giv_but' to={'/registration'}>{t("homePage.givtext5")}</Link>
                             </div>
