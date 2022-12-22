@@ -396,11 +396,12 @@ function Registration() {
                     <label className='reg__label'>
                         <input id='password2' onChange={error} ref={password} className='reg__input' required type="password" placeholder='Password' />
                         {/* <div onClick={show} id='togglePassword'><p>Show password</p></div> */}
-
+                        
                         <div className='sub-pass'>
                             <div style={{ cursor: "pointer", userSelect: "none" }} onClick={show} id='togglePassword'><p>{t("registration.show")}</p></div>
                             {/* <div className='gen' onClick={generate}><p>Generate</p></div> */}
                         </div>
+                        <p className='pass-req'>The password must be no shorter than 8 characters, one large latin letter and one small</p>
 
                         <div className='error__password error'>{t("registration.error1")}</div>
                         <div className='error__confirm password__error error'>{t("registration.error2")}</div>

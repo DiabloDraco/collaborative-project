@@ -225,7 +225,7 @@
 
 .header__bottom-open:hover {
     color: #F29C37;
-    background: #FFFFFF;
+    background: transparent;
     box-shadow: 0 0 0 1px#F29C37;
 }
 

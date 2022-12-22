@@ -18,6 +18,13 @@
     transition: all 0.3s ease;
 }
 
+.pass-req {
+    padding: 10px;
+    font-size: 12px;
+    border-radius: 5px;
+    border: 2px solid #F29C37;
+}
+
 .reg__input {
     width: 420px;
     display: block;
@@ -220,6 +227,15 @@
     .registration__form {
         max-width: 90vw;
     }
+
+    
+.pass-req {
+    padding: 10px;
+    font-size: 12px;
+    border-radius: 5px;
+    border: 2px solid #F29C37;
+    max-width: 350px;
+}
 
     .county-input {
         /* width: 100%;
