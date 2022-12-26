@@ -73,7 +73,7 @@ export const lang = {
                 home : "Home",
                 register : "Register",
                 error1 : "Please complete all required fields!",
-                error2 : "Password length is less than 8 characters or does not contain a number and a symbol",
+                error2 : "Password length is less than 8 characters or does not contain a number",
                 forgot : "Forgot password",
                 change_password: "Change",
                 password__error: "wrong mail",
