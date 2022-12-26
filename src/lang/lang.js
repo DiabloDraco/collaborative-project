@@ -66,7 +66,7 @@ export const lang = {
                 read : "I have read the ",
                 read2 : "and agree to the terms",
                 error1 : "Please complete all required fields!",
-                error2 : "Passwords do not match, or password length is less than 8 characters and does not contain a number and a symbol",
+                error2 : "The password must be at least 8 characters long and must contain uppercase and lowercase Latin letters.",
             },
             login : {
                 button1 : "Login",
@@ -390,7 +390,7 @@ export const lang = {
                 read : "я прочитал",
                 read2 : "и соглашаюсь с условиями",
                 error1 : "Пожалуйста, заполните все необходимые поля!",
-                error2 : "Пароли не совпадают или длина пароля меньше 8 символов и не содержит цыфру и символ",
+                error2 : "Пароль должен состоять не менее чем из 8 символов и содержать заглавные и строчные латинские буквы.",
             },
             login : {
                 button1 : "Войти",

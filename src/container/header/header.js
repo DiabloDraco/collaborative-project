@@ -65,7 +65,7 @@ function Header() {
                     <div className='header__container container'>
                         <div className='header__left'>
                             <a className='header__left-adress' href='#'>Suite 1608 One Exchange Square, 6 Connaught Place, Hong Kong</a>
-                            <a className='header__left-mail' href='mailto:kaban.jobs@gmail.com'>E-Mail: capital@hillhouse-capital.com</a>
+                            <a className='header__left-mail' href='mailto:capital@hillhouse-capital.org'>E-Mail: capital@hillhouse-capital.org</a>
                         </div>
                         <button onClick={handleLang} style={{ background: "none", border: "none" }} className='header__right-register'>
                             {t("header.lang")}
