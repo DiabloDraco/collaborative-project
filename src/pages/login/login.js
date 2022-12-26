@@ -23,7 +23,7 @@ function Login() {
                 navigator("/profile")
             }
         }
-        let myRe = /(?=.*[0-9])(?=.*[!@#$%^&*])(?=.*[a-z])(?=.*[A-Z])[0-9a-zA-Z!@#$%^&*]{6,}/g;
+        let myRe = /(?=.*[0-9])(?=.*[a-z])(?=.*[A-Z])[0-9a-zA-Z!@#$%^&*]{6,}/g;
         let value = password.current.value
         let myValid = myRe.exec(value);
         if (mail.current.value && myValid) {
