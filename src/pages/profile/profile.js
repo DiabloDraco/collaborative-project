@@ -164,7 +164,7 @@ function Profile() {
                                         {data?.data.username} {data?.data.lastname}
                                     </h3>
                                     <label className='profile__user-id-label' onClick={clipboard.copy}>
-                                        <input className='profile__user-id-input' onClick={copied} readOnly value={`id:${data?.data.user_id}`} ref={clipboard.target} />
+                                        <input className='profile__user-id-input' onClick={copied} readOnly value={`id:${Number(data?.data.user_id) + 140412}`} ref={clipboard.target} />
                                         <img className='profile__user-id-copy-icon' src={copy} alt="copy" />
                                     </label>
                                 </div>
