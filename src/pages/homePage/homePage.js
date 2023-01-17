@@ -29,7 +29,7 @@ function HomePage() {
     return (
         <div className='home__wrapper'>
 {/* sssssssssssssssssssssss */}
-            <div className='giv'>
+            {/* <div className='giv'>
 
             <div className='container z'>
                 <div className='giv__wrapper'>
@@ -97,7 +97,7 @@ function HomePage() {
                     <h3> {t("homePage.givtext6")}<span className='orange'>30</span> {t("homePage.givtext7")}</h3>
                     <h3> {t("homePage.givtext8")}</h3>
                 </div>
-            </div>
+            </div> */}
             {/* sssssssssssssssssssssss */}
 
 
