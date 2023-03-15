@@ -21,8 +21,9 @@ function Admin() {
             }
         }
         if (name && password) {
-            let res = await fetch("https://hillhouse-backend.herokuapp.com/admin/login ", {
+            let res = await fetch("https://hh-main.onrender.com/admin/login ", {
                 method: "POST",
+                mode: 'cors',
                 headers: {
                     "content-Type": "application/json"
                 },

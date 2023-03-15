@@ -58,4 +58,4 @@ function HeroWidget() {
     )
   }
   
-export default HeroWidget
+export default HeroWidget;
